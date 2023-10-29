@@ -7,7 +7,7 @@ namespace Game {
 
         public override void Act(StateController controller) {
             EnemyController m = (EnemyController)controller;
-            m.StartAttack();
+            m.PrepareAttack();
         }
     }
 }

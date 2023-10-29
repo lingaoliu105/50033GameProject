@@ -6,4 +6,5 @@ using UnityEngine;
 public class GameConstants : ScriptableObject
 {
 
+    public float soldierMaxHP = 100.0f;
 }

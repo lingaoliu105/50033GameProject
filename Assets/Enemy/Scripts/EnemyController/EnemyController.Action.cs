@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static UnityEngine.UI.Image;
 
 namespace Game {
@@ -15,225 +16,81 @@ namespace Game {
         Scout = 2,
         Attack = 3,
     }
-    public partial class EnemyController {
 
-        public void StartAttackOneShot(int i) {
-            StartCoroutine(AttackOneShot(i));
-        }
+    public partial class EnemyController
+    {
+        [FormerlySerializedAs("attackTemplate")]
+        public GameObject[] attackTemplates;
 
-        public IEnumerator AttackOneShot(int i) {
-            PlayAttackAnimation();
-            attackInstance[0] = Instantiate(attackTemplate[i], transform.position, Quaternion.identity);
-            attackInstance[0].transform.parent = transform;
-            for (int t = 0; t < attackTimeByFrame; t++) {
-                yield return null;
-            }
-        }
-        public void UpdateVelocity(float deltaTime) {
-            float mult = isGrounded ? 1 : Constants1.AirMult;
-            float maxRun = velocityX;
-            if (Math.Abs(velocity.x) > maxRun && Math.Sign(velocity.x) == (int)moveDirectionX) {
-                velocity.x = Mathf.MoveTowards(velocity.x, maxRun * (int)moveDirectionX, decelerationX * mult * deltaTime);
-            } else {
-                velocity.x = Mathf.MoveTowards(velocity.x, maxRun * (int)moveDirectionX, accelerationX * mult * deltaTime);
-            }
-            float maxFall = Constants1.MaxFall;
-            if (!gravity) {
-                //TODO：飞行
-            } else {
-                if (!isGrounded) {
-                    velocity.y = Mathf.MoveTowards(velocity.y, maxFall, Constants1.Gravity * deltaTime);
-                }
-            }
-            
+        protected GameObject[] attackInstances = new GameObject[3];
+        protected float attackTime = 0.2f;
+        public float patrolRangeL;
+        public float patrolRangeR;
+        public float patrolSpeed = 3.0f;
 
-        }
-        public void PerformJump() {
-            if (isGrounded && !isJumping) {
-                StartCoroutine(Jump());
-                isJumping = true;
-            }
-            
-        }
-        public IEnumerator Jump() {
-            for (int t = 0; t < jumpTimeByFrames; t++) {
-                velocity.y = jumpspeedY;
-                velocity.x += jumpspeedX * (int)moveDirectionX;
-                yield return null;
-            }
-            isJumping = false;
-            if (!gravity) {
-                velocity = Vector2.zero;
-            }
+        public IEnumerator AttackOneShot(int i)
+        {
+            yield return new WaitForSeconds(attackTime);
+            attackInstances[0] = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
+            attackInstances[0].transform.parent = transform;
         }
 
-        public void PerformMove(MoveDirectionX move) {
-            moveDirectionX = move;
-            if (move != MoveDirectionX.None) {
+        public void PerformMove(MoveDirectionX move)
+        {
+            if (move != MoveDirectionX.None)
+            {
                 facing = (Facings)move;
             }
         }
-        public void ForceMovement(Vector2 direction, float speed = -1, float mult = -1) {
-            direction.Normalize();
-            if (speed < 0) {
-                speed = forceMovementRate;
+
+        public void Patrol()
+        {
+            if (transform.position.x < patrolRangeL)
+            {
+                facing = Facings.Right;
             }
-            if (mult < 0) {
-                mult = forceMovementMult;
+
+            if (transform.position.x > patrolRangeR)
+            {
+                facing = Facings.Left;
             }
-            forceMovement = direction * speed;
-            StartCoroutine(forceMovementMulting(mult));
+
+            body.velocity = new Vector2((int)facing * patrolSpeed, body.velocity.y);
         }
-        private IEnumerator forceMovementMulting(float mult) {
-            while (forceMovement.magnitude > 0.05) {
-                forceMovement *= mult;
-                yield return null;
+
+        public void Attack()
+        {
+            animator.SetTrigger("attack");
+            StartCoroutine(AttackOneShot(0));
+        }
+
+        public void StartScout(float scoutSpeed)
+        {
+            if (targetPlayer)
+            {
+                
+                body.AddForce(targetPlayer.transform.position.x > transform.position.x? Vector2.right*scoutSpeed : Vector2.left*scoutSpeed,ForceMode2D.Force);
+            }
+            else
+            {
+                Debug.Log("no target player but still in scouting");
             }
         }
 
-        public void SetPatrolRange(float L, float R, float U, float D) {
-            patrolRangeD = D;
-            patrolRangeL = L;
-            patrolRangeR = R;
-            patrolRangeU = U;
-        }
-        public void StartPatrol(float speed = -1) {
-            if (speed > 0) {
-                velocityX = speed;
-            }
-            autoAction = AutoActionState.Patrol;
-        }
-        public void StopPatrol() {
-            autoAction = AutoActionState.None;
-        }
-        public void StartScout(float speed = -1) {
-            if (speed > 0) {
-                velocityX = speed;
-            }
-            autoAction = AutoActionState.Scout;
-        }
-        public void StopScout() {
-            autoAction = AutoActionState.None;
-        }
-        public void StartAttack() {
-            autoAction = AutoActionState.Attack;
-        }
-        public void StopAttack() {
-            autoAction = AutoActionState.None;
+        public virtual bool AttackCanReach()
+        {
+            return targetPlayer && MathF.Abs(targetPlayer.transform.position.x - transform.position.x) < 5;
         }
 
-        private void AutoMoveUpdate() {
-            bool obs = DetectObstacle();
-            bool wall = DetectWall();
-            bool ground = DetectGround();
-            switch (autoAction) {
-                case AutoActionState.Patrol: {
-                        if (position.x < patrolRangeL) {
-                            moveDirectionX = MoveDirectionX.Right;
-                        }
-                        if (position.x > patrolRangeR) {
-                            moveDirectionX = MoveDirectionX.Left;
-                        }
-                        if (position.x < patrolRangeL || position.x > patrolRangeR) {
-                            if (obs) {
-                                if (!wall) {
-                                    PerformJump();
-                                } else {
-                                    moveDirectionX = MoveDirectionX.None;
-                                }
-                            } else if (!ground) {
-                                if (!wall) {
-                                    PerformJump();
-                                } else {
-                                    moveDirectionX = MoveDirectionX.None;
-                                }
-                            }
-                            break;
-                        }
-                        if (moveDirectionX == MoveDirectionX.None) {
-                            // Random -1 or 1
-                            moveDirectionX = (MoveDirectionX)(UnityEngine.Random.Range(0, 2) * 2 - 1);
-                        }
-                        if (obs || !ground) {
-
-                            moveDirectionX = (MoveDirectionX)(-(int)moveDirectionX);
-                        }
-                        break;
-                    }
-                case AutoActionState.Scout: {
-                        if (position.x <= playerPos.x) {
-                            moveDirectionX = MoveDirectionX.Right;
-                        }
-                        if (position.x > playerPos.x) {
-                            moveDirectionX = MoveDirectionX.Left;
-                        }
-                        if (obs) {
-                            if (!wall) {
-                                PerformJump();
-                            } else {
-                                moveDirectionX = MoveDirectionX.None;
-                            }
-                        } else if (!ground) {
-                            Debug.Log("Ground");
-                            if (!wall) {
-                                PerformJump();
-                            } else {
-                                moveDirectionX = MoveDirectionX.None;
-                            }
-                        }
-                    }
-                    break;
-                case AutoActionState.Attack:
-                    moveDirectionX = MoveDirectionX.None;
-                    facing = (Facings)(playerPos.x < position.x ? -1 : 1);
-                    velocity.x = 0;
-                    break;
-                default:
-                    break;
-            }
-        
+        public void PrepareAttack()
+        {
+            // TODO: add charging animation of bullet
+            body.velocity = Vector2.zero;
         }
 
-
-
-        private bool DetectGround() {
-            Vector2 origin = position + Vector2.right * (int)moveDirectionX * offsetX + Vector2.down * boundingBoxSize.y * 1 / 2;
-            Vector2 direction = Vector2.down;
-            float raycastDistance = offsetY;
-            RaycastHit2D hit = Physics2D.Raycast(origin, direction, raycastDistance, groundMask);
-            Debug.DrawRay(origin, direction * raycastDistance, Color.red);
-            if (hit) {
-                if (hit.normal == Vector2.up) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        private bool DetectObstacle() {
-            Vector2 origin = position + Vector2.right * (int)moveDirectionX * offsetX + Vector2.up * boundingBoxSize.y * 1 / 2;
-            Vector2 direction = Vector2.right * (int)moveDirectionX;
-            float raycastDistance = boundingBoxSize.x * offsetRange;
-            RaycastHit2D hit = Physics2D.Raycast(origin, direction, raycastDistance, groundMask);
-            Debug.DrawRay(origin, direction * raycastDistance, Color.red);
-            if (hit) {
-                if (hit.normal == Vector2.right * (int)moveDirectionX) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        private bool DetectWall() {
-            Vector2 origin = position + Vector2.up * offsetY + Vector2.up * boundingBoxSize.y * 1 / 2;
-            Vector2 direction = Vector2.right * (int)moveDirectionX;
-            float raycastDistance = boundingBoxSize.x * offsetRange;
-            RaycastHit2D hit = Physics2D.Raycast(origin, direction, raycastDistance, groundMask);
-            Debug.DrawRay(origin, direction * raycastDistance, Color.red);
-            if (hit) {
-                if (hit.normal == Vector2.right * (int)moveDirectionX) {
-                    return true;
-                }
-            }
-            return false;
+        public bool HasTarget()
+        {
+            return targetPlayer != null;
         }
     }
 }

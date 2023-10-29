@@ -116,11 +116,8 @@ public abstract class StateController : MonoBehaviour {
     public void Update() {
         if (!isActive) return; // this is different from gameObject active, allow for separate control
         currentState.UpdateState(this);
-        UpdateObj(Time.deltaTime);
     }
-
-    public virtual void UpdateObj(float deltaTime) {
-    }
+    
     /********************************/
 
 

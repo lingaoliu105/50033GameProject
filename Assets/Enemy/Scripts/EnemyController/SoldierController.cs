@@ -6,14 +6,10 @@ using UnityEngine;
 public class SoldierController : EnemyController
 {
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
-        
+        base.Start();
+        hp = gameConstants.soldierMaxHP;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
