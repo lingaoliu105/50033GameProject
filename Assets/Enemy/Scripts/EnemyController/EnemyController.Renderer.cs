@@ -13,7 +13,7 @@ public enum Facings
 }
 namespace Game {
     public partial class EnemyController {
-        public Facings facing = Facings.Right;
+        protected Facings facing = Facings.Right;
         public void PlayDeadAnimation() {
             animator.SetTrigger("die");
         }

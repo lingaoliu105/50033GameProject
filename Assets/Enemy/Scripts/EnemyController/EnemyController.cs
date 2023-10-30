@@ -28,6 +28,7 @@ namespace Game
         protected Animator animator;
         protected GameObject targetPlayer;
         protected Rigidbody2D body;
+
         public Vector2 position
         {
             get
@@ -43,6 +44,7 @@ namespace Game
         private void FixedUpdate()
         {
             animator.SetFloat("xSpeed", MathF.Abs(body.velocity.x));
+            sprite.flipX = facing != Facings.Right;
         }
 
         public override void Start() {

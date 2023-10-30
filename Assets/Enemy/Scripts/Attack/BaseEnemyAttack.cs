@@ -23,7 +23,7 @@ namespace Game {
         public virtual void Start() {
             attackCount = 0;
             isAttacking = true;
-            this.GetComponent<Collider2D>().enabled = true;
+            GetComponent<Collider2D>().enabled = true;
             StartCoroutine(WaitAndDestroy());
         }
 

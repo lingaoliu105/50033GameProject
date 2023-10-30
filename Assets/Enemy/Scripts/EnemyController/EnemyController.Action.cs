@@ -27,11 +27,13 @@ namespace Game {
         public float patrolRangeL;
         public float patrolRangeR;
         public float patrolSpeed = 3.0f;
+        public float bulletSpawnForce = 3.0f;
 
         public IEnumerator AttackOneShot(int i)
         {
             yield return new WaitForSeconds(attackTime);
             attackInstances[0] = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
+            attackInstances[0].GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
             attackInstances[0].transform.parent = transform;
         }
 
@@ -79,13 +81,15 @@ namespace Game {
 
         public virtual bool AttackCanReach()
         {
-            return targetPlayer && MathF.Abs(targetPlayer.transform.position.x - transform.position.x) < 5;
+            return targetPlayer && MathF.Abs(targetPlayer.transform.position.x - transform.position.x) < 2;
         }
 
         public void PrepareAttack()
         {
+            facing = targetPlayer.transform.position.x > transform.position.x ? Facings.Right : Facings.Left;
             // TODO: add charging animation of bullet
             body.velocity = Vector2.zero;
+            
         }
 
         public bool HasTarget()
