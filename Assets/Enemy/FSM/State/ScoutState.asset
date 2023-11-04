@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d54db7d69901147a2c66ea1a906421, type: 3}
   m_Name: ScoutState
   m_EditorClassIdentifier: 
-  setupActions:
+  setupActions: []
+  actions:
   - {fileID: 11400000, guid: fd84a2b6afb81204c8c1a7405470f8ce, type: 2}
-  actions: []
   eventTriggeredActions: []
   exitActions: []
   transitions:

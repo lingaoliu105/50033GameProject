@@ -21,28 +21,23 @@ namespace Game {
     {
         [FormerlySerializedAs("attackTemplate")]
         public GameObject[] attackTemplates;
-
-        protected GameObject[] attackInstances = new GameObject[3];
         protected float attackTime = 0.2f;
         public float patrolRangeL;
         public float patrolRangeR;
         public float patrolSpeed = 3.0f;
         public float bulletSpawnForce = 3.0f;
+        public float scoutSpeed = 3.5f;
 
-        public IEnumerator AttackOneShot(int i)
+        public virtual IEnumerator AttackOneShot(int i)
         {
             yield return new WaitForSeconds(attackTime);
-            attackInstances[0] = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
-            attackInstances[0].GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
-            attackInstances[0].transform.parent = transform;
-        }
-
-        public void PerformMove(MoveDirectionX move)
-        {
-            if (move != MoveDirectionX.None)
+            GameObject atk = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
+            if (facing == Facings.Left)
             {
-                facing = (Facings)move;
+                atk.GetComponent<SpriteRenderer>().flipX = true;
             }
+            atk.GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
+            atk.transform.parent = transform;
         }
 
         public void Patrol()
@@ -66,12 +61,12 @@ namespace Game {
             StartCoroutine(AttackOneShot(0));
         }
 
-        public void StartScout(float scoutSpeed)
+        public void Scout()
         {
             if (targetPlayer)
             {
-                
-                body.AddForce(targetPlayer.transform.position.x > transform.position.x? Vector2.right*scoutSpeed : Vector2.left*scoutSpeed,ForceMode2D.Force);
+                facing = targetPlayer.transform.position.x > transform.position.x ? Facings.Right : Facings.Left;
+                body.velocity = new Vector2((int)facing * scoutSpeed, body.velocity.y);
             }
             else
             {

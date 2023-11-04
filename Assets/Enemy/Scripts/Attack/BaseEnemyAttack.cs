@@ -6,51 +6,52 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Game {
-    public class BaseEnemyAttack : MonoBehaviour, IAttack {
-        [Header("伤害")]
-        public int attackDamage = 1;
-        [Header("存在时间")]
-        public int attackTimeByFrame = 60;
-        [Header("进行攻击（指触碰时是否会造成伤害）")]
-        public bool isAttacking = false;
-        [Header("造成伤害x次后时会删除自身")]
-        public int destroyAfterAttack = -1;
-        [Header("造成伤害x次后时会禁用攻击")]
-        public int disableAfterAttack = 1;
-        private int attackCount = 0;
+namespace Game
+{
+    public class BaseEnemyAttack : MonoBehaviour, IAttack
+    {
+        [Header("伤害")] public int attackDamage = 1;
+        [Header("存在时间")] public int attackTimeByFrame = 60;
 
-        public virtual void Start() {
+        private int attackCount = 0;
+        protected Animator anim;
+        protected Rigidbody2D body;
+        protected Collider2D collider;
+        public GameObject hitEffect;
+        public virtual void Start()
+        {
             attackCount = 0;
-            isAttacking = true;
             GetComponent<Collider2D>().enabled = true;
-            StartCoroutine(WaitAndDestroy());
+            anim = GetComponent<Animator>();
+            body = GetComponent<Rigidbody2D>();
+            collider = GetComponent<Collider2D>();
+            
+            // StartCoroutine(WaitAndDestroy());
+            // TODO: alternatively, destroy when exceeding the viewport
         }
 
-        public IEnumerator WaitAndDestroy() {
-            for (int i = 0; i < attackTimeByFrame; i++) {
+        public IEnumerator WaitAndDestroy()
+        {
+            for (int i = 0; i < attackTimeByFrame; i++)
+            {
                 yield return null;
             }
+
             Destroy(gameObject);
         }
 
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+            body.bodyType = RigidbodyType2D.Static;
+            collider.enabled = false;
+            Instantiate(hitEffect, transform.position + Vector3.up*0.1f, Quaternion.identity);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                //Debug.Log("Deal " + attackDamage + " damage to " + collision.gameObject.name);
+                //collision.gameObject.GetComponent<PlayerController>().TakeDamage(attackDamage);
 
-        public void OnCollisionEnter2D(Collision2D collision) {
-            if (isAttacking) {
-                if (collision.gameObject.tag == "Player") {
-                    //Debug.Log("Deal " + attackDamage + " damage to " + collision.gameObject.name);
-                    //collision.gameObject.GetComponent<PlayerController>().TakeDamage(attackDamage);
-                    attackCount++;
-                    if (attackCount>=destroyAfterAttack&&destroyAfterAttack>0) {
-                        Destroy(gameObject);
-                    }
-                    if (attackCount >= disableAfterAttack&& destroyAfterAttack > 0) {
-                        isAttacking = false;
-                        this.GetComponent<Collider2D>().enabled = false;
-                    }
-
-                }
             }
+            Destroy(gameObject);
         }
     }
 }

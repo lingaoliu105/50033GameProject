@@ -47,9 +47,9 @@ namespace Game {
         private SpriteRenderer spriteRenderer;
 
 
-        public bool launched;//Æô¶¯Ê±µÄÁ£×ÓÐ§¹û
+        public bool launched;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
         public float launchedTimer;
-        private float dashCooldownTimer;                //³å´ÌÀäÈ´Ê±¼ä¼ÆÊýÆ÷£¬Îª0Ê±£¬¿ÉÒÔÔÙ´Î³å´Ì
+        private float dashCooldownTimer;                //ï¿½ï¿½ï¿½ï¿½ï¿½È´Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù´Î³ï¿½ï¿½
         private float dashRefillCooldownTimer;          //
         public int dashes;
         public int lastDashes;
@@ -66,7 +66,7 @@ namespace Game {
         public int WallSlideDir { get; set; }
 
 
-        public Facings Facing { get; set; }  //µ±Ç°³¯Ïò
+        public Facings Facing { get; set; }  //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
 
         void Awake() {
             this.stateMachine = new FiniteStateMachine<BaseActionState>((int)EActionState.Size);
@@ -145,7 +145,7 @@ namespace Game {
             //Get ground
             wasOnGround = onGround;
             if (Speed.y <= 0) {
-                this.onGround = CheckGround();//Åö×²¼ì²âµØÃæ
+                this.onGround = CheckGround();//ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             } else {
                 this.onGround = false;
             }
@@ -163,7 +163,7 @@ namespace Game {
 
             stateMachine.Update(deltaTime);
 
-            //ÌøÔ¾¼ì²é
+            //ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½
             JumpCheck.Update(deltaTime);
 
             CanJump = JumpCheck.AllowJump();
@@ -208,7 +208,7 @@ namespace Game {
             }
         }
 
-        //¼ì²âµ±Ç°ÊÇ·ñ¿ÉÒÔÕ¾Á¢
+        //ï¿½ï¿½âµ±Ç°ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½
         public bool CanUnDuck {
             get { 
                 if (!Ducking)

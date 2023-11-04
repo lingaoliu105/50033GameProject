@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 namespace Game { 
     public partial class EnemyController {
-        
+            
         // TODO: confirm ground layer number
         private int groundMask = 1;
         private Vector2 boundingBoxSize = new Vector2(0.3f,0.1f);
@@ -23,7 +23,7 @@ namespace Game {
     }
     
     public void OnTriggerEnter2D(Collider2D other)
-    {
+    {   
         if (other.gameObject.CompareTag("Player"))
         {
             targetPlayer = other.gameObject;

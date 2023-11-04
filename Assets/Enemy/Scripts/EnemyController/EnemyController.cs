@@ -26,7 +26,7 @@ namespace Game
         protected SpriteRenderer sprite;
         protected CapsuleCollider2D bodyCollider;
         protected Animator animator;
-        protected GameObject targetPlayer;
+        public GameObject targetPlayer;
         protected Rigidbody2D body;
 
         public Vector2 position
