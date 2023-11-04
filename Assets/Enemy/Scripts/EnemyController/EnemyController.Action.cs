@@ -32,9 +32,11 @@ namespace Game {
         {
             yield return new WaitForSeconds(attackTime);
             GameObject atk = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
+            Time.timeScale = 0.0f;
             if (facing == Facings.Left)
             {
-                atk.GetComponent<SpriteRenderer>().flipX = true;
+                Vector3 oldScale = atk.transform.localScale;
+                atk.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
             }
             atk.GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
             atk.transform.parent = transform;
@@ -84,7 +86,6 @@ namespace Game {
             facing = targetPlayer.transform.position.x > transform.position.x ? Facings.Right : Facings.Left;
             // TODO: add charging animation of bullet
             body.velocity = Vector2.zero;
-            
         }
 
         public bool HasTarget()

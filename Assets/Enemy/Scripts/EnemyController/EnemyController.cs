@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
+using UnityEngine.UI;
+
 namespace Game
 {
     public enum MoveDirectionX {
@@ -21,6 +23,7 @@ namespace Game
     {
         public GameConstants gameConstants;
         protected float hp;
+        public float maxHP = 100;
         public float dieWaitTime = 0.8f;
 
         protected SpriteRenderer sprite;
@@ -28,6 +31,7 @@ namespace Game
         protected Animator animator;
         public GameObject targetPlayer;
         protected Rigidbody2D body;
+        protected Slider healthBar;
 
         public Vector2 position
         {
@@ -53,6 +57,10 @@ namespace Game
             bodyCollider = GetComponent<CapsuleCollider2D>();
             animator = GetComponent<Animator>();
             body = GetComponent<Rigidbody2D>();
+            healthBar = GetComponentInChildren<Slider>();
+            hp = maxHP;
+            healthBar.maxValue = hp;
+            healthBar.value = hp;
             GameRestart(); // clear powerup in the beginning, go to start state
         }
 
@@ -65,6 +73,7 @@ namespace Game
 
         public void TakeDamage(int damage) {
             hp -= damage;
+            healthBar.value = hp;
             if (hp <= 0) {
                 PlayDeadAnimation();
                 StartCoroutine(WaitAndDestroy());

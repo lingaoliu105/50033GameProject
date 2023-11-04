@@ -5,12 +5,6 @@ using UnityEngine;
 
 public class SoldierController : EnemyController
 {
-    // Start is called before the first frame update
-    new void Start()
-    {
-        base.Start();
-        hp = gameConstants.soldierMaxHP;
-    }
 
     public override IEnumerator AttackOneShot(int i)
     {

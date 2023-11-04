@@ -12,4 +12,9 @@ namespace Game {
 
         void OnCollisionEnter2D(Collision2D collision);
     }
+
+    interface IEffect
+    {
+        void SelfDestroy();
+    }
 }
