@@ -21,7 +21,7 @@ namespace Game {
     {
         [FormerlySerializedAs("attackTemplate")]
         public GameObject[] attackTemplates;
-        protected float attackTime = 0.2f;
+        public float attackTime = 0.2f;
         public float patrolRangeL;
         public float patrolRangeR;
         public float patrolSpeed = 3.0f;
@@ -32,17 +32,18 @@ namespace Game {
         {
             yield return new WaitForSeconds(attackTime);
             GameObject atk = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
-            Time.timeScale = 0.0f;
             if (facing == Facings.Left)
             {
                 Vector3 oldScale = atk.transform.localScale;
+                
+                // horizontally flip
                 atk.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
             }
             atk.GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
             atk.transform.parent = transform;
         }
 
-        public void Patrol()
+        public virtual void Patrol()
         {
             if (transform.position.x < patrolRangeL)
             {
@@ -57,13 +58,13 @@ namespace Game {
             body.velocity = new Vector2((int)facing * patrolSpeed, body.velocity.y);
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             animator.SetTrigger("attack");
             StartCoroutine(AttackOneShot(0));
         }
 
-        public void Scout()
+        public virtual void Scout()
         {
             if (targetPlayer)
             {
@@ -81,14 +82,14 @@ namespace Game {
             return targetPlayer && MathF.Abs(targetPlayer.transform.position.x - transform.position.x) < 2;
         }
 
-        public void PrepareAttack()
+        public virtual void PrepareAttack()
         {
             facing = targetPlayer.transform.position.x > transform.position.x ? Facings.Right : Facings.Left;
             // TODO: add charging animation of bullet
             body.velocity = Vector2.zero;
         }
 
-        public bool HasTarget()
+        public virtual bool HasTarget()
         {
             return targetPlayer != null;
         }

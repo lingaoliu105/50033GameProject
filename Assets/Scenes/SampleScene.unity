@@ -673,14 +673,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShieldman
       objectReference: {fileID: 0}
-    - target: {fileID: 4231089336747413984, guid: 60a5865ba1842ac4da35bd42b29fd1c2, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231089336747413984, guid: 60a5865ba1842ac4da35bd42b29fd1c2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4347633875453349108, guid: 60a5865ba1842ac4da35bd42b29fd1c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.9339433
@@ -738,14 +730,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySoldier
       objectReference: {fileID: 0}
-    - target: {fileID: 1066107906329217583, guid: ea2e3af5f7b8f184484c4f30dd9a49fe, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066107906329217583, guid: ea2e3af5f7b8f184484c4f30dd9a49fe, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1080044772870526456, guid: ea2e3af5f7b8f184484c4f30dd9a49fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -791,12 +775,78 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea2e3af5f7b8f184484c4f30dd9a49fe, type: 3}
+--- !u!1001 &8401848416709658826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772035178550971731, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126039966297615739, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_Name
+      value: EnemyTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419632358280817792, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419632358280817792, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b602f77d3ea42724ea3c2c7b581fa3d5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 6372522003226944106}
+  - {fileID: 8401848416709658826}
   - {fileID: 666879437}
   - {fileID: 1076605363}
   - {fileID: 447891330395452125}
