@@ -15,7 +15,6 @@ namespace Game
         {
             moveDestination = new Vector2((Random.value - 0.5f) * horizontalMoveRange,
                 (Random.value - 0.5f) * verticalMoveRange);
-            
             AdjustOrientation();
             isMoving = true;
         }
@@ -25,7 +24,6 @@ namespace Game
             if (isMoving)
             {
                 body.MovePosition(body.position + (moveDestination-body.position) * (patrolSpeed * Time.fixedDeltaTime));
-                
             }
             animator.SetFloat("speed",body.velocity.magnitude);
             animator.SetBool("hasTarget",targetPlayer!=null);
@@ -38,7 +36,6 @@ namespace Game
             if (sprite.transform.localScale.x < 0)
             {
                 Vector3 oldScale = atk.transform.localScale;
-                
                 // horizontally flip
                 atk.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
             }
@@ -82,6 +79,7 @@ namespace Game
                 float distance = Mathf.Max(Random.value,0.3f) * attackRange;
                 moveDestination = targetPlayer.transform.position;
                 moveDestination += distance * (new Vector2(Mathf.Cos(angle),Mathf.Sin(angle)));
+                AdjustOrientation();
                 isMoving = true;
             }
             else

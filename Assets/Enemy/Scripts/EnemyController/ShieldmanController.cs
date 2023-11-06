@@ -34,10 +34,5 @@ public class ShieldmanController : EnemyController
             atk.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
-
-    public override void OnDrawGizmos()
-    {
-        // Vector3 center = transform.position + Vector3.right * attackOffset;
-        // Gizmos.DrawCube(center,attackRange);
-    }
+    
 }

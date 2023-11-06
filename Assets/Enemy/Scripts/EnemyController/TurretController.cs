@@ -21,30 +21,10 @@ namespace Game
                     
                 // horizontally flip
                 atkLeft.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
-                
-                atkLeft.GetComponent<Rigidbody2D>().AddForce(Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
-                atkRight.GetComponent<Rigidbody2D>().AddForce(Vector2.right * bulletSpawnForce,ForceMode2D.Impulse);
                 yield return new WaitForSeconds(0.1f);
             }
 
         }
-
-        public override void Patrol()
-        {
-            // don't move
-        }
-        
-
-        public override void Scout()
-        {
-            // don't move
-        }
-
-        public override void PrepareAttack()
-        {
-            Attack();
-        }
-
 
     }
 }

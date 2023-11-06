@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SoldierController : EnemyController
 {
-
     public override IEnumerator AttackOneShot(int i)
     {
         yield return new WaitForSeconds(attackTime);
@@ -19,7 +18,5 @@ public class SoldierController : EnemyController
         {
             atk.GetComponent<SpriteRenderer>().flipX = true;
         }
-        atk.GetComponent<Rigidbody2D>().AddForce(facing==Game.Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
-        atk.transform.parent = transform;
     }
 }

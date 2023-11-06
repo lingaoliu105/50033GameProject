@@ -21,7 +21,6 @@ namespace Game
     }
     public partial class EnemyController : StateController
     {
-        public GameConstants gameConstants;
         protected float hp;
         public float maxHP = 100;
         public float dieWaitTime = 0.8f;
@@ -69,8 +68,7 @@ namespace Game
             yield return new WaitForSeconds(dieWaitTime);
             Destroy(gameObject);
         }
-
-
+        
         public void TakeDamage(int damage) {
             hp -= damage;
             healthBar.value = hp;
@@ -82,11 +80,7 @@ namespace Game
                 HitFlash();
             }
         }
-
-        public void PassAway() {
-            Destroy(gameObject);
-        }
-
+        
         // this should be added to the GameRestart EventListener as callback
         public void GameRestart() {
             // set the start state

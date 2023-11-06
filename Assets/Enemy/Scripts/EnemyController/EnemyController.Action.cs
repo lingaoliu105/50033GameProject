@@ -25,21 +25,11 @@ namespace Game {
         public float patrolRangeL;
         public float patrolRangeR;
         public float patrolSpeed = 3.0f;
-        public float bulletSpawnForce = 3.0f;
         public float scoutSpeed = 3.5f;
 
         public virtual IEnumerator AttackOneShot(int i)
         {
-            yield return new WaitForSeconds(attackTime);
-            GameObject atk = Instantiate(attackTemplates[i], transform.position, Quaternion.identity);
-            if (facing == Facings.Left)
-            {
-                Vector3 oldScale = atk.transform.localScale;
-                
-                // horizontally flip
-                atk.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
-            }
-            atk.GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
+            yield return null;
         }
 
         public virtual void Patrol()
@@ -78,7 +68,7 @@ namespace Game {
 
         public virtual bool AttackCanReach()
         {
-            return targetPlayer && MathF.Abs(targetPlayer.transform.position.x - transform.position.x) < 2;
+            return true;
         }
 
         public virtual void PrepareAttack()
@@ -88,14 +78,14 @@ namespace Game {
             body.velocity = Vector2.zero;
         }
 
-        public virtual bool HasTarget()
+        public bool HasTarget()
         {
             return targetPlayer != null;
         }
 
         public virtual void StartIdle()
         {
-            animator.SetTrigger("idle");
+            
         }
 
         public virtual void StartPatrol()
@@ -110,7 +100,7 @@ namespace Game {
 
         public virtual void StartScout()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
