@@ -45,7 +45,7 @@ namespace Game
             }
         }
 
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             animator.SetFloat("xSpeed", MathF.Abs(body.velocity.x));
             sprite.flipX = facing != Facings.Right;
@@ -53,9 +53,9 @@ namespace Game
 
         public override void Start() {
             base.Start();
-            sprite = GetComponent<SpriteRenderer>();
+            sprite = GetComponentInChildren<SpriteRenderer>();
             bodyCollider = GetComponent<CapsuleCollider2D>();
-            animator = GetComponent<Animator>();
+            animator = GetComponentInChildren<Animator>();
             body = GetComponent<Rigidbody2D>();
             healthBar = GetComponentInChildren<Slider>();
             hp = maxHP;

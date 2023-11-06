@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d54db7d69901147a2c66ea1a906421, type: 3}
+  m_Name: WatcherWarning
+  m_EditorClassIdentifier: 
+  setupActions: []
+  actions: []
+  eventTriggeredActions: []
+  exitActions: []
+  transitions:
+  - decision: {fileID: 11400000, guid: 5efbbb677258c404183593f82b2ec5ab, type: 2}
+    trueState: {fileID: 11400000, guid: de3fa5c5eb81af74d81a721551f49447, type: 2}
+    falseState: {fileID: 11400000, guid: 40cc4fa238e690940bac302b035122ac, type: 2}
+  state: 0
+  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

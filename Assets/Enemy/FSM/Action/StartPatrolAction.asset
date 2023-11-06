@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fcd51cf0f9aea24880583d70a5db509, type: 3}
+  m_Script: {fileID: 11500000, guid: d6f5b30efd104454a2196c37c20e5f8d, type: 3}
   m_Name: StartPatrolAction
   m_EditorClassIdentifier: 
-  patrolSpeed: -1
-  patrolRangeD: -5
-  patrolRangeL: -10
-  patrolRangeR: 10
-  patrolRangeU: 5

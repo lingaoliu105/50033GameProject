@@ -2,8 +2,8 @@
 
 namespace Game
 {
-    [CreateAssetMenu(menuName = "Enemy/Petrol")]
-    public class PetrolAction : Action
+    [CreateAssetMenu(menuName = "Enemy/Patrol")]
+    public class PatrolAction : Action
     {
         public override void Act(StateController controller)
         {

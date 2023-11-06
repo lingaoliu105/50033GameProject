@@ -7,6 +7,7 @@ namespace Game
 {
     public class TurretController : EnemyController
     {
+
         public override IEnumerator AttackOneShot(int i)
         {
             yield return new WaitForSeconds(attackTime);
@@ -41,8 +42,9 @@ namespace Game
 
         public override void PrepareAttack()
         {
-            
             Attack();
         }
+
+
     }
 }

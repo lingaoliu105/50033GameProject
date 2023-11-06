@@ -18,6 +18,7 @@ namespace Game
         protected Rigidbody2D body;
         protected Collider2D collider;
         public GameObject hitEffect;
+        public float speed = 2f;
         public virtual void Start()
         {
             attackCount = 0;
@@ -28,6 +29,11 @@ namespace Game
             
             // StartCoroutine(WaitAndDestroy());
             // TODO: alternatively, destroy when exceeding the viewport
+        }
+
+        private void Update()
+        {
+            body.MovePosition(transform.position + transform.right * (transform.localScale.x * (Time.deltaTime * speed)));
         }
 
         public IEnumerator WaitAndDestroy()

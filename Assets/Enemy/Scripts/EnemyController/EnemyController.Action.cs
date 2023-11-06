@@ -40,7 +40,6 @@ namespace Game {
                 atk.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
             }
             atk.GetComponent<Rigidbody2D>().AddForce(facing==Facings.Right ? Vector2.right * bulletSpawnForce : Vector2.left * bulletSpawnForce,ForceMode2D.Impulse);
-            atk.transform.parent = transform;
         }
 
         public virtual void Patrol()
@@ -92,6 +91,26 @@ namespace Game {
         public virtual bool HasTarget()
         {
             return targetPlayer != null;
+        }
+
+        public virtual void StartIdle()
+        {
+            animator.SetTrigger("idle");
+        }
+
+        public virtual void StartPatrol()
+        {
+            
+        }
+
+        public virtual bool ReachedDestination()
+        {
+            return false;
+        }
+
+        public virtual void StartScout()
+        {
+            throw new NotImplementedException();
         }
     }
 }
