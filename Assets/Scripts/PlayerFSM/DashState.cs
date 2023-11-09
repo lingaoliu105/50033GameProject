@@ -26,6 +26,13 @@ namespace Game {
             player.Speed = newSpeed;
 
             DashDir = dir;
+            if (DashDir.y == 0 && player.DashStartedOnGround) {
+                player.PlayAnimation("Roll");
+            }
+            else
+            {
+                 player.PlayAnimation("Dash");
+            }
             if (DashDir.x != 0)
                 player.Facing = (Facings)Math.Sign(DashDir.x);
             player.PlayDashEffect(player.Position, DashDir);
@@ -57,6 +64,7 @@ namespace Game {
             player.Speed = Vector2.zero;
             DashDir = Vector2.zero;
             player.DashStartedOnGround = player.OnGround;
+            
         }
 
         public override void OnEnd() {

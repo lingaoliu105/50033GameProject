@@ -15,6 +15,7 @@ namespace Game {
 
     public struct VirtualButton {
         private KeyCode key;
+        private KeyCode overloadKey;
         private float bufferTime;
         public float buffer { get => this.bufferCounter; }
         private bool consumed;
@@ -23,27 +24,31 @@ namespace Game {
         }
         public VirtualButton(KeyCode key, float bufferTime) {
             this.key = key;
+            this.overloadKey = KeyCode.None;
             this.bufferTime = bufferTime;
             this.consumed = false;
             this.bufferCounter = 0f;
+        }
+        public void Overload(KeyCode key) { 
+            this.overloadKey = key;
         }
         public void ConsumeBuffer() {
             this.bufferCounter = 0f;
         }
         public bool Pressed() {
-            return UnityEngine.Input.GetKeyDown(key) || (!this.consumed && (this.bufferCounter > 0f));
+            return UnityEngine.Input.GetKeyDown(key) || UnityEngine.Input.GetKeyDown(overloadKey) || (!this.consumed && (this.bufferCounter > 0f));
         }
         public bool Checked() {
-            return UnityEngine.Input.GetKey(key);
+            return UnityEngine.Input.GetKey(key)|| UnityEngine.Input.GetKey(overloadKey);
         }
         public void Update(float deltaTime) {
             this.consumed = false;
             this.bufferCounter -= deltaTime;
             bool flag = false;
-            if (UnityEngine.Input.GetKeyDown(key)) {
+            if (UnityEngine.Input.GetKeyDown(key) || UnityEngine.Input.GetKeyDown(overloadKey)) {
                 this.bufferCounter = this.bufferTime;
                 flag = true;
-            } else if (UnityEngine.Input.GetKey(key)) {
+            } else if (UnityEngine.Input.GetKey(key) || UnityEngine.Input.GetKey(overloadKey)) {
                 flag = true;
             }
             if (!flag) {
@@ -56,8 +61,20 @@ namespace Game {
     public static class GameInput {
         public static VirtualButton JumpButton = new VirtualButton(KeyCode.Space, 0.08f);
         public static VirtualButton DashButton = new VirtualButton(KeyCode.L, 0.08f);
+        public static VirtualButton AttackButton = new VirtualButton(KeyCode.J, 0.1f);
+        public static VirtualButton HeavyAttackButton = new VirtualButton(KeyCode.K, 0.1f);
+        public static VirtualButton Sandevistan = new VirtualButton(KeyCode.T);
+        public static VirtualButton GrabButton = new VirtualButton(KeyCode.LeftShift);
         public static virtualJoystick Joystick = new virtualJoystick();
         public static Vector2 LastAim;
+
+        public static void Init() {
+            JumpButton.Overload(KeyCode.Joystick1Button0);
+            DashButton.Overload(KeyCode.Joystick1Button5);
+            AttackButton.Overload(KeyCode.Joystick1Button2);
+            HeavyAttackButton.Overload(KeyCode.Joystick1Button3);
+            GrabButton.Overload(KeyCode.Joystick1Button4);
+        }
 
         public static void Update(float deltaTime) {
             JumpButton.Update(deltaTime);

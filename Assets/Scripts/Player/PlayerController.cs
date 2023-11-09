@@ -23,6 +23,10 @@ namespace Game {
         private bool wasOnGround;
 
         public JumpCheck JumpCheck { get; set; }
+        public WallBoost WallBoost { get; set; }
+
+        public int ForceMoveX { get; set; }
+        public float ForceMoveXTimer { get; set; }
         [SerializeField]
         private float varJumpTimer = 0f;
         public float VarJumpTimer { get => varJumpTimer; set => varJumpTimer = value; }
@@ -42,6 +46,11 @@ namespace Game {
         private int moveY;
         public int MoveY { get => moveY; }
 
+        public float ClimbNoMoveTimer { get; set; } // Stop moving for a bit after climbing to avoid regrabbing the same wall
+
+        public int HopWaitX;   // If you climb hop onto a moving solid, snap to beside it until you get above it
+        public float HopWaitXSpeed;
+
         public object Holding => null;
 
         private SpriteRenderer spriteRenderer;
@@ -55,6 +64,9 @@ namespace Game {
         public int lastDashes;
         private float wallSpeedRetentionTimer; // If you hit a wall, start this timer. If coast is clear within this timer, retain h-speed
         private float wallSpeedRetained;
+
+
+
 
 
         public float DashCooldownTimer { get => dashCooldownTimer; set => dashCooldownTimer = value; }
@@ -73,7 +85,8 @@ namespace Game {
             this.stateMachine.AddState(new NormalState(this));
             this.stateMachine.AddState(new DashState(this));
             this.stateMachine.AddState(new ClimbState(this));
-
+            this.stateMachine.AddState(new AttackState(this));
+            this.stateMachine.AddState(new ComboState(this));
             this.Facing = Facings.Right;
             this.LastAim = Vector2.right;
 
@@ -81,7 +94,9 @@ namespace Game {
             collider = normalHitbox;
             Application.targetFrameRate = 60;
             deltaTime = 1f / frameRate;
+            GameInput.Init();
             this.JumpCheck = new JumpCheck(this, Constants.EnableJumpGrace);
+            this.WallBoost = new WallBoost(this);
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
         #region Debug
@@ -91,7 +106,7 @@ namespace Game {
         private float ButtonBufferTime = 0;
         [SerializeField]
         private bool CanJump = false;
-        private void OnDestroy() {
+/*        private void OnDestroy() {
             outputToFile();
         }
         List<Vector2> debugPoints = new List<Vector2>();
@@ -115,7 +130,7 @@ namespace Game {
             foreach (var item in debugJump) {
                 System.IO.File.AppendAllText(path, item.ToString() + "\n");
             }
-        }
+        }*/
         #endregion
 
 
@@ -127,6 +142,11 @@ namespace Game {
         void Update() {
             
             GameInput.Update(deltaTime);
+
+            if (CanSandevistan) {
+               Sandevistan();
+            }
+
             JoystickValue = GameInput.Joystick.Value;
             ButtonBufferTime = GameInput.JumpButton.buffer;
 
@@ -134,8 +154,15 @@ namespace Game {
                 varJumpTimer -= deltaTime;
             }
 
+
             // move x
-            moveX = Math.Sign(JoystickValue.x);
+            if (ForceMoveXTimer > 0) {
+                ForceMoveXTimer -= deltaTime;
+                this.moveX = ForceMoveX;
+            } else {
+                moveX = Math.Sign(JoystickValue.x);
+            }
+            
             if (moveX != 0) {
                 Facing = (Facings)moveX;
             }
@@ -148,6 +175,15 @@ namespace Game {
                 this.onGround = CheckGround();//��ײ������
             } else {
                 this.onGround = false;
+            }
+
+            //Wall Slide
+            if (this.WallSlideDir != 0) {
+                this.WallSlideTimer = Math.Max(this.WallSlideTimer - deltaTime, 0);
+                this.WallSlideDir = 0;
+            }
+            if (this.onGround && this.stateMachine.State != (int)EActionState.Climb) {
+                this.WallSlideTimer = Constants.WallSlideTime;
             }
 
             //Dash
@@ -163,18 +199,22 @@ namespace Game {
 
             stateMachine.Update(deltaTime);
 
+            //Wall Boost, ����������WallJump
+            this.WallBoost?.Update(deltaTime);
+
             //��Ծ���
             JumpCheck.Update(deltaTime);
 
             CanJump = JumpCheck.AllowJump();
             UpdateColliderX(Speed.x*deltaTime);
             UpdateColliderY(Speed.y*deltaTime);
-            if (lastTime != Time.fixedTime) {
+/*            if (lastTime != Time.fixedTime) {
                 debugPoints.Add(Speed);
                 debugTime.Add(Time.fixedTime);
                 lastTime = Time.fixedTime;
                 debugJump.Add(varJumpTimer);
-            }
+            }*/
+            transform.position = this.Position + collider.position;
             UpdateRender();
         }
 
@@ -183,14 +223,16 @@ namespace Game {
         }
 
         public void Jump() { 
-            // TODO: Wall Jump
             GameInput.JumpButton.ConsumeBuffer();
             JumpCheck.ResetTimer();
+            WallSlideTimer = Constants.WallSlideTime;
+            WallBoost?.ResetTime();
             varJumpTimer = Constants.VarJumpTime;
             Speed.x += Constants.JumpSpeed * moveX;
             Speed.y = Constants.JumpSpeed;
             varJumpSpeed = Speed.y;
             // TODO: Play Jump Animation and Sound and Particle
+            PlayAnimation("Jump");
         }
 
         public bool Ducking {
@@ -240,7 +282,6 @@ namespace Game {
                 return GameInput.DashButton.Pressed() && DashCooldownTimer <= 0 && dashes > 0;
             }   
         }
-
         public EActionState Dash() {
             //wasDashB = Dashes == 2;
             this.dashes = Math.Max(0, this.dashes - 1);
@@ -256,6 +297,61 @@ namespace Game {
                 return false;
         }
 
+        private bool inSandevistan = false;
+        public bool CanSandevistan {
+            get {
+                return GameInput.Sandevistan.Pressed()&& !inSandevistan;
+            }
+        }
+
+        public void Sandevistan() {
+            deltaTime = 1f / 120f;
+            EffectManager.Instance.ToggleChromaticAberration(true);
+            inSandevistan = true;
+            StartCoroutine(JustForTestCountDown());
+        }
+
+        private IEnumerator JustForTestCountDown() {            
+               yield return new WaitForSeconds(5f);
+            deltaTime = 1f / 60f;
+            EffectManager.Instance.ToggleChromaticAberration(false);
+            inSandevistan = false;
+        }
+
+        public void WallJump(int dir) {
+            GameInput.JumpButton.ConsumeBuffer();
+            Ducking = false;
+            JumpCheck?.ResetTimer();
+            varJumpTimer = Constants.VarJumpTime;
+            WallSlideTimer = Constants.WallSlideTime;
+            WallBoost?.ResetTime();
+            if (moveX != 0) {
+                this.ForceMoveX = dir;
+                this.ForceMoveXTimer = Constants.WallJumpForceTime;
+            }
+            PlayAnimation("Jump");
+            Speed.x = Constants.WallJumpHSpeed * dir;
+            Speed.y = Constants.JumpSpeed;
+            //TODO ���ǵ��ݶ��ٶȵļӳ�
+            //Speed += LiftBoost;
+            varJumpSpeed = Speed.y;
+
+            //ǽ������Ч����
+
+        }
+
+        
+
+        public void ClimbJump() {
+            if (!onGround) {
+                //Stamina -= ClimbJumpCost;
+
+                //sweatSprite.Play("jump", true);
+                //Input.Rumble(RumbleStrength.Light, RumbleLength.Medium);
+            }
+            Jump();
+            WallBoost?.Active();
+        }
 
     }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -38,6 +39,86 @@ namespace Game {
             return Physics2D.OverlapBox(origion + dir * (dist + DEVIATION), collider.size, 0, groundMask);
         }
 
+        public bool ClimbHopBlockedCheck() {
+            if (CollideCheck(Position, Vector2.up, 0.6f))
+                return true;
+            return false;
+        }
+
+        public bool OverlapPoint(Vector2 position) {
+            return Physics2D.OverlapPoint(position, groundMask);
+        }
+
+        public bool ClimbCheck(int dir, float yAdd = 0) {
+            //获取当前的碰撞体
+            Vector2 origion = this.Position + collider.position;
+            if (Physics2D.OverlapBox(origion + Vector2.up * (float)yAdd + Vector2.right * dir * (Constants.ClimbCheckDist * 0.1f + DEVIATION), collider.size, 0, groundMask)) {
+                return true;
+            }
+            return false;
+        }
+
+        public bool SlipCheck(float addY = 0) {
+            int direct = Facing == Facings.Right ? 1 : -1;
+            Vector2 origin = this.Position + collider.position + Vector2.up * collider.size.y / 2f + Vector2.right * direct * (collider.size.x / 2f + STEP);
+            Vector2 point1 = origin + Vector2.up * (-0.4f + addY);
+
+            if (Physics2D.OverlapPoint(point1, groundMask)) {
+                return false;
+            }
+            Vector2 point2 = origin + Vector2.up * (0.4f + addY);
+            if (Physics2D.OverlapPoint(point2, groundMask)) {
+                return false;
+            }
+            return true;
+        }
+
+        public RaycastHit2D CollideClimbHop(int dir) {
+            Vector2 origion = this.Position + collider.position;
+            RaycastHit2D hit = Physics2D.BoxCast(Position, collider.size, 0, Vector2.right * dir, DEVIATION, groundMask);
+            return hit;
+            //if (hit && hit.normal.x == -dir)
+            //{
+
+            //}
+        }
+
+        //攀爬时，向上吸附
+        public bool ClimbUpSnap() {
+            for (int i = 1; i <= Constants.ClimbUpCheckDist; i++) {
+                //检测上方是否存在可以攀爬的墙壁，如果存在则瞬移i个像素
+                float yOffset = i * 0.1f;
+                if (!CollideCheck(this.Position, Vector2.up, yOffset) && ClimbCheck((int)Facing, yOffset + DEVIATION)) {
+                    this.Position += Vector2.up * yOffset;
+                    Debug.Log($"======Climb Correct");
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void ClimbSnap() {
+            Vector2 origion = this.Position + collider.position;
+            Vector2 dir = Vector2.right * (int)this.Facing;
+            RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, dir, Constants.ClimbCheckDist * 0.1f + DEVIATION, groundMask);
+            if (hit) {
+                //如果发生碰撞,则移动距离
+                this.Position += dir * Mathf.Max((hit.distance - DEVIATION), 0);
+            }
+            //for (int i = 0; i < Constants.ClimbCheckDist; i++)
+            //{
+            //    Vector2 dir = Vector2.right * (int)ctx.Facing;
+            //    if (!ctx.CollideCheck(ctx.Position, dir))
+            //    {
+            //        ctx.AdjustPosition(dir * 0.1f);
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
+        }
+
         public void PlayDuck(bool enable) {
             if (enable) {
                 //SpriteControl.Scale(new Vector2(1.4f, .6f));
@@ -48,6 +129,17 @@ namespace Game {
                 }
                 //SpriteControl.SetSpriteScale(NORMAL_SPRITE_SCALE);
             }
+        }
+
+        //墙壁上跳检测
+        public bool WallJumpCheck(int dir) {
+            return ClimbBoundsCheck(dir) && this.CollideCheck(Position, Vector2.right * dir, Constants.WallJumpCheckDist);
+        }
+
+        //根据整个关卡的边缘框进行检测,确保人物在关卡的框内.
+        public bool ClimbBoundsCheck(int dir) {
+            return true;
+            //return base.Left + (float)(dir * 2) >= (float)this.level.Bounds.Left && base.Right + (float)(dir * 2) < (float)this.level.Bounds.Right;
         }
 
         private void UpdateColliderX(float distX) {
@@ -131,14 +223,67 @@ namespace Game {
             Vector2 origion = this.Position + collider.position;
             Vector2 direct = Math.Sign(distX) > 0 ? Vector2.right : Vector2.left;
 
-            if (true) { }
+            if ((this.stateMachine.State == (int)EActionState.Dash)) {
+                if (onGround && DuckFreeAt(Position + Vector2.right * distX)) {
+                    Ducking = true;
+                    return true;
+                } else if (this.Speed.y == 0 && this.Speed.x != 0) {
+                    for (int i =1; i<= Constants.DashCornerCorrection; i++) {
+                        for (int j = 1; j >= -1; j -= 2) {
+                            if (!CollideCheck(Position + new Vector2(0, j * i * 0.1f), direct, Mathf.Abs(distX))) {
+                                this.Position += new Vector2(distX, j * i * 0.1f);
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
             return false;
         }
         private bool CorrectY(float distY) {
             Vector2 origion = this.Position + collider.position;
             Vector2 direct = Math.Sign(distY) > 0 ? Vector2.up : Vector2.down;
-
-            if (true) { }
+            if (this.Speed.y < 0) {
+                if ((this.stateMachine.State == (int)EActionState.Dash) && !DashStartedOnGround) {
+                    if (this.Speed.x <= 0) {
+                        for (int i = -1; i >= -Constants.DashCornerCorrection; i--) {
+                            float step = (Mathf.Abs(i * 0.1f) + DEVIATION);
+                            if (!CheckGround(new Vector2(-step, 0))) {
+                                this.Position += new Vector2(-step, distY);
+                                return true;
+                            }
+                        }
+                    }
+                    if (this.Speed.x >= 0) {
+                        for (int i = 1; i <= Constants.DashCornerCorrection; i++) {
+                            float step = (Mathf.Abs(i * 0.1f) + DEVIATION);
+                            if (!CheckGround(new Vector2(step, 0))) {
+                                this.Position += new Vector2(step, distY);
+                                return true;
+                            }
+                        }
+                    }
+                }
+            } else if (this.Speed.y > 0) {
+                if (this.Speed.x <= 0) {
+                    for (int i = 1; i <= Constants.UpwardCornerCorrection; i++) {
+                        RaycastHit2D hit = Physics2D.BoxCast(origion + new Vector2(-i * 0.1f, 0), collider.size, 0, direct, Mathf.Abs(distY) + DEVIATION, groundMask);
+                        if (!hit) {
+                            this.Position += new Vector2(-i * 0.1f, 0);
+                            return true;
+                        }
+                    }
+                }
+                if (this.Speed.x >= 0) {
+                    for (int i = 1; i <= Constants.UpwardCornerCorrection; i++) {
+                        RaycastHit2D hit = Physics2D.BoxCast(origion + new Vector2(i * 0.1f, 0), collider.size, 0, direct, Mathf.Abs(distY) + DEVIATION, groundMask);
+                        if (!hit) {
+                            this.Position += new Vector2(i * 0.1f, 0);
+                            return true;
+                        }
+                    }
+                }
+            }
             return false;
         }
 

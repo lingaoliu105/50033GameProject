@@ -10,20 +10,44 @@ namespace Game {
         public Vector2 position;
         public Facings facing;
         public SpriteRenderer spriteRenderer;
+        private Vector2 offset;
         public Vector2 cameraPos;
+        private Animator animator;
+        public float SpeedX;
+        public float SpeedY;
+        public bool Land;
         public void SetSprite(Sprite sprite) {
             
         }
         public void Start() {
             spriteRenderer = GetComponent<SpriteRenderer>();
+            animator = GetComponent<Animator>();
         }
         public void Update() {
-            transform.position = position;
+            
+            //transform.position = position;
             if (facing == Facings.Left) {
                 spriteRenderer.flipX = true;        
             } else {
                 spriteRenderer.flipX = false;
             }
+            animator.SetFloat("SpeedX", SpeedX);
+            animator.SetFloat("SpeedY", SpeedY);
+            animator.SetBool("Land", Land);
         }
+
+        public void SetTrigger(String trigger) {
+            animator.SetTrigger(trigger);
+        }
+
+        public void SetFloat(String name, float value) {
+            animator.SetFloat(name, value);
+        }
+
+        public void SetBool(String name, bool value) {
+            animator.SetBool(name, value);
+        }
+
+
     }
 }

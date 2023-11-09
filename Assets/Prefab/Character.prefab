@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2847428204876177734}
   - component: {fileID: 718797631069592187}
   - component: {fileID: 2165716296215339369}
+  - component: {fileID: 6459493042798202839}
   m_Layer: 0
   m_Name: PlayerRender
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 276743571348461424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.34, y: 1.57, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,6 +50,9 @@ MonoBehaviour:
   facing: 0
   spriteRenderer: {fileID: 2165716296215339369}
   cameraPos: {x: 0, y: 0}
+  SpeedX: 0
+  SpeedY: 0
+  Land: 0
 --- !u!212 &2165716296215339369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: -509326069
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1553310312, guid: 0f89cb03f5b9c2544b69337ebdb25451, type: 3}
+  m_Sprite: {fileID: -362520094350843435, guid: 8c87102f7e464494599f1e6229d64a79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +104,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
+--- !u!95 &6459493042798202839
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276743571348461424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 994f3b68c36612040b8841b5699236dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3779697531838084338
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3779697531838084338}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -154,6 +179,8 @@ MonoBehaviour:
   Speed: {x: 0, y: 0}
   onGround: 0
   varJumpTimer: 0
+  HopWaitX: 0
+  HopWaitXSpeed: 0
   launched: 0
   launchedTimer: 0
   dashes: 0
