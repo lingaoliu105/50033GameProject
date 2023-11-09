@@ -12,6 +12,9 @@ namespace Game {
         Normal,
         Dash,
         Climb,
+        Attack,
+        Combo,
+        Hold,
         Size,
     }
 

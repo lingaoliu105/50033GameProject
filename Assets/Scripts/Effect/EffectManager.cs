@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 namespace Game {
     public class EffectManager: Singleton<EffectManager> {
         public SceneCamera gameCamera;
+        public Volume volume; // 引用包含Volume组件的游戏对象
         private float freezeTime;
 
         public void Update() {
@@ -35,6 +39,47 @@ namespace Game {
             } else {
                 Time.timeScale = 1;
             }
+        }
+
+        
+        private ChromaticAberration chromaticAberration;
+
+        void Start() {
+            // 获取Chromatic Aberration效果
+            if (volume.profile.TryGet(out ChromaticAberration ca)) {
+                chromaticAberration = ca;
+                chromaticAberration.active = false;
+            }
+        }
+
+        public void ToggleChromaticAberration(bool isEnabled) {
+            if (chromaticAberration != null) {
+                if(isEnabled) {
+                    chromaticAberration.active = true;
+                } else {
+                    chromaticAberration.active = false;
+                }
+            }
+        }
+
+        private IEnumerator ChromaticAbberationOn(float duration) {
+            float timer = 0f;
+            chromaticAberration.active = true;
+            while (timer < duration) {
+                timer += Time.deltaTime;
+                chromaticAberration.intensity.value = Mathf.Lerp(0f, 1f, timer / duration);
+                yield return null;
+            }
+        }
+
+        private IEnumerator ChomaticAbberationOff(float duration) {
+            float timer = 0f;
+            while (timer < duration) {
+                timer += Time.deltaTime;
+                chromaticAberration.intensity.value = Mathf.Lerp(1f, 0f, timer / duration);
+                yield return null;
+            }
+            chromaticAberration.active = false;
         }
 
     }

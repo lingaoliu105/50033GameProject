@@ -11,14 +11,30 @@ namespace Game {
         public static Vector2 DUCK_SPRITE_SCALE = new Vector2(1F, 0.75f);
         public Vector2 cameraPos;
 
+
         public void PlayDashEffect(Vector3 position, Vector2 dir) {
             EffectManager.Instance.CameraShake(dir);
+        }
+
+        public void PlayAnimation(String trigger) {
+            PlayerSpriteRenderer.Instance.SetTrigger(trigger);
+        }
+
+        public void SetFloat(String name, float value) {
+            PlayerSpriteRenderer.Instance.SetFloat(name, value);
+        }
+
+        public void SetBool(String name, bool value) {
+            PlayerSpriteRenderer.Instance.SetBool(name, value);
         }
 
         public void UpdateRender() {
             PlayerSpriteRenderer.Instance.position = Position + collider.position;
             PlayerSpriteRenderer.Instance.facing = Facing;
             PlayerSpriteRenderer.Instance.cameraPos = cameraPos;
+            PlayerSpriteRenderer.Instance.SpeedX = Mathf.Abs(Speed.x);
+            PlayerSpriteRenderer.Instance.SpeedY = Speed.y;
+            PlayerSpriteRenderer.Instance.Land = OnGround;
         }
     }
 }

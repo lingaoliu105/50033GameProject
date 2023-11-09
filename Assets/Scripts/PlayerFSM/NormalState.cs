@@ -27,7 +27,26 @@ namespace Game {
         }
 
         public override EActionState Update(float deltaTime) {
-            
+            #region 攀爬
+            //Climb
+            if (GameInput.GrabButton.Checked() && !player.Ducking) {
+                //Climbing
+                if (player.Speed.y <= 0 && Math.Sign(player.Speed.x) != -(int)player.Facing) {
+                    if (player.ClimbCheck((int)player.Facing)) {
+                        player.Ducking = false;
+                        return EActionState.Climb;
+                    }
+                    //非下坠情况，需要考虑向上攀爬吸附
+                    if (player.MoveY > -1) {
+                        bool snapped = player.ClimbUpSnap();
+                        if (snapped) {
+                            player.Ducking = false;
+                            return EActionState.Climb;
+                        }
+                    }
+                }
+            }
+            #endregion
             #region 鸭子
             if (player.Ducking) {
                 if (player.OnGround && player.MoveY != -1) {
@@ -45,7 +64,8 @@ namespace Game {
             #endregion
             #region 地面
             if (player.Ducking && player.OnGround) {
-                player.Speed.x = Mathf.MoveTowards(player.Speed.x, Constants.DuckSpeed, Constants.DuckFriction * deltaTime);
+                
+                player.Speed.x = Mathf.MoveTowards(player.Speed.x, Constants.DuckSpeed * this.player.MoveX, Constants.DuckFriction * deltaTime);
             } 
             else {
                 float mult = player.OnGround ? 1 : Constants.AirMult;
@@ -72,9 +92,22 @@ namespace Game {
             }
             if (!player.OnGround) { 
                 float max = this.player.MaxFall;
+                if ((player.MoveX == (int)player.Facing || (player.MoveX == 0 && GameInput.GrabButton.Checked())) && player.MoveY != -1) {
+                    //判断是否向下做Wall滑行
+                    if (player.Speed.y <= 0 && player.WallSlideTimer > 0 && player.ClimbBoundsCheck((int)player.Facing) && player.CollideCheck(player.Position, Vector2.right * (int)player.Facing) && player.CanUnDuck) {
+                        player.Ducking = false;
+                        player.WallSlideDir = (int)player.Facing;
+                    }
+                    if (player.WallSlideDir != 0) {
+                        max = Mathf.Lerp(Constants.MaxFall, Constants.WallSlideStartMax, player.WallSlideTimer / Constants.WallSlideTime);
+                        //TODO: effect
+                        player.PlayAnimation("Slip");
+                    }
+                }
+
+                
                 float mult = (Math.Abs(player.Speed.y) < Constants.HalfGravThreshold && (GameInput.JumpButton.Checked())) ? .5f : 1f;
                 player.Speed.y = Mathf.MoveTowards(player.Speed.y, max, Constants.Gravity * mult * deltaTime);
-                
             }
             if (player.VarJumpTimer > 0) {
                 if (GameInput.JumpButton.Checked()) {
@@ -95,9 +128,30 @@ namespace Game {
             if (GameInput.JumpButton.Pressed()) {
                 if (this.player.JumpCheck.AllowJump()) {
                     this.player.Jump();
+                } else if (player.CanUnDuck) { 
+                    if (player.WallJumpCheck(1)) {
+                        if (player.Facing == Facings.Right && GameInput.GrabButton.Checked()) {
+                            player.ClimbJump();
+                        } else {
+                            player.WallJump(-1);
+                        }
+                    } else if (player.WallJumpCheck(-1)) {
+                        if (player.Facing == Facings.Left && GameInput.GrabButton.Checked()) {
+                            player.ClimbJump();
+                        } else {
+                            player.WallJump(1);
+                        }
+                    }
                 }
             }
-            #endregion 
+            #endregion
+            #region 攻击
+            if (player.CanAttack) {
+                return player.AttackStart();
+            }
+
+            #endregion
+
 
             return EActionState.Normal;
         }
