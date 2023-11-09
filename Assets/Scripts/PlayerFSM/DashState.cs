@@ -35,7 +35,7 @@ namespace Game {
             }
             if (DashDir.x != 0)
                 player.Facing = (Facings)Math.Sign(DashDir.x);
-            player.PlayDashEffect(player.Position, DashDir);
+            //player.PlayDashEffect(player.Position, DashDir);
 
             for (int t = 0; t < Constants.DashTimeByFrames; t++) {
                 yield return null;
