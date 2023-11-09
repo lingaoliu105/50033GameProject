@@ -511,37 +511,15 @@ MonoBehaviour:
   currentAffectType: 0
   transitionStateChanged: 0
   stateTimeElapsed: 0
-  boundingBoxSize: {x: 1, y: 1}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
-  velocity: {x: 0, y: 0}
-  position: {x: 9, y: 3}
-  isGrounded: 1
-  playerInfo: {fileID: 11400000, guid: 7338dc7806dec9244bf5d09796bbd867, type: 2}
-  velocityX: 3
-  accelerationX: 20
-  decelerationX: 100
-  gravity: 1
-  jumpspeedY: 9
-  jumpspeedX: 3
-  jumpTimeByFrames: 9
-  velocityY: 3
-  forceMovementRate: 10
-  forceMovementMult: 0.15
-  moveDirectionX: 0
-  jump: 0
-  attackTimeByFrame: 60
-  dieTimeByFrame: 40
-  attackTemplate: []
+  attackTemplates: []
+  attackTime: 0.2
+  patrolRangeL: 0
+  patrolRangeR: 0
+  patrolSpeed: 3
+  scoutSpeed: 3.5
   maxHP: 30
-  currentHP: 30
-  autoAction: 0
-  advancedSettings:
-    enemyAutoPathingEdgeOffsetY: 1
-    enemyAutoPathingEdgeOffsetX: 0.6
-    enemyAutoPathingEdgeOffsetX2: 0.9
-  facing: 1
+  dieWaitTime: 0.8
+  targetPlayer: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +707,8 @@ MonoBehaviour:
   Speed: {x: 0, y: 0}
   onGround: 0
   varJumpTimer: 0
+  HopWaitX: 0
+  HopWaitXSpeed: 0
   launched: 0
   launchedTimer: 0
   dashes: 0
@@ -736,6 +716,7 @@ MonoBehaviour:
   JoystickValue: {x: 0, y: 0}
   ButtonBufferTime: 0
   CanJump: 0
+  cameraPos: {x: 0, y: 0}
 --- !u!4 &1512828754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5849425264585389538, guid: 64db652b099d5ae4c9c8054e22d12db8, type: 3}

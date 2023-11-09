@@ -4379,6 +4379,14 @@ PrefabInstance:
       value: Groundmid1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3420534058112363153, guid: 40374b9f29b1ec94e9d389a00a4c4afb, type: 3}
+      propertyPath: m_Size.x
+      value: 81.99862
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420534058112363153, guid: 40374b9f29b1ec94e9d389a00a4c4afb, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.030017853
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420534058112363153, guid: 40374b9f29b1ec94e9d389a00a4c4afb, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
       value: 2
       objectReference: {fileID: 0}
