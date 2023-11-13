@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1080044772870526456
 Transform:
   m_ObjectHideFlags: 0
@@ -300,12 +300,13 @@ MonoBehaviour:
   patrolRangeL: -10
   patrolRangeR: 10
   patrolSpeed: 3
-  bulletSpawnForce: 2
   scoutSpeed: 4
-  gameConstants: {fileID: 11400000, guid: 4328870e85eb1d346934613970e02842, type: 2}
   maxHP: 100
   dieWaitTime: 0.8
+  detectRange: 8
   targetPlayer: {fileID: 0}
+  playerPosition: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
 --- !u!1 &711019398530038361
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5639442264765894162
 Transform:
   m_ObjectHideFlags: 0

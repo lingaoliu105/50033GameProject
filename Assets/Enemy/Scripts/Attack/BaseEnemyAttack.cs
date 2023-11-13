@@ -48,14 +48,15 @@ namespace Game
 
         public void OnCollisionEnter2D(Collision2D collision)
         {
+            // TODO: manually call this method when player collides the bullet
             body.bodyType = RigidbodyType2D.Static;
             collider.enabled = false;
             Instantiate(hitEffect, transform.position + Vector3.up*0.1f, Quaternion.identity);
+            
             if (collision.gameObject.CompareTag("Player"))
             {
                 //Debug.Log("Deal " + attackDamage + " damage to " + collision.gameObject.name);
                 //collision.gameObject.GetComponent<PlayerController>().TakeDamage(attackDamage);
-
             }
             Destroy(gameObject);
         }

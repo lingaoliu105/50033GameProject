@@ -16,6 +16,7 @@ namespace Game {
         public AttackParam currentAttackParam;
         public AttackParam nextAttackParam;
         private int attackCount = 0;
+        GameObject attack;
         
 
         public EActionState AttackStart() {
@@ -24,6 +25,8 @@ namespace Game {
             PlayAnimation("Attack");
             GameInput.AttackButton.ConsumeBuffer();
             attackCount = 1;
+            attack = Instantiate(attack1, transform.position + attack1.transform.position, Quaternion.identity);
+            attack.transform.parent = transform;
             return EActionState.Attack;
         }
 
@@ -34,10 +37,15 @@ namespace Game {
                 // Combo
                 attackCount = 0;
                 PlayAnimation("Combo");
+                attack = Instantiate(attack2, transform.position + attack2.transform.position, Quaternion.identity);
+                attack.transform.parent = transform;
+
             } else {
                 // Back to start
                 attackCount = 1;
                 PlayAnimation("Attack");
+                attack = Instantiate(attack1, transform.position + attack1.transform.position, Quaternion.identity);
+                attack.transform.parent = transform;
             }
             GameInput.AttackButton.ConsumeBuffer();
             return EActionState.Attack;

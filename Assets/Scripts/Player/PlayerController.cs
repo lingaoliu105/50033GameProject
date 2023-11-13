@@ -56,9 +56,9 @@ namespace Game {
         private SpriteRenderer spriteRenderer;
 
 
-        public bool launched;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+        public bool launched;//Æô¶¯Ê±µÄÁ£×ÓÐ§¹û
         public float launchedTimer;
-        private float dashCooldownTimer;                //ï¿½ï¿½ï¿½ï¿½ï¿½È´Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù´Î³ï¿½ï¿½
+        private float dashCooldownTimer;                //³å´ÌÀäÈ´Ê±¼ä¼ÆÊýÆ÷£¬Îª0Ê±£¬¿ÉÒÔÔÙ´Î³å´Ì
         private float dashRefillCooldownTimer;          //
         public int dashes;
         public int lastDashes;
@@ -66,7 +66,8 @@ namespace Game {
         private float wallSpeedRetained;
 
 
-
+        public GameObject attack1;
+        public GameObject attack2;
 
 
         public float DashCooldownTimer { get => dashCooldownTimer; set => dashCooldownTimer = value; }
@@ -78,7 +79,7 @@ namespace Game {
         public int WallSlideDir { get; set; }
 
 
-        public Facings Facing { get; set; }  //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
+        public Facings Facing { get; set; }  //µ±Ç°³¯Ïò
 
         void Awake() {
             this.stateMachine = new FiniteStateMachine<BaseActionState>((int)EActionState.Size);
@@ -172,7 +173,7 @@ namespace Game {
             //Get ground
             wasOnGround = onGround;
             if (Speed.y <= 0) {
-                this.onGround = CheckGround();//ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                this.onGround = CheckGround();//Åö×²¼ì²âµØÃæ
             } else {
                 this.onGround = false;
             }
@@ -199,10 +200,10 @@ namespace Game {
 
             stateMachine.Update(deltaTime);
 
-            //Wall Boost, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WallJump
+            //Wall Boost, ²»ÏûºÄÌåÁ¦WallJump
             this.WallBoost?.Update(deltaTime);
 
-            //ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½
+            //ÌøÔ¾¼ì²é
             JumpCheck.Update(deltaTime);
 
             CanJump = JumpCheck.AllowJump();
@@ -250,7 +251,7 @@ namespace Game {
             }
         }
 
-        //ï¿½ï¿½âµ±Ç°ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½
+        //¼ì²âµ±Ç°ÊÇ·ñ¿ÉÒÔÕ¾Á¢
         public bool CanUnDuck {
             get { 
                 if (!Ducking)
@@ -320,6 +321,7 @@ namespace Game {
 
         public void WallJump(int dir) {
             GameInput.JumpButton.ConsumeBuffer();
+            PlayAnimation("Jump");
             Ducking = false;
             JumpCheck?.ResetTimer();
             varJumpTimer = Constants.VarJumpTime;
@@ -329,14 +331,14 @@ namespace Game {
                 this.ForceMoveX = dir;
                 this.ForceMoveXTimer = Constants.WallJumpForceTime;
             }
-            PlayAnimation("Jump");
+            
             Speed.x = Constants.WallJumpHSpeed * dir;
             Speed.y = Constants.JumpSpeed;
-            //TODO ï¿½ï¿½ï¿½Çµï¿½ï¿½Ý¶ï¿½ï¿½Ù¶ÈµÄ¼Ó³ï¿½
+            //TODO ¿¼ÂÇµçÌÝ¶ÔËÙ¶ÈµÄ¼Ó³É
             //Speed += LiftBoost;
             varJumpSpeed = Speed.y;
 
-            //Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½
+            //Ç½±ÚÁ£×ÓÐ§¹û¡£
 
         }
 

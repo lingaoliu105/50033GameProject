@@ -8,10 +8,10 @@ using UnityEngine;
 
 public class BaseEnemyAttack00 : MonoBehaviour{
     public int attackDamage = 1;
-    public int attackTimeByFrame = 60;
+    public int attackTimeByFrame = 18;
     public bool isAttacking = false;
     public bool destroyAfterAttack = false;
-    public bool disableAfterAttack = true;
+    public bool disableAfterAttack = false;
     public int rechargeAfterTimeByFrame = -1;
     public void Start() {
         isAttacking = true;
@@ -43,9 +43,8 @@ public class BaseEnemyAttack00 : MonoBehaviour{
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (isAttacking) {
-            if (collision.gameObject.tag == "Player") {
-                //Debug.Log("Deal " + attackDamage + " damage to " + collision.gameObject.name);
-                //collision.gameObject.GetComponent<PlayerController>().TakeDamage(attackDamage);
+            if (collision.gameObject.tag == "Enemy") {
+                Debug.Log("Deal " + attackDamage + " damage to " + collision.gameObject.name);
                 if (destroyAfterAttack) {
                     Destroy(gameObject);
                 }

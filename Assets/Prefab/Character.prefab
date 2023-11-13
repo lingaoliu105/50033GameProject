@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: -509326069
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -362520094350843435, guid: 8c87102f7e464494599f1e6229d64a79, type: 3}
+  m_Sprite: {fileID: 5131744734759156155, guid: 643addf3aa30a2a4b8e3d2345baa7377, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,6 +185,8 @@ MonoBehaviour:
   launchedTimer: 0
   dashes: 0
   lastDashes: 0
+  attack1: {fileID: 7684743406591134364, guid: 07a2125a935c05942b7914bb2cbe3cdd, type: 3}
+  attack2: {fileID: 7684743406591134364, guid: fc62fc7421abbee4eb996dac78f61a96, type: 3}
   JoystickValue: {x: 0, y: 0}
   ButtonBufferTime: 0
   CanJump: 0

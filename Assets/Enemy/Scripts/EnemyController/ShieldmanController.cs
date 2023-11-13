@@ -6,12 +6,12 @@ using UnityEngine;
 public class ShieldmanController : EnemyController
 {
     public Vector2 attackRange = new Vector2(0.3f, 1.2f);
-    public LayerMask playerMask;
     public float attackOffset = 0.3f;
     public override bool AttackCanReach()
     {
-        var raycastAll = Physics2D.OverlapBoxAll(GetAttackCenter(), attackRange, 0, playerMask);
-        return raycastAll.Length > 0;
+        float horizontalDiff = Mathf.Abs(GetPlayerPosition().x - transform.position.x);
+
+        return horizontalDiff < attackOffset + attackRange.x;
     }
 
     private Vector3 GetAttackCenter()

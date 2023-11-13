@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849425264585389538, guid: 64db652b099d5ae4c9c8054e22d12db8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5849425264585389538, guid: 64db652b099d5ae4c9c8054e22d12db8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -639,7 +639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849425264585389538, guid: 64db652b099d5ae4c9c8054e22d12db8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 5849425264585389538, guid: 64db652b099d5ae4c9c8054e22d12db8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -817,6 +817,10 @@ PrefabInstance:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 519420033}
+    - target: {fileID: 2042125705887212609, guid: ec34feca861af124aa9507f3d93d1434, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2042125705887212609, guid: ec34feca861af124aa9507f3d93d1434, type: 3}
       propertyPath: m_Enabled
       value: 1

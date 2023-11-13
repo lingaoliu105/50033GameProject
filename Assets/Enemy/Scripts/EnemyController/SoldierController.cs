@@ -16,7 +16,9 @@ public class SoldierController : EnemyController
         GameObject atk = Instantiate(attackTemplates[i], transform.position+offset, Quaternion.identity);
         if (facing == Game.Facings.Left)
         {
-            atk.GetComponent<SpriteRenderer>().flipX = true;
+            Vector3 oldScale = atk.transform.localScale;
+            // horizontally flip
+            atk.transform.localScale = new Vector3(-oldScale.x, oldScale.y, oldScale.z);
         }
     }
 }

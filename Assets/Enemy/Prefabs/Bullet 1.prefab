@@ -103,6 +103,7 @@ MonoBehaviour:
   attackDamage: 1
   attackTimeByFrame: 180
   hitEffect: {fileID: 5044690138862907110, guid: 55026943125d5224fb32d343eba2561f, type: 3}
+  speed: 4
 --- !u!50 &2885742957174774388
 Rigidbody2D:
   serializedVersion: 4

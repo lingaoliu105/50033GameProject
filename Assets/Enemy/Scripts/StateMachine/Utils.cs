@@ -113,7 +113,7 @@ public abstract class StateController : MonoBehaviour {
         return stateTimeElapsed >= duration;
     }
 
-    public void Update() {
+    public virtual void Update() {
         if (!isActive) return; // this is different from gameObject active, allow for separate control
         currentState.UpdateState(this);
     }

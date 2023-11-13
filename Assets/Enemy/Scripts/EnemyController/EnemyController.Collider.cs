@@ -13,6 +13,8 @@ namespace Game {
 
         const float DEVIATION = 0.02f;  //碰撞检测误差
 
+        private int playerAttackLayer = 11;
+
     private bool CheckGround() {
         return CheckGround(Vector2.zero);
     }
@@ -24,19 +26,12 @@ namespace Game {
     
     public void OnTriggerEnter2D(Collider2D other)
     {   
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.layer == playerAttackLayer)
         {
-            targetPlayer = other.gameObject;
+            // TODO: how to properly get damage amount?
+            TakeDamage(other.gameObject.GetComponent<BaseEnemyAttack00>().attackDamage);
         }
     }
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        if (targetPlayer && other.gameObject == targetPlayer.gameObject)
-        {
-            targetPlayer = null;
-        }
-    }
-
 }
 }
 

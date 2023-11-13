@@ -24,6 +24,7 @@ namespace Game
         protected float hp;
         public float maxHP = 100;
         public float dieWaitTime = 0.8f;
+        public float detectRange = 8f;
 
         protected SpriteRenderer sprite;
         protected CapsuleCollider2D bodyCollider;
@@ -31,6 +32,11 @@ namespace Game
         public GameObject targetPlayer;
         protected Rigidbody2D body;
         protected Slider healthBar;
+        
+        // for dev only
+        public Vector3 playerPosition = new Vector3(0, 0);
+        public GameObject player;
+
 
         public Vector2 position
         {
@@ -60,15 +66,48 @@ namespace Game
             hp = maxHP;
             healthBar.maxValue = hp;
             healthBar.value = hp;
+            player = GameObject.FindGameObjectWithTag("Player");
             GameRestart(); // clear powerup in the beginning, go to start state
         }
 
         private IEnumerator WaitAndDestroy() {
             bodyCollider.enabled = false;
+            body.bodyType = RigidbodyType2D.Static;
             yield return new WaitForSeconds(dieWaitTime);
             Destroy(gameObject);
         }
-        
+
+        public override void Update()
+        {
+            base.Update();
+            DetectPlayer();
+        }
+
+        protected void DetectPlayer()
+        {
+            if ((GetPlayerPosition() - transform.position).magnitude < detectRange)
+            {
+                targetPlayer = GetPlayerObject();
+            }
+            else
+            {
+                targetPlayer = null;
+            }
+        }
+
+        public GameObject GetPlayerObject()
+        {
+            
+            // TODO: return the actual player reference
+            return player;
+        }
+
+        public Vector3 GetPlayerPosition()
+        {
+            // TODO: replace with actual player position
+            return player.transform.position;
+        }
+
         public void TakeDamage(int damage) {
             hp -= damage;
             healthBar.value = hp;

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4121020538888187321}
   - component: {fileID: 533332016600845512}
   - component: {fileID: 8921986280548356309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShielmanMelee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
