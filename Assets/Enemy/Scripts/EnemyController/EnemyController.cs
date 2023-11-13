@@ -32,6 +32,7 @@ namespace Game
         public GameObject targetPlayer;
         protected Rigidbody2D body;
         protected Slider healthBar;
+        protected AudioSource hitAudio;
         
         // for dev only
         public Vector3 playerPosition = new Vector3(0, 0);
@@ -63,6 +64,8 @@ namespace Game
             animator = GetComponentInChildren<Animator>();
             body = GetComponent<Rigidbody2D>();
             healthBar = GetComponentInChildren<Slider>();
+            hitAudio = GetComponent<AudioSource>();
+            
             hp = maxHP;
             healthBar.maxValue = hp;
             healthBar.value = hp;
@@ -119,7 +122,12 @@ namespace Game
                 HitFlash();
             }
         }
-        
+
+        private void PlayHitSound()
+        {
+            hitAudio.PlayOneShot(hitAudio.clip);
+        }
+
         // this should be added to the GameRestart EventListener as callback
         public void GameRestart() {
             // set the start state

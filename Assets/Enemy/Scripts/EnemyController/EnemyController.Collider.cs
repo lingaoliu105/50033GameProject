@@ -29,6 +29,7 @@ namespace Game {
         if (other.gameObject.layer == playerAttackLayer)
         {
             // TODO: how to properly get damage amount?
+            PlayHitSound();
             TakeDamage(other.gameObject.GetComponent<BaseEnemyAttack00>().attackDamage);
         }
     }
