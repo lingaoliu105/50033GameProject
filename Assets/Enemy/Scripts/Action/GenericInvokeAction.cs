@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using UnityEngine;
 
-namespace Game {
+namespace Enemy {
     [CreateAssetMenu(menuName = "Enemy/Generic Action")]
     public class GenericInvokeAction : Action
     {

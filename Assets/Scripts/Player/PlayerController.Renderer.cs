@@ -28,13 +28,25 @@ namespace Game {
             PlayerSpriteRenderer.Instance.SetBool(name, value);
         }
 
+        public void SetCameraPos() { 
+            if (Position.y <= 0f) {
+                cameraPos = new Vector2(Position.x, -1f);
+            } else if (Position.y >= 5) {
+                cameraPos = new Vector2(Position.x, 6f);
+            } else { 
+                cameraPos = new Vector2(Position.x, -1f + 7f * (Position.y/5f));
+            }
+        }
+
         public void UpdateRender() {
             PlayerSpriteRenderer.Instance.position = Position + collider.position;
             PlayerSpriteRenderer.Instance.facing = Facing;
+            SetCameraPos();
             PlayerSpriteRenderer.Instance.cameraPos = cameraPos;
             PlayerSpriteRenderer.Instance.SpeedX = Mathf.Abs(Speed.x);
             PlayerSpriteRenderer.Instance.SpeedY = Speed.y;
             PlayerSpriteRenderer.Instance.Land = OnGround;
+            PlayerSpriteRenderer.Instance.Ducking = Ducking;
         }
     }
 }

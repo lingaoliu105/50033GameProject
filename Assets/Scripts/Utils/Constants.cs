@@ -46,6 +46,7 @@ namespace Game {
 
         #endregion
 
+
         #region SuperWallJump
         public static float SuperJumpSpeed = JumpSpeed;
         public static float SuperJumpH = 26f;
@@ -100,5 +101,12 @@ namespace Game {
         #region Corner Correct
         public static int UpwardCornerCorrection = 4; //向上移动，X轴上边缘校正的最大距离
         #endregion
+
+        #region 体力
+        public static float StaminaLockCountdown = .5f; //体力锁定时间
+        #endregion
+
+        public static float InvinsibleOnHitTime = .2f; //受伤无敌时间
+        public static float TubeSwtichColdDownTime = .1f;
     }
 }

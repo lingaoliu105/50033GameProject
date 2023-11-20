@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-namespace Game {
+namespace Enemy {
     [CreateAssetMenu(menuName = "Enemy/StartAttack")]
 
     public class StartAttackAction : Action {

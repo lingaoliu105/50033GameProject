@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-namespace Game { 
+using Assets.Scripts.Attack;
+
+namespace Enemy { 
     public partial class EnemyController {
             
         // TODO: confirm ground layer number
-        private int groundMask = 1;
+        private int groundMask = 6;
         private Vector2 boundingBoxSize = new Vector2(0.3f,0.1f);
 
         const float DEVIATION = 0.02f;  //碰撞检测误差
@@ -26,14 +28,18 @@ namespace Game {
     
     public void OnTriggerEnter2D(Collider2D other)
     {   
-        if (other.gameObject.layer == playerAttackLayer)
-        {
-            // TODO: how to properly get damage amount?
-            PlayHitSound();
-            TakeDamage(other.gameObject.GetComponent<BaseEnemyAttack00>().attackDamage);
+        
+    }
+        public void OnCollisionEnter2D(Collision2D collision) {
+            if (collision.gameObject.tag == "PlayerProjectile") {
+                PlayHitSound();
+                TakeDamage(collision.gameObject.GetComponent<BasicPlayerProjectile>().attackDamage);
+            }
+            if (collision.gameObject.tag == "Void") {
+                TakeDamage(9999999);
+            }
         }
     }
-}
 }
 
 

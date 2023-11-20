@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 2cb8d05f3ac4be1489e37b19c14190d1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: player crouch-walk 48x48_Clip
+    second: {fileID: 7400000, guid: 03b35f7cbdebc5746bb4ea42ffdeb1d1, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 0
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 48
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638351424035276531
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: player crouch-walk 48x48_Frame_0
+    originalName: 
+    pivot: {x: 0.44827583, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 4
+      width: 29
+      height: 21
+    spriteID: 032100899896a334daa83ab9bdaf354e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 4}
+  - name: player crouch-walk 48x48_Frame_1
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 30
+      height: 21
+    spriteID: 3c296d7e66a863247ae8666ff8607363
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: player crouch-walk 48x48_Frame_2
+    originalName: 
+    pivot: {x: 0.3703704, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 62
+      width: 27
+      height: 20
+    spriteID: c26d35f6d4ef4b247801976d23a49def
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 62}
+  - name: player crouch-walk 48x48_Frame_3
+    originalName: 
+    pivot: {x: 0.26086956, y: -0.56}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 90
+      width: 23
+      height: 20
+    spriteID: 7167072a6a3d5cf4aa2d2957c21fe022
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 90}
+  - name: player crouch-walk 48x48_Frame_4
+    originalName: 
+    pivot: {x: 0.35714287, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 33
+      width: 28
+      height: 20
+    spriteID: bed5ff2cf7d4a1b4a993c947c0a586c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 33}
+  - name: player crouch-walk 48x48_Frame_5
+    originalName: 
+    pivot: {x: 0.37931034, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 4
+      width: 29
+      height: 21
+    spriteID: 3adebd7af34b5d04fa622f261e9b3bb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 4}
+  - name: player crouch-walk 48x48_Frame_6
+    originalName: 
+    pivot: {x: 0.37931034, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 33
+      width: 29
+      height: 21
+    spriteID: 1f40678cfeb63fa4392f93919fb925cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 33}
+  - name: player crouch-walk 48x48_Frame_7
+    originalName: 
+    pivot: {x: 0.3076923, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 62
+      width: 26
+      height: 20
+    spriteID: f8563f9922b98a244914bd724b3aaf97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 62}
+  - name: player crouch-walk 48x48_Frame_8
+    originalName: 
+    pivot: {x: 0.25, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 62
+      width: 24
+      height: 20
+    spriteID: b0e485c80ebd0a74dbc1ea3637c0c427
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 62}
+  - name: player crouch-walk 48x48_Frame_9
+    originalName: 
+    pivot: {x: 0.44827583, y: -0.58}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 33
+      width: 29
+      height: 20
+    spriteID: a3c908d89511cf74d8e58a2613904787
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 33}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 314710483
+    name: player crouch-walk 48x48
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: player crouch-walk 48x48_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 11
+        y: 8
+        width: 29
+        height: 21
+      spriteId: 032100899896a334daa83ab9bdaf354e
+    - name: player crouch-walk 48x48_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 8
+        width: 30
+        height: 21
+      spriteId: 3c296d7e66a863247ae8666ff8607363
+    - name: player crouch-walk 48x48_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 14
+        y: 8
+        width: 27
+        height: 20
+      spriteId: c26d35f6d4ef4b247801976d23a49def
+    - name: player crouch-walk 48x48_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 18
+        y: 8
+        width: 23
+        height: 20
+      spriteId: 7167072a6a3d5cf4aa2d2957c21fe022
+    - name: player crouch-walk 48x48_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 14
+        y: 8
+        width: 28
+        height: 20
+      spriteId: bed5ff2cf7d4a1b4a993c947c0a586c0
+    - name: player crouch-walk 48x48_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 13
+        y: 8
+        width: 29
+        height: 21
+      spriteId: 3adebd7af34b5d04fa622f261e9b3bb6
+    - name: player crouch-walk 48x48_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 13
+        y: 8
+        width: 29
+        height: 21
+      spriteId: 1f40678cfeb63fa4392f93919fb925cf
+    - name: player crouch-walk 48x48_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 8
+        width: 26
+        height: 20
+      spriteId: f8563f9922b98a244914bd724b3aaf97
+    - name: player crouch-walk 48x48_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 18
+        y: 8
+        width: 24
+        height: 20
+      spriteId: b0e485c80ebd0a74dbc1ea3637c0c427
+    - name: player crouch-walk 48x48_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 11
+        y: 8
+        width: 29
+        height: 20
+      spriteId: a3c908d89511cf74d8e58a2613904787
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 48, y: 48}

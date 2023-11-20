@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.Attack;
+using Game;
 
-namespace Game
-{
+namespace Enemy {
     public enum MoveDirectionX {
         Left = -1,
         Right = 1,
@@ -25,6 +26,7 @@ namespace Game
         public float maxHP = 100;
         public float dieWaitTime = 0.8f;
         public float detectRange = 8f;
+        public int SoulAmount = 100;
 
         protected SpriteRenderer sprite;
         protected CapsuleCollider2D bodyCollider;
@@ -90,7 +92,7 @@ namespace Game
         {
             if ((GetPlayerPosition() - transform.position).magnitude < detectRange)
             {
-                targetPlayer = GetPlayerObject();
+                targetPlayer = GetPlayer();
             }
             else
             {
@@ -98,17 +100,14 @@ namespace Game
             }
         }
 
-        public GameObject GetPlayerObject()
+        public GameObject GetPlayer()
         {
-            
-            // TODO: return the actual player reference
-            return player;
+            return GameObject.FindGameObjectWithTag("Player");
         }
 
         public Vector3 GetPlayerPosition()
         {
-            // TODO: replace with actual player position
-            return player.transform.position;
+            return GameObject.FindGameObjectWithTag("Player").transform.position;
         }
 
         public void TakeDamage(int damage) {
@@ -116,6 +115,7 @@ namespace Game
             healthBar.value = hp;
             if (hp <= 0) {
                 PlayDeadAnimation();
+                GetPlayer().GetComponent<PlayerController>().GainSoul(SoulAmount);
                 StartCoroutine(WaitAndDestroy());
             } else
             {

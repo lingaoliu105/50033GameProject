@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5962707283039827506}
   m_Layer: 7
   m_Name: EnemyShieldman
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,9 +179,10 @@ MonoBehaviour:
   patrolRangeR: 10
   patrolSpeed: 3
   scoutSpeed: 3.5
-  maxHP: 100
+  maxHP: 320
   dieWaitTime: 0.8
   detectRange: 8
+  SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game {
+namespace Enemy {
     [CreateAssetMenu(menuName = "Enemy/StartIdle")]
     public class StartIdle : Action {
 

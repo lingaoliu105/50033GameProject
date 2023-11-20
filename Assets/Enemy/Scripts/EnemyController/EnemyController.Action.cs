@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using static UnityEngine.UI.Image;
 
-namespace Game {
+namespace Enemy {
 
     public enum AutoActionState {
         None = 0,

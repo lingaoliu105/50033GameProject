@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 48024468377522498}
   m_Layer: 7
   m_Name: EnemyWatcher
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   maxHP: 100
   dieWaitTime: 0.8
   detectRange: 8
+  SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}

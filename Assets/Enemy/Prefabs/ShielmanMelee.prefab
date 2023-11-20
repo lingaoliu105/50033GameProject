@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8921986280548356309}
   m_Layer: 8
   m_Name: ShielmanMelee
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ad78032281f10429a2b9f3f7cc7d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 80
   range: {x: 0.3, y: 1.2}
   hitAudio: {fileID: 8300000, guid: 20475986536932142bb1f8fbdb02bc7d, type: 3}
 --- !u!82 &8921986280548356309

@@ -6,12 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public enum Facings
-{
-    Right = 1,
-    Left = -1
-}
-namespace Game {
+
+namespace Enemy {
+    public enum Facings {
+        Left = -1,
+        Right = 1,
+    }
     public partial class EnemyController {
         protected Facings facing = Facings.Right;
         public void PlayDeadAnimation() {

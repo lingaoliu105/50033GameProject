@@ -4,9 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
+  - SceneObject
+  - PlayerProjectile
+  - Enemy
+  - EnemyProjectile
   - MovingPlatform
+  - Ground
   - Trap
+  - Void
   layers:
   - Default
   - TransparentFX
@@ -15,11 +20,11 @@ TagManager:
   - Water
   - UI
   - Ground
-  - Enemy
-  - EnemyProjectile
-  - Player
-  - toxic_liquid
   - PlayerProjectile
+  - EnemyProjectile
+  - Enemy
+  - Player
+  - Background
   - 
   - 
   - 
@@ -41,6 +46,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg
+    uniqueID: 1488878071
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 3785641227
     locked: 0

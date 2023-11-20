@@ -5,7 +5,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-
+using Enemy;
+using Assets.Scripts.Map;
 namespace Game {
     public partial class PlayerController {
         
@@ -19,6 +20,25 @@ namespace Game {
         private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.8f, 0.4f);
 
         private Rect collider;
+
+        void CheckForSomeObject() {
+            // 执行矩形区域检测
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(this.Position + collider.position, collider.size, 0);
+
+            // 遍历检测到的碰撞器
+            foreach (Collider2D collider in colliders) {
+                // 检查标签是否为 "EnemyProjectile"
+                if (collider.CompareTag("EnemyProjectile")) {
+                    // 处理敌方投射物的逻辑
+                    int damage = collider.GetComponent<EnemyAttack>().Damage;
+                    this.TakeDamage(damage);
+                    collider.GetComponent<EnemyAttack>().Hitting();
+                }
+                if (collider.CompareTag("Void")) { 
+                    collider.GetComponent<VoidArea>().GetOut(this);
+                }
+            }
+        }
 
 
         private bool CheckGround() {

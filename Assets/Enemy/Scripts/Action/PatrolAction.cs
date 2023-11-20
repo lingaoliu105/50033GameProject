@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game
+namespace Enemy
 {
     [CreateAssetMenu(menuName = "Enemy/Patrol")]
     public class PatrolAction : Action

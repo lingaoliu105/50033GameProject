@@ -81,6 +81,9 @@ namespace Game {
             }
             #endregion
             #region 空中移动
+            if (player.WasOnGround && !player.OnGround) {
+                player.PlayAnimation("Jump");
+            }
             float maxFallSpeed = Constants.MaxFall;
             float fastMaxFallSpeed = Constants.FastMaxFall;
             if (player.MoveY == -1 && player.Speed.y <= maxFallSpeed) {
@@ -102,7 +105,7 @@ namespace Game {
                         max = Mathf.Lerp(Constants.MaxFall, Constants.WallSlideStartMax, player.WallSlideTimer / Constants.WallSlideTime);
                         //TODO: effect
                         player.PlayAnimation("Slip");
-                    }
+                    } else player.PlayAnimation("Jump");
                 }
 
                 
@@ -147,9 +150,14 @@ namespace Game {
             #endregion
             #region 攻击
             if (player.CanAttack) {
-                return player.AttackStart();
+                return player.Attack(player.CurrentMeleeWeapon);
             }
-
+            if (player.CanShoot) {
+                return player.Shoot(player.CurrentRangedWeapon);
+            }
+            if (player.CanConsume) {
+                player.UseTube();
+            }
             #endregion
 
 

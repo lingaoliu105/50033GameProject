@@ -15,7 +15,6 @@ namespace Game {
     }
     public class AttackState : BaseActionState {
         private AttackStage stage;
-        private AttackParam param;
         private Vector2 dir;
         private int frame;
         private bool comboFlag;
@@ -24,25 +23,24 @@ namespace Game {
         }
 
         public override IEnumerator Coroutine() {
-            for (int t = 0; t < param.BeforeAttackFrames; t++) {
+            for (int t = 0; t < player.AttackFrames1; t++) {
                 yield return null;
             }
             stage = AttackStage.Attack;
-            maxSpeed = param.AttackMaxSpeed;
-            for (int t = 0; t < param.AttackFrames; t++) {
+            maxSpeed = player.AttackFrames2MaxSpeed;
+            for (int t = 0; t < player.AttackFrames2; t++) {
                 yield return null;
             }
 
             stage = AttackStage.AfterAttack;
-            maxSpeed = param.AfterAttackMaxSpeed;
-            for (int t = 0; t < param.AfterAttackFrames; t++) {
+            maxSpeed = player.AttackFrames3MaxSpeed;
+            for (int t = 0; t < player.AttackFrames3; t++) {
                 if (player.CanAttack) {
-                    Debug.Log("Combooo " + frame);
                     comboFlag = true;
                 } else { }
                 yield return null;
             }
-            player.PlayAnimation("AttackEnd");
+            player.AttackEnd();
             player.SetState((int)EActionState.Normal);
         }
 
@@ -52,8 +50,7 @@ namespace Game {
 
         public override void OnBegin() {
             stage = AttackStage.BeforeAttack;
-            param = player.currentAttackParam;
-            maxSpeed = param.BeforeAttackMaxSpeed;
+            maxSpeed = player.AttackFrames1MaxSpeed;
             dir = player.LastAim;
             comboFlag = false;
             frame = 0;
@@ -65,7 +62,7 @@ namespace Game {
         public override EActionState Update(float deltaTime) {
             frame++;
             state = EActionState.Attack;
-            player.Speed.x = Mathf.MoveTowards(player.Speed.x, maxSpeed * dir.x, Constants.DuckFriction * deltaTime);
+            player.Speed.x = maxSpeed * dir.x;
             if (comboFlag) { 
                 Debug.Log("Combo " + frame);
                 return EActionState.Combo;

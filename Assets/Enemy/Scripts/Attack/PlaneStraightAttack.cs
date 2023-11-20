@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Game {
-    public class PlaneStraightAttack : BaseEnemyAttack {
+namespace Enemy {
+    public class PlaneStraightAttack : BasicEnemyProjectile {
         public float speed = 2f;
         public Vector2 dir = Vector2.zero;
         public override void Start() {

@@ -28,7 +28,7 @@ namespace Game {
 
         public override EActionState Update(float deltaTime) {
             Debug.Log("Combo");
-            return player.ComboAttack();
+            return player.Attack(player.CurrentMeleeWeapon);
         }
     }
 }

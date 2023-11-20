@@ -1,54 +1,101 @@
-﻿using System;
+﻿using Assets.Scripts.Attack;
+using Assets.Scripts.Buff;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static Assets.Scripts.Buff.Invinsible;
 
 namespace Game {
     public partial class PlayerController {
         public bool CanAttack {
             get {
-                return GameInput.AttackButton.Pressed() && onGround;
+                return GameInput.AttackButton.Pressed() && onGround && !Ducking;
             }
         }
 
-        public AttackParam currentAttackParam;
-        public AttackParam nextAttackParam;
+        public bool CanShoot {
+            get {
+                return GameInput.ShootButton.Pressed() && !Ducking;
+            }
+        }
+        [HideInInspector]
+        public int AttackFrames1 = 0;
+        [HideInInspector]
+        public float AttackFrames1MaxSpeed = 0f;
+        [HideInInspector]
+        public int AttackFrames2 = 0;
+        [HideInInspector]
+        public float AttackFrames2MaxSpeed = 0f;
+        [HideInInspector]
+        public int AttackFrames3 = 0;
+        [HideInInspector]
+        public float AttackFrames3MaxSpeed = 0f;
+        [HideInInspector]
+        public RangedAttack CurrentRangedAttack;
+        [HideInInspector]
+        public MeleeAttack CurrentMeleeAttack;
+        [HideInInspector]
+        public Weapon CurrentRangedWeapon;
+        [HideInInspector]
+        public Weapon CurrentMeleeWeapon;
+
         private int attackCount = 0;
         GameObject attack;
+
+        public void SetUpWeapons(Weapon ranged, Weapon melee) {
+            CurrentRangedWeapon = ranged;
+            CurrentRangedWeapon.Player = this;
+            Debug.Log(CurrentRangedWeapon + " Damage = "+CurrentRangedWeapon.BasicDamage);
+            CurrentMeleeWeapon = melee;
+            CurrentMeleeWeapon.Player = this;
+            Debug.Log(CurrentMeleeWeapon + " Damage = " + CurrentMeleeWeapon.BasicDamage);
+        }
+
         
 
-        public EActionState AttackStart() {
-            currentAttackParam = AttackParams.KatanaLightAtk;
-            nextAttackParam = AttackParams.KatanaLightAtk;
-            PlayAnimation("Attack");
-            GameInput.AttackButton.ConsumeBuffer();
-            attackCount = 1;
-            attack = Instantiate(attack1, transform.position + attack1.transform.position, Quaternion.identity);
-            attack.transform.parent = transform;
-            return EActionState.Attack;
-        }
-
-        public EActionState ComboAttack() {
-            currentAttackParam = AttackParams.KatanaLightAtk;
-            nextAttackParam = AttackParams.KatanaLightAtk;
-            if (attackCount == 1) {
-                // Combo
-                attackCount = 0;
-                PlayAnimation("Combo");
-                attack = Instantiate(attack2, transform.position + attack2.transform.position, Quaternion.identity);
-                attack.transform.parent = transform;
-
-            } else {
-                // Back to start
-                attackCount = 1;
-                PlayAnimation("Attack");
-                attack = Instantiate(attack1, transform.position + attack1.transform.position, Quaternion.identity);
-                attack.transform.parent = transform;
+        public EActionState Shoot(Weapon RangedWeapon) {
+            GameInput.ShootButton.ConsumeBuffer();
+            CurrentRangedAttack = (RangedAttack)RangedWeapon.GetNextAttack(AttackKey.Shoot);
+            if (CurrentRangedAttack.ElecCost > Elec) {
+                CurrentRangedWeapon.GetNextAttack(AttackKey.Break);
+                return EActionState.Normal;
             }
-            GameInput.AttackButton.ConsumeBuffer();
+            Elec -= CurrentRangedAttack.ElecCost;
+            AttackFrames1 = CurrentRangedAttack.ShootingAnimationFrames;
+            AttackFrames1MaxSpeed = CurrentRangedAttack.ShootingAnimationMaxSpeed;
+            AttackFrames2 = 0;
+            AttackFrames3 = 0;
+            CurrentRangedAttack.PerformAttack();
             return EActionState.Attack;
         }
+        
+
+        public EActionState Attack(Weapon MeleeWeapon) {
+            GameInput.AttackButton.ConsumeBuffer();
+            CurrentMeleeAttack = (MeleeAttack)MeleeWeapon.GetNextAttack(AttackKey.Light);
+            if (CurrentMeleeAttack.StaminaCost > Stamina) {
+                CurrentMeleeWeapon.GetNextAttack(AttackKey.Break);
+                return EActionState.Normal;
+            }
+            Stamina -= CurrentMeleeAttack.StaminaCost;
+            LockStamina();
+            AttackFrames1 = CurrentMeleeAttack.BeforeAttackFrames;
+            AttackFrames1MaxSpeed = CurrentMeleeAttack.BeforeAttackMaxSpeed;
+            AttackFrames2 = CurrentMeleeAttack.AttackFrames;
+            AttackFrames2MaxSpeed = CurrentMeleeAttack.AttackMaxSpeed;
+            AttackFrames3 = CurrentMeleeAttack.AfterAttackFrames;
+            AttackFrames3MaxSpeed = CurrentMeleeAttack.AfterAttackMaxSpeed;
+            CurrentMeleeAttack.PerformAttack();
+            return EActionState.Attack;
+        }
+
+        public void AttackEnd() {
+            PlayAnimation("AttackEnd");
+            CurrentMeleeWeapon.GetNextAttack(AttackKey.Break);
+        }
+
     }
 }

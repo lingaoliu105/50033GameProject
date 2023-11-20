@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game {
+namespace Enemy {
     [CreateAssetMenu(menuName = "Enemy/StartScout")]
 
     public class StartScoutAction : Action {

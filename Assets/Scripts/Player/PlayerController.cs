@@ -5,14 +5,19 @@ using UnityEngine;
 using System;
 using UnityEngine.UIElements.Experimental;
 using UnityEngine.Rendering.Universal;
+using Assets.Scripts.Attack;
 
 namespace Game {
     public partial class PlayerController : MonoBehaviour {
 
         public LayerMask groundMask;
 
+        private float invinsibleOnHitTimer = 0f;
+
         private int frameRate = 60;
         private float deltaTime;
+
+        public bool isAlive = true;
 
         public Vector2 Position;
         public Vector2 InitPos = new Vector2(1f, -1.5f);
@@ -21,6 +26,7 @@ namespace Game {
         private bool onGround;
         public bool OnGround { get => onGround;}
         private bool wasOnGround;
+        public bool WasOnGround { get => wasOnGround; }
 
         public JumpCheck JumpCheck { get; set; }
         public WallBoost WallBoost { get; set; }
@@ -65,9 +71,8 @@ namespace Game {
         private float wallSpeedRetentionTimer; // If you hit a wall, start this timer. If coast is clear within this timer, retain h-speed
         private float wallSpeedRetained;
 
-
-        public GameObject attack1;
-        public GameObject attack2;
+        public Weapon TestRangedWeapon;
+        public Weapon TestMeleeWeapon;
 
 
         public float DashCooldownTimer { get => dashCooldownTimer; set => dashCooldownTimer = value; }
@@ -99,6 +104,8 @@ namespace Game {
             this.JumpCheck = new JumpCheck(this, Constants.EnableJumpGrace);
             this.WallBoost = new WallBoost(this);
             spriteRenderer = GetComponent<SpriteRenderer>();
+            
+            this.LoadPlayerInfo();
         }
         #region Debug
         [SerializeField]
@@ -137,24 +144,46 @@ namespace Game {
 
         void Start() {
             this.stateMachine.State = (int)EActionState.Normal;
+            this.SetUpWeapons(TestRangedWeapon, TestMeleeWeapon);
+            this.InitInventory();
+            isAlive = true;
+        }
+
+        private void OnDestroy() {
+            SavePlayerInfo();
         }
 
         // Update is called once per frame
         void Update() {
+            if (!isAlive) {
+                return;
+            }
             
             GameInput.Update(deltaTime);
 
-            if (CanSandevistan) {
-               Sandevistan();
-            }
-
+            UpdateBuff(deltaTime);
+            CalcFix();
+            CheckForSomeObject();
+            UpdateEquipsOnUpdate();
             JoystickValue = GameInput.Joystick.Value;
             ButtonBufferTime = GameInput.JumpButton.buffer;
-
+            RecoverStamina(deltaTime);
             if (varJumpTimer > 0) {
                 varJumpTimer -= deltaTime;
             }
-
+            if (invinsibleOnHitTimer > 0) {
+                invinsibleOnHitTimer -= deltaTime;
+            }
+            // switch tube 
+            if (GameInput.SwitchItem.Pressed()) {
+                if (tubeSwitchColdDown <= 0) {
+                    SwitchTubeType();
+                    tubeSwitchColdDown = Constants.TubeSwtichColdDownTime;
+                }
+            }
+            if (tubeSwitchColdDown > 0) {
+                tubeSwitchColdDown -= deltaTime;
+            }
 
             // move x
             if (ForceMoveXTimer > 0) {
@@ -217,6 +246,11 @@ namespace Game {
             }*/
             transform.position = this.Position + collider.position;
             UpdateRender();
+        }
+
+        public void Die() {
+            isAlive = false;
+            PlayAnimation("Die");
         }
 
         public void SetState(int state) {

@@ -15,6 +15,7 @@ namespace Game {
         private Animator animator;
         public float SpeedX;
         public float SpeedY;
+        public bool Ducking;
         public bool Land;
         public void SetSprite(Sprite sprite) {
             
@@ -25,7 +26,7 @@ namespace Game {
         }
         public void Update() {
             
-            //transform.position = position;
+            // transform.position = position;
             if (facing == Facings.Left) {
                 spriteRenderer.flipX = true;        
             } else {
@@ -34,6 +35,7 @@ namespace Game {
             animator.SetFloat("SpeedX", SpeedX);
             animator.SetFloat("SpeedY", SpeedY);
             animator.SetBool("Land", Land);
+            animator.SetBool("Ducking", Ducking);
         }
 
         public void SetTrigger(String trigger) {

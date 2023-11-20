@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Game;
 using UnityEngine;
 
-namespace Game
+namespace Enemy
 {
     public class TurretController : EnemyController
     {
@@ -13,7 +12,7 @@ namespace Game
             yield return new WaitForSeconds(attackTime);
             for (int j = 0; j < 3; j++)
             {
-                Vector3 offset = Vector3.up * 0.15f;
+                Vector3 offset = Vector3.up * 0.5f;
                 GameObject atkLeft = Instantiate(attackTemplates[i], transform.position+offset, Quaternion.identity);
                 GameObject atkRight = Instantiate(attackTemplates[i], transform.position+offset, Quaternion.identity);
             
