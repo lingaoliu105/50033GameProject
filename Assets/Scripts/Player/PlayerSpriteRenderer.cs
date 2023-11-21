@@ -11,7 +11,6 @@ namespace Game {
         public Facings facing;
         public SpriteRenderer spriteRenderer;
         private Vector2 offset;
-        public Vector2 cameraPos;
         private Animator animator;
         public float SpeedX;
         public float SpeedY;

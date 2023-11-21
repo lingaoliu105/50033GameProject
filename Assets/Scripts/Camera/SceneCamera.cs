@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Game {
     public class SceneCamera : MonoBehaviour, ICamera {
@@ -15,6 +16,7 @@ namespace Game {
         //private Camera postCamera;
 
         private Vector2 offset;
+        public bool IsLocked  = false;
 
         [SerializeField]
         private float ShakeStrength = 1;
@@ -30,12 +32,22 @@ namespace Game {
                 new Keyframe(1, 0, 0, 0)
             });
 
-        public void SetCameraPosition(Vector2 cameraPosition) {
-            this.mainCamera.transform.position = new Vector3(cameraPosition.x + offset.x, cameraPosition.y + offset.y, -10);
+        public void SetCameraPositionByPlayerPosition(Vector2 playerPosition) {
+            Vector2 cameraPos;
+            if (playerPosition.y <= 0f) {
+                cameraPos = new Vector2(playerPosition.x, -1f);
+            } else if (playerPosition.y >= 5) {
+                cameraPos = new Vector2(playerPosition.x, 6f);
+            } else {
+                cameraPos = new Vector2(playerPosition.x, -1f + 7f * (playerPosition.y / 5f));
+            }
+            this.mainCamera.transform.position = new Vector3(cameraPos.x + offset.x, cameraPos.y + offset.y, -10);
         }
 
+
+
         public void Update() {
-             this.mainCamera.transform.position = new Vector3(PlayerSpriteRenderer.Instance.cameraPos.x + offset.x, PlayerSpriteRenderer.Instance.cameraPos.y + offset.y, -10);
+            SetCameraPosition(PlayerSpriteRenderer.Instance.position);
         }
 
         public void Shake(Vector2 dir, float duration) {
@@ -55,6 +67,14 @@ namespace Game {
                 yield return null;
             }
             offset = Vector2.zero;
+        }
+
+        public void SetCameraPosition(Vector2 cameraPosition) {
+            if (IsLocked) {
+                return;
+            } else {
+                SetCameraPositionByPlayerPosition(cameraPosition);
+            }
         }
     }
 }
