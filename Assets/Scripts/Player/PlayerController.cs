@@ -82,7 +82,7 @@ namespace Game {
 
         public float WallSlideTimer { get; set; } = Constants.WallSlideTime;
         public int WallSlideDir { get; set; }
-
+        public bool CanMove = false;
 
         public Facings Facing { get; set; }  //当前朝向
 
@@ -98,9 +98,9 @@ namespace Game {
 
             Position = InitPos;
             collider = normalHitbox;
-            Application.targetFrameRate = 60;
-            deltaTime = 1f / frameRate;
-            GameInput.Init();
+
+            deltaTime = 1 / 60f;
+            
             this.JumpCheck = new JumpCheck(this, Constants.EnableJumpGrace);
             this.WallBoost = new WallBoost(this);
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -147,7 +147,10 @@ namespace Game {
             this.SetUpWeapons(TestRangedWeapon, TestMeleeWeapon);
             this.InitInventory();
             isAlive = true;
+            CanMove = true;
         }
+
+
 
         private void OnDestroy() {
             SavePlayerInfo();
@@ -158,11 +161,29 @@ namespace Game {
             if (!isAlive) {
                 return;
             }
+            if (!CanMove) {
+                if (invinsibleOnHitTimer <= Constants.InvinsibleOnHitTime) {
+                    invinsibleOnHitTimer = Constants.InvinsibleOnHitTime;
+                }
+                if (ForceMoveXTimer > 0) {
+                    ForceMoveXTimer -= deltaTime;
+                    this.moveX = ForceMoveX;
+                }
+                
+                wasOnGround = onGround;
+                if (Speed.y <= 0) {
+                    this.onGround = CheckGround();//碰撞检测地面
+                } else {
+                    this.onGround = false;
+                }
+                stateMachine.Update(deltaTime);
+                transform.position = this.Position + collider.position;
+                UpdateRender();
+            }
             
             GameInput.Update(deltaTime);
 
             UpdateBuff(deltaTime);
-            CalcFix();
             CheckForSomeObject();
             UpdateEquipsOnUpdate();
             JoystickValue = GameInput.Joystick.Value;
@@ -341,7 +362,7 @@ namespace Game {
 
         public void Sandevistan() {
             deltaTime = 1f / 120f;
-            EffectManager.Instance.ToggleChromaticAberration(true);
+            EffectManager.ToggleChromaticAberration(true);
             inSandevistan = true;
             StartCoroutine(JustForTestCountDown());
         }
@@ -349,7 +370,7 @@ namespace Game {
         private IEnumerator JustForTestCountDown() {            
                yield return new WaitForSeconds(5f);
             deltaTime = 1f / 60f;
-            EffectManager.Instance.ToggleChromaticAberration(false);
+            EffectManager.ToggleChromaticAberration(false);
             inSandevistan = false;
         }
 

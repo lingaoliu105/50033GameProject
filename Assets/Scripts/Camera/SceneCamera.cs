@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UIElements;
 
 namespace Game {
@@ -17,6 +18,9 @@ namespace Game {
 
         private Vector2 offset;
         public bool IsLocked  = false;
+        [HideInInspector]
+        public PlayerSpriteRenderer PlayerSpriteRenderer;
+        public Vector2 LockedCameraPos = Vector2.zero;
 
         [SerializeField]
         private float ShakeStrength = 1;
@@ -44,10 +48,17 @@ namespace Game {
             this.mainCamera.transform.position = new Vector3(cameraPos.x + offset.x, cameraPos.y + offset.y, -10);
         }
 
+        public void SetCameraSize(float Size) { 
+            mainCamera.orthographicSize = Size;
+        }
 
 
         public void Update() {
-            SetCameraPosition(PlayerSpriteRenderer.Instance.position);
+            Vector2 cameraPos = LockedCameraPos;
+            if (PlayerSpriteRenderer != null) {
+                cameraPos = PlayerSpriteRenderer.position;
+            }
+            SetCameraPosition(cameraPos);
         }
 
         public void Shake(Vector2 dir, float duration) {
@@ -71,7 +82,7 @@ namespace Game {
 
         public void SetCameraPosition(Vector2 cameraPosition) {
             if (IsLocked) {
-                return;
+                this.mainCamera.transform.position = new Vector3(LockedCameraPos.x + offset.x, LockedCameraPos.y + offset.y, -10);
             } else {
                 SetCameraPositionByPlayerPosition(cameraPosition);
             }

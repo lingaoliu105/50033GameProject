@@ -9,7 +9,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 namespace Game {
-    public class EffectManager: Singleton<EffectManager> {
+    public class EffectManager: MonoBehaviour {
         public SceneCamera gameCamera;
         public Volume volume; // 引用包含Volume组件的游戏对象
         private float freezeTime;

@@ -14,7 +14,7 @@ public struct EnemyWave {
     public float spawnInterval;
     public float tillNextWave;
 }
-public class EnemyManager : Singleton<EnemyManager> {
+public class EnemyWaveManager : Singleton<EnemyWaveManager> {
     public EnemyGeneration[] enemyGenerations;
     public EnemyGeneration enemyGeneration;
     private GameObject[] enemies;

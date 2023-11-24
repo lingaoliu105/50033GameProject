@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Game {
-    public class PlayerSpriteRenderer: Singleton<PlayerSpriteRenderer> {
+    public class PlayerSpriteRenderer: MonoBehaviour {
         public Vector2 position;
         public Facings facing;
         public SpriteRenderer spriteRenderer;

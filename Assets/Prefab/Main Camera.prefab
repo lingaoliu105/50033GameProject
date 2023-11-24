@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6089389181790695794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1, y: 4.58, z: -10}
+  m_LocalPosition: {x: 0, y: 6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -153,6 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 8514294055651557571}
+  IsLocked: 1
+  PlayerSpriteRenderer: {fileID: 718797631069592187, guid: 1dfc3d34d89b0004b8c1d785972abfcb, type: 3}
+  LockedCameraPos: {x: 0, y: 5}
   ShakeStrength: 0.4
   ShakeCurve:
     serializedVersion: 2

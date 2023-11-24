@@ -137,8 +137,7 @@ namespace Game
         public void GainSoul(int amount) { 
             Soul += amount;
         }
-        private void CalcFix() {
-        }
+
         private void LoadPlayerInfo() {
             PlayerInfo = LoadFromFile();
             if (PlayerInfo == null || !LoadDataFromFile) {

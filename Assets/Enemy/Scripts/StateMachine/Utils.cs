@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Data;
+using UnityEngine;
 
 public abstract class Action : ScriptableObject {
     public abstract void Act(StateController controller);
@@ -63,7 +64,7 @@ public abstract class StateController : MonoBehaviour {
     [HideInInspector] public float stateTimeElapsed;
 
     private bool isActive = true;
-
+    public float deltaTime;
     public virtual void Start() {
         OnSetupState(); // setup when game starts
     }
@@ -113,9 +114,11 @@ public abstract class StateController : MonoBehaviour {
         return stateTimeElapsed >= duration;
     }
 
+    public virtual void UpdateThis(float deltatime) { }
     public virtual void Update() {
         if (!isActive) return; // this is different from gameObject active, allow for separate control
         currentState.UpdateState(this);
+        UpdateThis(deltaTime);
     }
     
     /********************************/

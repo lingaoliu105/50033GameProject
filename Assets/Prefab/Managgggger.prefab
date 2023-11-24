@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6215547429337535427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8513961255795237312}
+  - component: {fileID: 9071006630322371468}
+  m_Layer: 0
+  m_Name: Managgggger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8513961255795237312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215547429337535427}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.631135, y: -0.82254475, z: 0.10965079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9071006630322371468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215547429337535427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e475788523672dc43947a5f29bafab68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 0}
+  PlayerControllerObject: {fileID: 3779697531838084338, guid: 1dfc3d34d89b0004b8c1d785972abfcb, type: 3}
+  PlayerSpriteRenderer: {fileID: 0}
+  SceneCamera: {fileID: 0}
+  SceneCameraObject: {fileID: 6089389181790695794, guid: c157b6d22167d3940888717ced1cce46, type: 3}
+  EnemyManagerObject: {fileID: 8189330626271908184, guid: 7cbfee51a3034fb4ea2ed20715ca1086, type: 3}
+  EnemyManager: {fileID: 0}
+  EffectManagerObject: {fileID: 5510613733838494038, guid: ec34feca861af124aa9507f3d93d1434, type: 3}
+  EffectManager: {fileID: 0}
+  CurrentLevelInfo: {fileID: 11400000, guid: ae15b73f5a5d7294a99089055f9269a4, type: 2}
+  PlayerPrefab: {fileID: 3779697531838084338, guid: 1dfc3d34d89b0004b8c1d785972abfcb, type: 3}
+  SceneCameraPrefab: {fileID: 6089389181790695794, guid: c157b6d22167d3940888717ced1cce46, type: 3}
+  EnemyManagerPrefab: {fileID: 8189330626271908184, guid: 7cbfee51a3034fb4ea2ed20715ca1086, type: 3}
+  EffectManagerPrefab: {fileID: 5510613733838494038, guid: ec34feca861af124aa9507f3d93d1434, type: 3}

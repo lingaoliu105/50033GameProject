@@ -10,22 +10,24 @@ namespace Game {
         public static Vector2 NORMAL_SPRITE_SCALE = Vector2.one;
         public static Vector2 DUCK_SPRITE_SCALE = new Vector2(1F, 0.75f);
         public Vector2 cameraPos;
+        public PlayerSpriteRenderer SpriteRenderer;
+        public EffectManager EffectManager;
 
 
         public void PlayDashEffect(Vector3 position, Vector2 dir) {
-            EffectManager.Instance.CameraShake(dir);
+            EffectManager.CameraShake(dir);
         }
 
         public void PlayAnimation(String trigger) {
-            PlayerSpriteRenderer.Instance.SetTrigger(trigger);
+            SpriteRenderer.SetTrigger(trigger);
         }
 
         public void SetFloat(String name, float value) {
-            PlayerSpriteRenderer.Instance.SetFloat(name, value);
+            SpriteRenderer.SetFloat(name, value);
         }
 
         public void SetBool(String name, bool value) {
-            PlayerSpriteRenderer.Instance.SetBool(name, value);
+            SpriteRenderer.SetBool(name, value);
         }
 
         public void SetCameraPos() { 
@@ -33,13 +35,14 @@ namespace Game {
         }
 
         public void UpdateRender() {
-            PlayerSpriteRenderer.Instance.position = Position + collider.position;
-            PlayerSpriteRenderer.Instance.facing = Facing;
+            if (SpriteRenderer == null) return;
+            SpriteRenderer.position = Position + collider.position;
+            SpriteRenderer.facing = Facing;
             SetCameraPos();
-            PlayerSpriteRenderer.Instance.SpeedX = Mathf.Abs(Speed.x);
-            PlayerSpriteRenderer.Instance.SpeedY = Speed.y;
-            PlayerSpriteRenderer.Instance.Land = OnGround;
-            PlayerSpriteRenderer.Instance.Ducking = Ducking;
+            SpriteRenderer.SpeedX = Mathf.Abs(Speed.x);
+            SpriteRenderer.SpeedY = Speed.y;
+            SpriteRenderer.Land = OnGround;
+            SpriteRenderer.Ducking = Ducking;
         }
     }
 }

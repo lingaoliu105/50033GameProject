@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1207b396612032f42a05705d31f7cb4f, type: 3}
+  m_Name: Boss1Panel
+  m_EditorClassIdentifier: 
+  AirMult: 0.65
+  RunAccel: 100
+  RunReduce: 40
+  Gravity: 90
+  MaxFall: -16
+  FastMaxFall: -40
+  FastMaxAccel: -50
+  JumpSpeed: 32
+  VarJumpTime: 12
+  GroundY: 0
+  CocktailMother: {fileID: 6766469762206839423, guid: b7acbb8e519ee964390f6cc547194290, type: 3}
+  GroundWave: {fileID: 1044080518034847956, guid: d92f88f0a124f644c8dfe9ce1678e881, type: 3}
+  LandingWave: {fileID: 7923558543268873613, guid: 89ed3462abf79834b808e5ec22c89a79, type: 3}

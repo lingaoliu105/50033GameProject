@@ -17,7 +17,8 @@ namespace Enemy {
     {
         public abstract IEnumerator WaitAndDestroy();
 
-        public int Damage;
+        public int Damage; 
+        public float TimeToDestroy;
         public abstract void Hitting();
 
         public abstract void  OnCollisionEnter2D(Collision2D collision);
