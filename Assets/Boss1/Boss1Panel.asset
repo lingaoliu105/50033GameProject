@@ -22,6 +22,9 @@ MonoBehaviour:
   JumpSpeed: 32
   VarJumpTime: 12
   GroundY: 0
+  DashSpeed: 32
   CocktailMother: {fileID: 6766469762206839423, guid: b7acbb8e519ee964390f6cc547194290, type: 3}
   GroundWave: {fileID: 1044080518034847956, guid: d92f88f0a124f644c8dfe9ce1678e881, type: 3}
   LandingWave: {fileID: 7923558543268873613, guid: 89ed3462abf79834b808e5ec22c89a79, type: 3}
+  AimingBullet: {fileID: 1862893689990583542, guid: 9344d42a189188d49a1527c7848f515d, type: 3}
+  DashAttack: {fileID: 7112891474309455775, guid: 7cc6e8de0cb882c4bbd979110a20b376, type: 3}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803255259680863016}
   - component: {fileID: 8936261779581316441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: All_Fire_Bullet_Pixel_16x16_01_25 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8281276401676940339}
   - component: {fileID: 102696961926094199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: All_Fire_Bullet_Pixel_16x16_01_25 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,9 +180,9 @@ GameObject:
   - component: {fileID: 4636903663426392891}
   - component: {fileID: 1821504386588064687}
   - component: {fileID: 5468448321430624109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Landing
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

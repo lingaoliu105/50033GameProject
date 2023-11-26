@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,20 @@ namespace Game {
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
         }
+        public void Flash() {
+            StartCoroutine(FlashCoroutine());
+        }
+
+        public IEnumerator FlashCoroutine() {
+            spriteRenderer.color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(0.05f);
+            spriteRenderer.color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.05f);
+            spriteRenderer.color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(0.05f);
+            spriteRenderer.color = new Color(1, 1, 1, 1);
+        }
+
         public void Update() {
             
             // transform.position = position;

@@ -13,9 +13,16 @@ namespace Game {
         public PlayerSpriteRenderer SpriteRenderer;
         public EffectManager EffectManager;
 
+        public void Flash() {
+            SpriteRenderer.Flash();
+        }
 
         public void PlayDashEffect(Vector3 position, Vector2 dir) {
             EffectManager.CameraShake(dir);
+        }
+
+        public void PlayAbsorbEffect() {
+            EffectManager.PlayAbsorbEffect(this);
         }
 
         public void PlayAnimation(String trigger) {

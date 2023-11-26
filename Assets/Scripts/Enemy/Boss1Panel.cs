@@ -18,9 +18,12 @@ namespace Assets.Scripts.Enemy {
         public float JumpSpeed = 18f;
         public int VarJumpTime = 18;
         public float GroundY = 0f;
+        public float DashSpeed = 30f;
         public GameObject CocktailMother;
         public GameObject GroundWave;
         public GameObject LandingWave;
+        public GameObject AimingBullet;
+        public GameObject DashAttack;
         public void OnValidate() {
             B1Constants.AirMult = AirMult;
             B1Constants.RunAccel = RunAccel;
@@ -35,6 +38,9 @@ namespace Assets.Scripts.Enemy {
             B1Constants.CocktailMother = CocktailMother;
             B1Constants.GroundWave = GroundWave;
             B1Constants.LandingWave = LandingWave;
+            B1Constants.AimingBullet = AimingBullet;
+            B1Constants.DashSpeed = DashSpeed;
+            B1Constants.DashAttack = DashAttack;
         }
     }
 

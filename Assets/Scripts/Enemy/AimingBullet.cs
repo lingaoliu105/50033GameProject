@@ -8,22 +8,25 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemy {
-    public class StillAttack : EnemyAttack {
+    public class AimingBullet : EnemyAttack {
+        public Vector2 initialVelocity;
         public void Start() {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             StartCoroutine(WaitAndDestroy());
         }
         public override void Hitting() {
-            this.GetComponent<Collider2D>().enabled = false;
-            return;
+            Destroy(transform.parent.gameObject);
         }
 
         public override void OnCollisionEnter2D(Collision2D collision) {
-            return;
+            if (collision.gameObject.tag == "Ground") {
+                Destroy(transform.parent.gameObject);
+            }
         }
 
         public override IEnumerator WaitAndDestroy() {
-            yield return new WaitForSeconds(TimeToDestroy);
-            Destroy(gameObject);
+            yield return null;
+            GetComponent<Rigidbody2D>().velocity = initialVelocity;
         }
     }
 }

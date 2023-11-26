@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameCamera: {fileID: 0}
   volume: {fileID: 2042125705887212609}
+  AbsorbEffectPrefab: {fileID: 7175349683131483525, guid: 847a20b152eea5746ab620d07be36db5, type: 3}
 --- !u!114 &2042125705887212609
 MonoBehaviour:
   m_ObjectHideFlags: 0

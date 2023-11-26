@@ -78,6 +78,7 @@ namespace Game
                     Die();
                 }
                 invinsibleOnHitTimer = Constants.InvinsibleOnHitTime;
+                Flash();
             }
         }
         public void RestoreHP(int amount) {

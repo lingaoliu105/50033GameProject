@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Enemy;
 using Assets.Scripts.Map;
+using Assets.Scripts.Items;
+
 namespace Game {
     public partial class PlayerController {
         
@@ -36,6 +38,10 @@ namespace Game {
                 }
                 if (collider.CompareTag("Void")) { 
                     collider.GetComponent<VoidArea>().GetOut(this);
+                }
+                if (collider.CompareTag("Object")) {
+                    Debug.Log("Object");
+                    collider.GetComponent<ItemObject>().PickedUP(this);
                 }
             }
         }

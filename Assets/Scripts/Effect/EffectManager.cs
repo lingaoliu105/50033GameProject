@@ -12,6 +12,7 @@ namespace Game {
     public class EffectManager: MonoBehaviour {
         public SceneCamera gameCamera;
         public Volume volume; // 引用包含Volume组件的游戏对象
+        public GameObject AbsorbEffectPrefab;
         private float freezeTime;
 
         public void Update() {
@@ -19,6 +20,9 @@ namespace Game {
         }
         public void CameraShake(Vector2 dir) {
             this.gameCamera.Shake(dir, 0.2f);
+        }
+        public void CameraShake(Vector2 dir, float time) {
+            this.gameCamera.Shake(dir, time);
         }
         public bool UpdateTime(float deltaTime) {
             if (freezeTime > 0f) {
@@ -29,6 +33,12 @@ namespace Game {
                 Time.timeScale = 1;
             }
             return true;
+        }
+        public void PlayAbsorbEffect(PlayerController player) {
+            GameObject effect = Instantiate(AbsorbEffectPrefab, player.transform.position, Quaternion.identity);
+            effect.transform.parent = player.transform;
+            effect.transform.localPosition = Vector3.zero;
+            effect.transform.localScale = Vector3.one;
         }
 
         //冻帧
