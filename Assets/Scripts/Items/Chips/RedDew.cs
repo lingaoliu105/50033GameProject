@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Items {
-    public class RedDew : EquipableItem {
+
+    public class RedDew : EquipableItem {//102
         public BasicBuff buff = new RedDewBuff();
         public override void Update() {
             base.Update();

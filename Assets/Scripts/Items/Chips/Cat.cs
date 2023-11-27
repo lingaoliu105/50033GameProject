@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Items {
-    public class Cat : EquipableItem {
+
+    public class Cat : EquipableItem {//101
         public override void OnHurt() {
             base.OnHurt();
             if (player == null) {

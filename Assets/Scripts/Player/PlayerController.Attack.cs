@@ -12,13 +12,40 @@ namespace Game {
     public partial class PlayerController {
         public bool CanAttack {
             get {
-                return GameInput.AttackButton.Pressed() && onGround && !Ducking;
+                do {
+                    if (!onGround) {
+                        //break;
+                    }
+                    if (Ducking) {
+                        break;
+                    }
+                    if (!GameInput.AttackButton.Pressed() )
+                    {
+                        break;
+                    }
+                    return true;
+                } while(false);
+                return false;
+                // return GameInput.AttackButton.Pressed() && onGround && !Ducking;
             }
         }
 
         public bool CanShoot {
             get {
-                return GameInput.ShootButton.Pressed() && !Ducking;
+                do {
+                    if (!onGround) {
+                        //break;
+                    }
+                    if (Ducking) {
+                        break;
+                    }
+                    if (!GameInput.ShootButton.Pressed()) {
+                        break;
+                    }
+                    return true;
+                } while (false);
+                return false;
+                // return GameInput.ShootButton.Pressed() && !Ducking;
             }
         }
         [HideInInspector]

@@ -1,4 +1,5 @@
-﻿using Game;
+﻿using Assets.Scripts.Items;
+using Game;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,9 +37,14 @@ public class GameManager : Singleton<GameManager> {
 
     public GameObject LoadingScreenRighthalf;
     public GameObject LoadingScreenLefthalf;
+
+    public ItemDataObject ItemDataObject;
+    public ItemFactory ItemFactory;
     
     public void Start() {
         Application.targetFrameRate = 60;
+        ItemDataObject.Initialize();
+        ItemFactory = new ItemFactory(ItemDataObject);
         GameInput.Init();
         Time.timeScale = 0f;
         StartCoroutine(StartGame());
@@ -60,13 +66,14 @@ public class GameManager : Singleton<GameManager> {
         SceneCamera.PlayerSpriteRenderer = PlayerSpriteRenderer;
         EffectManager.gameCamera = SceneCamera;
         PlayerController.EffectManager = EffectManager;
+        PlayerController.ItemFactory = ItemFactory;
         EnemyManager.EffectManager = EffectManager;
         EnemyManager.PlayerController = PlayerController;
         Debug.Log("SetComponents");
         yield return new WaitForSecondsRealtime(0.03f);
         //PlayerController.LoadDataFromFile = true;
         PlayerController.Position = CurrentLevelInfo.PlayerPosition;
-
+        PlayerController.Initialize();
         SceneCamera.IsLocked = CurrentLevelInfo.CameraLocked;
         SceneCamera.LockedCameraPos = CurrentLevelInfo.CameraStartPos;
         SceneCamera.SetCameraSize(CurrentLevelInfo.CameraSize);

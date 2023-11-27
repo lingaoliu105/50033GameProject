@@ -104,6 +104,7 @@ namespace Game {
 
         #region 体力
         public static float StaminaLockCountdown = .5f; //体力锁定时间
+        public static int DashStaminaCost = 24; //冲刺耐力消耗
         #endregion
 
         public static float InvinsibleOnHitTime = .2f; //受伤无敌时间

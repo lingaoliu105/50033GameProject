@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Game{
     public partial class PlayerController {
@@ -23,10 +24,11 @@ namespace Game{
         public int YellowTubes = 0;
         public int TubeLevel = 0;
         public TubeType CurrentTube = TubeType.HP;
-
+        [SerializeField]
         public EquipableItem[] Equipments;
+        [SerializeField]
         public List<EquipableItem> EquipmentBackpack;
-        private ItemFactory ItemFactory;
+        public ItemFactory ItemFactory;
 
         private float tubeSwitchColdDown = 0f;
 
@@ -36,10 +38,9 @@ namespace Game{
                 Equipments[i] = null;
             }
             RechargeAllTubes();
-            ItemFactory = new ItemFactory();
             //Test Only
-            EquipItem((EquipableItem)ItemFactory.CreateItem(1));
-            EquipItem((EquipableItem)ItemFactory.CreateItem(2));
+            EquipItem((EquipableItem)ItemFactory.CreateItem(101));
+            EquipItem((EquipableItem)ItemFactory.CreateItem(102));
         }
 
         public void EquipItem(EquipableItem item) {
@@ -55,8 +56,22 @@ namespace Game{
             }
         }
 
+        public void EquipItem(int id) {
+            EquipableItem item = (EquipableItem)ItemFactory.CreateItem(id);
+            if (item == null) {
+                return;
+            }
+            for (int i = 0; i < 4; i++) {
+                if (Equipments[i] == null) {
+                    Equipments[i] = item;
+                    item.player = this;
+                    return;
+                }
+            }
+        }
 
         public void UpdateEquipsOnUpdate() {
+           
             for (int i = 0; i < 4; i++) {
                 if (Equipments[i] != null) {
                     Equipments[i].Update();

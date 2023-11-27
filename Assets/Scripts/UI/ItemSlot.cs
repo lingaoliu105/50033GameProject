@@ -25,8 +25,7 @@ namespace Assets.Scripts.UI {
         }
 
         void EquipItem() {
-            ItemFactory itemFactory = new ItemFactory();
-            player.EquipItem((EquipableItem)itemFactory.CreateItem(1));
+            player.EquipItem(ItemID);
         }
 
         void UnequipItem() {

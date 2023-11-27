@@ -95,6 +95,8 @@ namespace Game {
             this.stateMachine.AddState(new ComboState(this));
             this.Facing = Facings.Right;
             this.LastAim = Vector2.right;
+            isAlive = true;
+            CanMove = false;
 
             Position = InitPos;
             collider = normalHitbox;
@@ -144,10 +146,13 @@ namespace Game {
 
         void Start() {
             this.stateMachine.State = (int)EActionState.Normal;
+        }
+
+        public void Initialize() {
             this.SetUpWeapons(TestRangedWeapon, TestMeleeWeapon);
             this.InitInventory();
-            isAlive = true;
             CanMove = true;
+
         }
 
 
@@ -179,6 +184,7 @@ namespace Game {
                 stateMachine.Update(deltaTime);
                 transform.position = this.Position + collider.position;
                 UpdateRender();
+                return;
             }
             
             GameInput.Update(deltaTime);
@@ -335,13 +341,31 @@ namespace Game {
 
         public bool CanDash{
             get {
-                return GameInput.DashButton.Pressed() && DashCooldownTimer <= 0 && dashes > 0;
+                do {
+                    if (Stamina <= Constants.DashStaminaCost) {
+                        break;
+                    }
+                    if (dashCooldownTimer > 0) {
+                        break;
+                    }
+                    if (!GameInput.DashButton.Pressed()) {
+                        break;
+                    }
+                    if (dashes <= 0) {
+                        break;
+                    }
+                    return true;
+                } while (false);
+                return false;
+                //return GameInput.DashButton.Pressed() && DashCooldownTimer <= 0 && dashes > 0;
             }   
         }
         public EActionState Dash() {
             //wasDashB = Dashes == 2;
             this.dashes = Math.Max(0, this.dashes - 1);
             GameInput.DashButton.ConsumeBuffer();
+            Stamina -= CurrentMeleeAttack.StaminaCost;
+            LockStamina();
             return EActionState.Dash;
         }
 
