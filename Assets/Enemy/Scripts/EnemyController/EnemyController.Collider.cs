@@ -5,39 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Assets.Scripts.Attack;
+using UnityEngine.Serialization;
 
 namespace Enemy { 
     public partial class EnemyController {
             
         // TODO: confirm ground layer number
-        private int groundMask = 6;
-        private Vector2 boundingBoxSize = new Vector2(0.3f,0.1f);
+        private int groundMask = 1<<6;
+        public Vector2 groundBoxSize = new Vector2(0.3f,0.1f);
+        public float groundCheckOffset;
 
         const float DEVIATION = 0.02f;  //碰撞检测误差
 
         private int playerAttackLayer = 11;
-
-    private bool CheckGround() {
-        return CheckGround(Vector2.zero);
-    }
-    private bool CheckGround(Vector2 offset) {
-        Vector2 origin = new Vector2(transform.position.x,transform.position.y) + offset;
-        RaycastHit2D hit = Physics2D.BoxCast(origin, boundingBoxSize, 0, Vector2.down, DEVIATION, groundMask);
-        return hit && hit.normal == Vector2.up;
-    }
-    
-    public void OnTriggerEnter2D(Collider2D other)
-    {   
         
+    protected bool CheckGround() {
+        var rayCastAll = Physics2D.OverlapBoxAll(transform.position+groundCheckOffset*Vector3.down, groundBoxSize, 0, groundMask);
+        return rayCastAll.Length > 0;
     }
-        public void OnCollisionEnter2D(Collision2D collision) {
-            if (collision.gameObject.tag == "PlayerProjectile") {
+
+    public virtual void OnCollisionEnter2D(Collision2D collision) {
+            if (collision.gameObject.CompareTag("PlayerProjectile")) {
                 PlayHitSound();
                 TakeDamage(collision.gameObject.GetComponent<BasicPlayerProjectile>().attackDamage);
             }
-            if (collision.gameObject.tag == "Void") {
+            if (collision.gameObject.CompareTag("Void")) {
                 TakeDamage(9999999);
             }
+            
         }
     }
 }
