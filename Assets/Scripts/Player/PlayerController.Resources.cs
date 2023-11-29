@@ -11,23 +11,33 @@ namespace Game
     {
         public PlayerInfo PlayerInfo;
         [Header("属性的原生数值")]
-        public int MaxHP;
-        public int MaxElec;
-        public int MaxStamina;
+        public int HPVOrigin;
+        public int MPVOrigin;
+        public int STMOrigin;
         public int STROrigin;
         public int DEXOrigin;
         public int TECOrigin;
         public int LUCOrigin;
         [Header("属性的实时数值")]
 		public int HP;
-		public int Elec;
-		public int Stamina;
+        
+        public int MaxHP;
+        public int Elec;
+        public int MaxElec;
+        public int MaxStamina;
+        public int Stamina;
         public int Soul;
         public int STR;
         public int DEX;
         public int TEC;
         public int LUC;
         public int Level;
+        public int MaxHPCalculated { get { return CalcHPValue(HPVOrigin); } }
+        
+        
+        public int MaxElecCalculated { get { return CalcHPValue(MPVOrigin); } }
+        public int MaxStaminaCalculated { get { return CalcHPValue(STMOrigin); } }
+
         public float STRFix { get { return CalcFixValue(STR); } }
         public float DEXFix { get { return CalcFixValue(DEX); } }
         public float TECFix { get { return CalcFixValue(TEC); } }
@@ -38,6 +48,8 @@ namespace Game
 
         public int DamageToTake = 0;
         public string DamageTag = "";
+
+        
 
         public void LockStamina() {
             staminaRecoverConuntdown = Constants.StaminaLockCountdown;
@@ -116,21 +128,18 @@ namespace Game
             if (value >= 99) result = 1f;
             return result;
         }
-        private float CalcHPValue(int value) {
-            float result = 0;
-            if (value <= 9 && value >= 0) result = value / 100f;
-            if (value <= 29 && value >= 10) result = (10 + (value - 10) * 2) / 100f;
-            if (value <= 39 && value >= 30) result = (50 + (value - 30) * 3.2f) / 100f;
-            if (value <= 98 && value >= 40) result = (80 + (value - 40) * 0.328f) / 100f;
-            if (value >= 99) result = 1f;
+        private int CalcHPValue(int value) {
+            int result = 0;
+
             return result;
         }
         public int NextLevelExp(int currentLevel) {
+            int nextLevel = currentLevel;
             int result = 0;
-            if (currentLevel + 81 < 92) {
-                result = (int)(0.1f * Math.Pow(currentLevel + 81, 2) + 1);
+            if (nextLevel + 81 < 92) {
+                result = (int)(0.1f * Math.Pow(nextLevel + 81, 2) + 1);
             } else {
-                result = (int)((0.1f + 0.02f * (currentLevel + 81 - 92)) * Math.Pow(currentLevel + 81, 2) + 1);
+                result = (int)((0.1f + 0.02f * (nextLevel + 81 - 92)) * Math.Pow(nextLevel + 81, 2) + 1);
             }
             return result;
         }
@@ -153,6 +162,9 @@ namespace Game
                 DEXOrigin = PlayerInfo.DEXOrigin;
                 TECOrigin = PlayerInfo.TECOrigin;
                 LUCOrigin = PlayerInfo.LUCOrigin;
+                HPVOrigin = PlayerInfo.HPVOrigin;
+                MPVOrigin = PlayerInfo.MPVOrigin;
+                STMOrigin = PlayerInfo.STMOrigin;
                 HP = PlayerInfo.HP;
                 Elec = PlayerInfo.Elec;
                 Stamina = PlayerInfo.Stamina;
@@ -173,6 +185,9 @@ namespace Game
             PlayerInfo.DEXOrigin = DEXOrigin;
             PlayerInfo.TECOrigin = TECOrigin;
             PlayerInfo.LUCOrigin = LUCOrigin;
+            PlayerInfo.HPVOrigin = HPVOrigin;
+            PlayerInfo.MPVOrigin = MPVOrigin;
+            PlayerInfo.STMOrigin = STMOrigin;
             PlayerInfo.HP = HP;
             PlayerInfo.Elec = Elec;
             PlayerInfo.Stamina = Stamina;
