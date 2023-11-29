@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2901660180137880051}
   - component: {fileID: 4592819441693399184}
   - component: {fileID: 5028935114880661676}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1991421535009247268}
   - component: {fileID: 7822160795378012935}
   - component: {fileID: 735817575841438032}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: EnemyTurret
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -267,6 +267,7 @@ MonoBehaviour:
   currentAffectType: 0
   transitionStateChanged: 0
   stateTimeElapsed: 0
+  deltaTime: 0
   attackTemplates:
   - {fileID: 3883574252096972240, guid: 74bda27821e16fc4ab814e3093f336f4, type: 3}
   attackTime: 0.4
@@ -277,6 +278,7 @@ MonoBehaviour:
   maxHP: 100
   dieWaitTime: 0.8
   detectRange: 8
+  SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
@@ -387,7 +389,7 @@ GameObject:
   - component: {fileID: 6419632358280817792}
   - component: {fileID: 3618599566641556261}
   - component: {fileID: 6599851586230521746}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7674479852182295838}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +501,7 @@ GameObject:
   - component: {fileID: 4759438906699947098}
   - component: {fileID: 6087375365406449025}
   - component: {fileID: 6397804610715235050}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: HealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1219518252711142794}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +638,7 @@ GameObject:
   - component: {fileID: 3107370399312062386}
   - component: {fileID: 7330261419468145217}
   - component: {fileID: 2677772780195696007}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735640030216382971}
   - component: {fileID: 4052380936350709531}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
