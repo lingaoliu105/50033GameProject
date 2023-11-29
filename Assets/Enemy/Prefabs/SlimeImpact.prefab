@@ -169,7 +169,7 @@ MonoBehaviour:
   Damage: 8
   TimeToDestroy: 0
   hasHit: 0
-  hitAudio: {fileID: 8300000, guid: 20475986536932142bb1f8fbdb02bc7d, type: 3}
+  hitAudio: {fileID: 0}
 --- !u!82 &8921986280548356309
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6954986916800565037, guid: b359e4e69385f924cb8de1c8080ba551, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 75381cbc7e0bf534ca640b38686ca754, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b9686befc297186498c47d7527f63d2e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.6
   m_Pitch: 1

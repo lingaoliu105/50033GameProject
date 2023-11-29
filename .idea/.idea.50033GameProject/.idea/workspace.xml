@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_26_23_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_26_23_25__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_28_11_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_28_11_04__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +82,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\MyProjects\UnityGameProject\50033GameProject -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -92,7 +90,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\MyProjects\UnityGameProject\50033GameProject -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -156,7 +154,7 @@
       <workItem from="1699865308943" duration="5838000" />
       <workItem from="1700409175579" duration="3025000" />
       <workItem from="1700462938702" duration="1458000" />
-      <workItem from="1701012310515" duration="13364000" />
+      <workItem from="1701012310515" duration="13990000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -302,15 +300,39 @@
       <option name="project" value="LOCAL" />
       <updated>1700461773984</updated>
     </task>
-    <task id="LOCAL-00019" summary="fix merging bugs">
+    <task id="LOCAL-00019" summary="new enemies: bat and slime">
       <option name="closed" value="true" />
-      <created>1701234228750</created>
+      <created>1701227102834</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1701234228750</updated>
+      <updated>1701227102834</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="new enemy: bat and slime">
+      <option name="closed" value="true" />
+      <created>1701227132371</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701227132371</updated>
+    </task>
+    <task id="LOCAL-00021" summary="bat and slime">
+      <option name="closed" value="true" />
+      <created>1701227177920</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701227177920</updated>
+    </task>
+    <task id="LOCAL-00022" summary="bat and slime">
+      <option name="closed" value="true" />
+      <created>1701227186331</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701227186331</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +372,9 @@
     <MESSAGE value="enemy hurt animation" />
     <MESSAGE value="sfx on hit &amp; health bar correction" />
     <MESSAGE value="flush codebase with new version" />
-    <MESSAGE value="fix merging bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix merging bugs" />
+    <MESSAGE value="new enemies: bat and slime" />
+    <MESSAGE value="new enemy: bat and slime" />
+    <MESSAGE value="bat and slime" />
+    <option name="LAST_COMMIT_MESSAGE" value="bat and slime" />
   </component>
 </project>
