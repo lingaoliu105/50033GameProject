@@ -7,48 +7,126 @@ using UnityEngine;
 using Game;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 namespace Assets.Scripts.UI {
+    [Serializable]
+    public struct ValueBlock { 
+    
+    
+    }
+
+    public enum ValueBlockType {
+        HPV = 0,
+        MPV = 1,
+        STM = 2,
+        STR = 3,
+        DEX = 4,
+        TEC = 5,
+        LUC = 6,
+        Size = 7,
+        LV = 8,
+        Soul = 9,
+    }
+
     public class Upgrading:MonoBehaviour {
         public PlayerController Player;
 
-        public TextMeshProUGUI SoulText;
-        public TextMeshProUGUI LevelText;
-        public TextMeshProUGUI STRText;
-        public TextMeshProUGUI DEXText;
-        public TextMeshProUGUI TECText;
-        public TextMeshProUGUI LUCText;
+        public bool IsBonfire = false;
+        public int DeltaLevel = 0;
+        public int DeltaSoul = 0;
+        public int NextLevelSoul = 0;
 
-                 public GameObject STRButtonUP;
-                public GameObject DEXButtonUp;
-                public GameObject TECButtonUp;
-                public GameObject LUCButtonUp;
-                public GameObject LUCButtonDown;
-                public GameObject TECButtonDown;
-                public GameObject DEXButtonDown;
-                public GameObject STRButtonDown;
-         
-        private int tempLV = 0;
-        private int displayLV = 0;
-        private int tempSTR = 0;
-        private int displaySTR = 0;
-        private int tempDEX = 0;
-        private int displayDEX = 0;
-        private int tempTEC = 0;
-        private int displayTEC = 0;
-        private int tempLUC = 0;
-        private int displayLUC = 0;
-        private int tempSoul = 0;
-        private int displaySoul = 0;
+        public UpgradingValueBlock[] ValueBlocks;
+
+        public TextMeshProUGUI SoulText;
+        public string SoulString;
+        public int SoulValue;
+        public TextMeshProUGUI LevelText;
+        public string LevelString;
+        public int LevelValue;
+
+        public Color HigherValueColor = Color.green;
+        public Color NormalColor = Color.black;
+        public Color LowerValueColor = Color.red;
+
+        public bool CanUpgrade {
+            get {
+                if (IsBonfire) {
+                    return (Player.Soul - DeltaSoul) >= NextLevelSoul;
+                }
+                return false;
+            }
+        }
+
+
+        public void UpgradeCalc() {
+            
+            DeltaLevel += 1;
+            costs[DeltaLevel] = NextLevelSoul;
+            DeltaSoul += NextLevelSoul;
+            NextLevelSoul = Player.NextLevelExp(Player.Level + DeltaLevel);
+        }
+
+        public void DowngradeCalc() { 
+            DeltaSoul -= costs[DeltaLevel];
+            NextLevelSoul = costs[DeltaLevel];
+            costs[DeltaLevel] = 0;
+            DeltaLevel -= 1;
+        }
+
+        public int GetValue(ValueBlockType type) {
+            if (Player == null) return 0; 
+            switch (type) {
+                case ValueBlockType.HPV:
+                    return Player.HPVOrigin;
+                case ValueBlockType.MPV:
+                    return Player.MPVOrigin;
+                case ValueBlockType.STM:
+                    return Player.STMOrigin;
+                case ValueBlockType.STR:
+                    return Player.STROrigin;
+                case ValueBlockType.DEX:
+                    return Player.DEXOrigin;
+                case ValueBlockType.TEC:
+                    return Player.TECOrigin;
+                case ValueBlockType.LUC:
+                    return Player.LUCOrigin;
+                default:
+                    return 0;
+            }
+        }
+        
 
         private int[] costs = new int[999];
 
-        private int nextLevelSoul = 0;
 
+        public void Update() {
+            if (Player == null) return;
+            SoulValue = Player.Soul - DeltaSoul;
+            if (DeltaSoul > 0) {
+                SoulText.color = LowerValueColor;
+                SoulText.text = Player.Soul.ToString()+" -> " +SoulValue.ToString();
+            } 
+            if (DeltaSoul == 0) {
+                SoulText.color = NormalColor;
+                SoulText.text = Player.Soul.ToString();
+            }
+            if (DeltaLevel > 0) {
+                LevelText.color = HigherValueColor;
+                LevelText.text = Player.Level.ToString()+" -> " + (Player.Level + DeltaLevel).ToString();
+            }
+            if (DeltaLevel == 0) {
+                LevelText.color = NormalColor;
+                LevelText.text = Player.Level.ToString();
+            }
+        }
 
         private void Start() {
-            Player = this.transform.parent.GetComponent<PlayerController>();
-            Close();
+            //Player = this.transform.parent.GetComponent<PlayerController>();
+            IsBonfire = true;
+            NextLevelSoul = Player.NextLevelExp(Player.Level + DeltaLevel);
+            //Close();
         }
         private string Len3(int value) {
             string result = "";
@@ -59,11 +137,16 @@ namespace Assets.Scripts.UI {
         }
 
         public void Close() { 
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
-        public void Open() {
-            this.gameObject.SetActive(true);
+        public void Open(bool isBonfire = false) {
+            //IsBonfire = isBonfire;
+            //this.gameObject.SetActive(true);
+
         }
+
+        public IEnumerator OpenAnimate() { yield return null; }
+        public IEnumerator CloseAnimate() { yield return null; }
 
         private string Int2String(int value) {
             string result = "";
@@ -72,128 +155,11 @@ namespace Assets.Scripts.UI {
             if (value >= 1000000 && value < 1000000000) result = (value / 1000000).ToString() + "," + Len3((value % 1000000) / 1000) + "K";
             return result;
         }
-        public void STRUp() {
-            if (nextLevelSoul <= displaySoul) {
-                tempSTR++;
-                tempLV++;
-                costs[tempLV] = nextLevelSoul;
-                tempSoul += nextLevelSoul;
-            }
-        }
-        public void STRDown() { 
-            tempSoul -= costs[tempLV];
-            tempLV--;
-            tempSTR--;
-        }
-        public void DEXUp() {
-            if (nextLevelSoul <= displaySoul) {
-                tempDEX++;
-                tempLV++;
-                costs[tempLV] = nextLevelSoul;
-                tempSoul += nextLevelSoul;
-            }
-        }
-        public void DEXDown() {
-            tempSoul -= costs[tempLV];
-            tempLV--;
-            tempDEX--;
-        }
-        public void TECUp() {
-            if (nextLevelSoul <= displaySoul) {
-                tempTEC++;
-                tempLV++;
-                costs[tempLV] = nextLevelSoul;
-                tempSoul += nextLevelSoul;
-            }
-        }
-        public void TECDown() {
-            tempSoul -= costs[tempLV];
-            tempLV--;
-            tempTEC--;
-        }
-        public void LUCUp() {
-            if (nextLevelSoul <= displaySoul) {
-                tempLUC++;
-                tempLV++;
-                costs[tempLV] = nextLevelSoul;
-                tempSoul += nextLevelSoul;
-            }
-        }
-        public void LUCDown() {
-            tempSoul -= costs[tempLV];
-            tempLV--;
-            tempLUC--;
-        }
+        
         public void Confirm() {
-            Player.STR += tempSTR;
-            Player.DEX += tempDEX;
-            Player.TEC += tempTEC;
-            Player.LUC += tempLUC;
-            Player.Level += tempLV;
-            Player.Soul -= tempSoul;
-            tempSTR = 0;
-            tempDEX = 0;
-            tempTEC = 0;
-            tempLUC = 0;
-            tempLV = 0;
-            tempSoul = 0;
-            Close();
+
+            //Close();
         }
-        private void UpdateValues() {
-            displayLV = Player.Level + tempLV;
-            nextLevelSoul = Player.NextLevelExp(displayLV);
-            LevelText.text = displayLV.ToString();
-
-            displaySoul = Player.Soul - tempSoul;
-
-            if (nextLevelSoul > displaySoul) {
-                STRButtonUP.SetActive(false);
-                DEXButtonUp.SetActive(false);
-                TECButtonUp.SetActive(false);
-                LUCButtonUp.SetActive(false);
-            } else { 
-                STRButtonUP.SetActive(true);
-                DEXButtonUp.SetActive(true);
-                TECButtonUp.SetActive(true);
-                LUCButtonUp.SetActive(true);
-            }
-
-            if (tempSTR > 0) {
-                STRButtonDown.SetActive(true);
-            } else {
-                STRButtonDown.SetActive(false);
-            }
-            if (tempDEX > 0) {
-                DEXButtonDown.SetActive(true);
-            } else {
-                DEXButtonDown.SetActive(false);
-            }
-            if (tempTEC > 0) {
-                TECButtonDown.SetActive(true);
-            } else {
-                TECButtonDown.SetActive(false);
-            }
-            if (tempLUC > 0) {
-                LUCButtonDown.SetActive(true);
-            } else {
-                LUCButtonDown.SetActive(false);
-            }
-
-            displaySTR = Player.STR + tempSTR;
-            displayDEX = Player.DEX + tempDEX;
-            displayTEC = Player.TEC + tempTEC;
-            displayLUC = Player.LUC + tempLUC;
-
-
-            SoulText.text = Int2String(displaySoul);
-
-            STRText.text = displaySTR.ToString();
-            DEXText.text = displayDEX.ToString();
-            TECText.text = displayTEC.ToString();
-            LUCText.text = displayLUC.ToString();
-        }
-        private void Update() {
-            UpdateValues();
-        }
+       
     }
 }
