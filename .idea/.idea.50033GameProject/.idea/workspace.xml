@@ -5,220 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Documentation.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Documentation.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Editor/AutoSaveExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Editor/AutoSaveExtension.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Scenes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Scenes/SampleScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EckTechGames/AutoSave/Scenes/SampleScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/attack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/attack.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/bat_anim.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/bat_anim.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/death.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/death.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/fly.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Bat/fly.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyBat.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyBat.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SlimeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SlimeController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/BatComplete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/BatComplete.gif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Attack.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Attack_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Attack_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Death.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Death_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Death_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Fly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Fly.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Bat/Bat_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/CrabComplete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/CrabComplete.gif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Ability.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Ability.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackA.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackA_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackA_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackB.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackB_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackB_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackC.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackC_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_AttackC_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Death.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Crab/Crab_Run.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Ability.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Ability.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_ArmorBreak.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_ArmorBreak.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackA.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackA_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackA_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackB.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackB_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackB_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackC.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackC_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_AttackC_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Run.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/GolemComplete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/GolemComplete.gif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackA.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackA_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackA_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackB.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackB_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackB_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackC.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackC_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_AttackC_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_DeathA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_DeathA.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_DeathB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_DeathB.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Death_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Death_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_HitA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_HitA.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_HitB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_HitB.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_IdleA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_IdleA.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_IdleB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_IdleB.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Reset.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Reset.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Run.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Upgrade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Golem/No Armor/Golem_Upgrade.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Death.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Pebble/Pebble_Run.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/RatComplete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/RatComplete.gif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Ability.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Ability.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Attack.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Attack_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Attack_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Death.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Death_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Death_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Rat/Rat_Run.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Death.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Death_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Death_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Fly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Fly.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Full_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Full_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Skull/Bones_SingleSkull_Idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/SlimeComplete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/SlimeComplete.gif.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Ability.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Ability.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Ability_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Ability_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Death.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Full.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Hit.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Idle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Jump.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Jump_FX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Jump_FX.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy_Galore_I/Slime/Slime_Spiked_Run.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Map2/LightingData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Map2/LightingData.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyWatcher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyWatcher.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/ShielmanMelee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/ShielmanMelee.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/IAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/IAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Playerrefab/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Playerrefab/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sample.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.Collider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.Collider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_26_23_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_26_23_25__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_28_11_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_28_11_04__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +84,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\MyProjects\UnityGameProject\50033GameProject -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -303,7 +92,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\MyProjects\UnityGameProject\50033GameProject -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -328,10 +117,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="32668">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="32668" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -513,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700461773984</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix merging bugs">
+      <option name="closed" value="true" />
+      <created>1701234228750</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701234228750</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,6 +350,7 @@
     <MESSAGE value="enemy hurt animation" />
     <MESSAGE value="sfx on hit &amp; health bar correction" />
     <MESSAGE value="flush codebase with new version" />
-    <option name="LAST_COMMIT_MESSAGE" value="flush codebase with new version" />
+    <MESSAGE value="fix merging bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix merging bugs" />
   </component>
 </project>
