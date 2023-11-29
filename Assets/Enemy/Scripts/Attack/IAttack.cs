@@ -19,8 +19,8 @@ namespace Enemy {
 
         public int Damage; 
         public float TimeToDestroy;
+        public bool hasHit = false;
         public abstract void Hitting();
-
         public abstract void  OnCollisionEnter2D(Collision2D collision);
     }
 

@@ -3896,6 +3896,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4375872669393619080, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3484447063606298808}
+    - target: {fileID: 4375872669393619080, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375872669393619080, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BackpackCloseButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6252546000101044757, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
       propertyPath: m_Name
       value: ButtonClose
@@ -3903,13 +3915,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6252546000101044757, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3484447063606298808}
   m_SourcePrefab: {fileID: 100100000, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
 --- !u!224 &1841896004357100638 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3236226208685001953, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
   m_PrefabInstance: {fileID: 3848000697023862975}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7179680408481557162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6252546000101044757, guid: 8aee31d0e72f83244972d0d6c09a270e, type: 3}
+  m_PrefabInstance: {fileID: 3848000697023862975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3484447063606298808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179680408481557162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31be3be45acecb46a5df85d1439ff7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backpackPanel: {fileID: 545191554332032104}
 --- !u!1001 &4300802338597711278
 PrefabInstance:
   m_ObjectHideFlags: 0
