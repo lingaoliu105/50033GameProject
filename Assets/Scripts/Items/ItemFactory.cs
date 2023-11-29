@@ -21,9 +21,12 @@ namespace Assets.Scripts.Items {
             // s
         }
 
-        private ItemBase GetClassByName(string className) {
+        private ItemBase GetClassByName(string className) {  
+            Debug.Log("class name: " + className);
+            className = "Assets.Scripts.Items." + className;
             // 使用 Type.GetType 获取类型
             Type myClassType = Type.GetType(className);
+            Debug.Log("my class type: " + myClassType);
             ItemBase myClassInstance = null;
             if (myClassType != null) {
                 // 创建类的实例

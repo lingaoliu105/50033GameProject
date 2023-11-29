@@ -4,8 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
+    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="fix collider">
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box10.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box10.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box11.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box11.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box12.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box12.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box4.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box4.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box5.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box5.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box6.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box6.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box7.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box7.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box8.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box8.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box9.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Box9.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest5.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Chest5.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Box9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/3 Objects/Chest5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/Deco Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/Deco Palette.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +65,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/787acc3c9a4c471ba7d971300105af2446ac00/7a/b6aba145/DisableMediaInsertionPrompt.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b93114940d45463da98e2cb2dda4376520a00/e5/f0d1d8b8/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c8cc7c3239f545aca16532f69b99099c3e000/ae/18426339/Graph.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Enemy/Prefabs/BatMelee.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Enemy/Prefabs/SlimeImpact.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Enemy/Prefabs/SlimeImpact.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Action/StartIdle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Decision/AttackReachableDecision.cs" root0="FORCE_HIGHLIGHTING" />
@@ -27,9 +76,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SoldierController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Scenes/Boss.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Scenes/Sample.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Sprites/1/3 Objects/Box1.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Tiles/Deco Palette.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.24/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -332,7 +389,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701227186331</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="slummap remake">
+      <option name="closed" value="true" />
+      <created>1701268575471</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701268575471</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix collider">
+      <option name="closed" value="true" />
+      <created>1701269376589</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701269376589</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +448,8 @@
     <MESSAGE value="new enemies: bat and slime" />
     <MESSAGE value="new enemy: bat and slime" />
     <MESSAGE value="bat and slime" />
-    <option name="LAST_COMMIT_MESSAGE" value="bat and slime" />
+    <MESSAGE value="slummap remake" />
+    <MESSAGE value="fix collider" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix collider" />
   </component>
 </project>
