@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e6de21e6aea1f4da0230e913de541b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 45
+  Damage: 30
   TimeToDestroy: 0
+  hasHit: 0
   initialVelocity: {x: 0, y: 0}

@@ -201,6 +201,9 @@ namespace Game {
             if (invinsibleOnHitTimer > 0) {
                 invinsibleOnHitTimer -= deltaTime;
             }
+            if (DebugInvinsible) {
+                invinsibleOnHitTimer = 99;
+            }
             // switch tube 
             if (GameInput.SwitchItem.Pressed()) {
                 if (tubeSwitchColdDown <= 0) {
@@ -364,7 +367,7 @@ namespace Game {
             //wasDashB = Dashes == 2;
             this.dashes = Math.Max(0, this.dashes - 1);
             GameInput.DashButton.ConsumeBuffer();
-            Stamina -= CurrentMeleeAttack.StaminaCost;
+            Stamina -= Constants.DashStaminaCost;
             LockStamina();
             return EActionState.Dash;
         }

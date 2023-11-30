@@ -20,6 +20,7 @@ namespace Assets.Scripts.Enemy {
         }
 
         public IEnumerator Appear(float appearTime) {
+            yield return null;
             // Size from 3 to 1 and alpha from 0 to 255
             float time = 0;
             while (time < appearTime) {

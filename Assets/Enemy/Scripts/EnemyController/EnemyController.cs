@@ -110,7 +110,7 @@ namespace Enemy {
             return GameObject.FindGameObjectWithTag("Player").transform.position;
         }
 
-        public void TakeDamage(int damage) {
+        public override void TakeDamage(int damage) {
             hp -= damage;
             healthBar.value = hp;
             if (hp <= 0) {

@@ -1153,6 +1153,7 @@ MonoBehaviour:
   LoadDataFromFile: 0
   DamageToTake: 0
   DamageTag: 
+  DebugInvinsible: 1
 --- !u!1 &6631411847305245595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +2992,10 @@ PrefabInstance:
     - target: {fileID: 5709952430457436801, guid: 907874410f6ef7e4287380d482159dba, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752007483337928899, guid: 907874410f6ef7e4287380d482159dba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6195642105627048065, guid: 907874410f6ef7e4287380d482159dba, type: 3}
       propertyPath: m_AnchorMax.y

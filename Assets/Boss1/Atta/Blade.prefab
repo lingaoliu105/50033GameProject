@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 57911349127313556}
   - component: {fileID: 8154370623563044065}
   - component: {fileID: 975886681492104249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blade
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0c36ebaa4e1c3084c9f98606c377cb77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 55
   TimeToDestroy: 0.2
+  hasHit: 0
 --- !u!95 &975886681492104249
 Animator:
   serializedVersion: 5

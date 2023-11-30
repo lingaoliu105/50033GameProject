@@ -27,7 +27,7 @@ namespace Assets.Scripts.Items {
             while (elapsedTime < time) {
                 transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, (elapsedTime / time));
                 elapsedTime += Time.deltaTime;
-                transform.position -= (transform.position - player.transform.position)/ (time - elapsedTime)*Time.deltaTime;
+                //transform.position -= (transform.position - player.transform.position)/ (time - elapsedTime)*Time.deltaTime;
                 yield return null;
             }
             Destroy(gameObject);
