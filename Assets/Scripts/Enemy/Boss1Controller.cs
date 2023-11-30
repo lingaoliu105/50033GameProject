@@ -65,7 +65,17 @@ namespace Assets.Scripts.Enemy {
         public int HPMAX = 1000;
         public int HP = 1000;
 
-        
+        public int NextSpecialAttackCountdown = 5;
+        public int NextExCountdown = 20;
+
+        public IEnumerator WaitAndDecide(float time) { 
+            yield return new WaitForSeconds(time);
+            float random = UnityEngine.Random.Range(0f, 1f);
+            NextExCountdown -= 1;
+            NextSpecialAttackCountdown -= 1;
+            if NextSpecialAttack
+        }
+
         public void Jump(Facings facing = Facings.Left) { 
             StartCoroutine(ContinuousDash());
         }
@@ -76,6 +86,8 @@ namespace Assets.Scripts.Enemy {
         public override void Start() {
             base.Start();
             panel.OnValidate();
+            NextExCountdown = 20 + (int)UnityEngine.Random.Range(-4,4);
+            NextExCountdown = 5 + (int)UnityEngine.Random.Range(-2, 2);
             facing = Facings.Left;
             velocity = Vector2.zero;
             StartCoroutine(WaitJump());
