@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Camera;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,4 +12,5 @@ public class LevelInfo : ScriptableObject {
     public Vector2 CameraStartPos;
     public bool CameraLocked;
     public float CameraSize;
+    public CameraLayer[] CameraLayers;
 }
