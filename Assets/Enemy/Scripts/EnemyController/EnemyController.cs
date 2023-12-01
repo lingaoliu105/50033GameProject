@@ -103,11 +103,11 @@ namespace Enemy {
 
         public Vector3 GetPlayerPosition()
         {
-            if (player)
+            if (!player)
             {
-                return player.transform.position;
+                player = GameObject.FindGameObjectWithTag("Player");
             }
-            return GameObject.FindGameObjectWithTag("Player").transform.position;
+            return player.transform.position;
         }
 
         public override void TakeDamage(int damage) {
