@@ -5,123 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Levels/City.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Levels/City.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/Palette.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/Banner.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/Banner.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-big-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-big-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-coke-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-coke-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-neon-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-neon-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-scroll-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-scroll-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-side-4.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-side-4.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-sushi-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-sushi-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner1.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner1.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_coke.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_coke.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_green.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_green.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_neon.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_neon.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_scroll.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_scroll.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_sushi.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_sushi.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor-face-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor-face-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/Materials/hotel-sign.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/Materials/hotel-sign.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 5.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 5.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 6.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 6.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 7.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 7.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/~UnityDirMonSyncFile~3ef400766d10f5e4984883ad1db3874b~" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/~UnityDirMonSyncFile~72a49987d9a96a449b7080288cc2bbe6~" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/~UnityDirMonSyncFile~accb8ca23dbb4714dabf08c4f53e985d~" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_01_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_01_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_02_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_02_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_04_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_04_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_05_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_05_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_11_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_11_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_14_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_14_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_22_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_22_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_23_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_23_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_25_0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_25_0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_41.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_41.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_42.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_42.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/banner-big-1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/banner-big-1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/banner-coke-1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/banner-coke-1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-1.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Animation/Shieldman/ShieldmanAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Shieldman/ShieldmanAnim.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Animation/Soldier/SoldierAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Soldier/SoldierAnim.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyTurret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyTurret.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyWatcher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyWatcher.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Renderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Renderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Playerrefab/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Playerrefab/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attack/BasicPlayerProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attack/BasicPlayerProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss1Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss1Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/antenna.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/antenna.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-arrow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-floor.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-floor.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-open.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-open.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-small.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-small.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banners.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banners.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/hotel-sign.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/hotel-sign.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SlumMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SlumMap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_41.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_41.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_42.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/1/1 Tiles/Tile_42.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/Deco Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/Deco Palette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/Ground Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/Ground Palette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/Palette.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,9 +50,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/787acc3c9a4c471ba7d971300105af2446ac00/7a/b6aba145/DisableMediaInsertionPrompt.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b93114940d45463da98e2cb2dda4376520a00/e5/f0d1d8b8/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c8cc7c3239f545aca16532f69b99099c3e000/ae/18426339/Graph.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Action/StartIdle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Decision/AttackReachableDecision.cs" root0="FORCE_HIGHLIGHTING" />
@@ -143,15 +58,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SoldierController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Avalon/Desktop/Team Project/50033GameProject/Assets/Scripts/Enemy/Boss1Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/IInteractive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/LootBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -168,32 +83,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Notification.DisplayName-DoNotAsk-Unity project open": "Unity project open",
-    "Notification.DoNotAsk-Unity project open": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.51282054",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Unity project open&quot;: &quot;Unity project open&quot;,
+    &quot;Notification.DoNotAsk-Unity project open&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.51282054&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\linga\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\linga\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\linga\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\linga\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\linga\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\linga\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
@@ -204,7 +119,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\MyProjects\UnityGameProject\50033GameProject -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -212,7 +127,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\MyProjects\UnityGameProject\50033GameProject -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -237,10 +152,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7508">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22268">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7508" />
+      <option name="pid" value="22268" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -526,53 +441,25 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs</url>
           <line>62</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="62" containingFunctionPresentation="Method 'Attack'">
-            <startOffsets>
-              <option value="2473" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2487" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="62" containingFunctionPresentation="Method 'Attack'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs</url>
           <line>70</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="70" containingFunctionPresentation="Method 'StartScout'">
-            <startOffsets>
-              <option value="2689" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2706" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="70" containingFunctionPresentation="Method 'StartScout'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs</url>
           <line>92</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="92" containingFunctionPresentation="Method 'AttackCanReach'">
-            <startOffsets>
-              <option value="3406" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3423" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="92" containingFunctionPresentation="Method 'AttackCanReach'" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Renderer.cs</url>
           <line>26</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\EnemyController.Renderer.cs" initialLine="26" containingFunctionPresentation="Method 'HitFlash'">
-            <startOffsets>
-              <option value="597" />
-            </startOffsets>
-            <endOffsets>
-              <option value="624" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\EnemyController.Renderer.cs" initialLine="26" containingFunctionPresentation="Method 'HitFlash'" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
