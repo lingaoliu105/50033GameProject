@@ -229,9 +229,11 @@ MonoBehaviour:
   patrolRangeR: 0
   patrolSpeed: 2.5
   scoutSpeed: 3.5
+  groundBoxSize: {x: 0.3, y: 0.1}
+  groundCheckOffset: 0
   maxHP: 100
   dieWaitTime: 0.8
-  detectRange: 8
+  detectRange: 4
   SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
@@ -240,7 +242,7 @@ MonoBehaviour:
   verticalMoveRange: 6
   horizontalMoveRange: 8
   isMoving: 0
-  attackRange: 4
+  attackRange: 3
 --- !u!82 &48024468377522498
 AudioSource:
   m_ObjectHideFlags: 0

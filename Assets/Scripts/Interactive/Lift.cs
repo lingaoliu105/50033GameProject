@@ -5,7 +5,6 @@ using UnityEngine;
 public class Lift : AbstractInteractiveObject
 {
     public float liftHeight;
-    public bool flag;
 
     private IEnumerator LiftUp()
     {
@@ -15,18 +14,9 @@ public class Lift : AbstractInteractiveObject
             yield return null;
         }
     }
-
-    protected override void Update()
-    {
-        base.Update();
-        if (flag)
-        {
-            Interact();
-        }
-    }
+    
     public override void Interact()
     {
         StartCoroutine(LiftUp());
-        
     }
 }

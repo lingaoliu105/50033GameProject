@@ -1153,6 +1153,7 @@ MonoBehaviour:
   LoadDataFromFile: 0
   DamageToTake: 0
   DamageTag: 
+  DebugInvinsible: 1
 --- !u!1 &6631411847305245595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,6 +2993,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -60
       objectReference: {fileID: 0}
+    - target: {fileID: 5752007483337928899, guid: 907874410f6ef7e4287380d482159dba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6195642105627048065, guid: 907874410f6ef7e4287380d482159dba, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3018,11 +3023,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319012224582347100, guid: 907874410f6ef7e4287380d482159dba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6522960316793116874, guid: 907874410f6ef7e4287380d482159dba, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522960316793116874, guid: 907874410f6ef7e4287380d482159dba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6884793590817746718, guid: 907874410f6ef7e4287380d482159dba, type: 3}
       propertyPath: m_AnchorMax.y

@@ -27,7 +27,7 @@ TagManager:
   - Player
   - Background
   - Object
-  - 
+  - Interactive
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 2561102877
+    locked: 0
   - name: Background
     uniqueID: 1488878071
     locked: 0

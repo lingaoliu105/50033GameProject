@@ -24,6 +24,8 @@ namespace Assets.Scripts.Attack {
         public float speed = 15f;
         [Header("子弹方向")]
         public Vector2 direction;
+
+        public bool hasHit = false;
         public float DeltaTime { get; set; }
         private new Collider2D collider;
 
@@ -56,6 +58,7 @@ namespace Assets.Scripts.Attack {
         public virtual void  CollideWithEnemy(GameObject enemy) {
             attackCount++;
             // TODO: 伤害计算
+
             if (attackCount >= destroyAfterAttack && destroyAfterAttack > 0) {
                 Destroy(gameObject);
             }
@@ -68,7 +71,7 @@ namespace Assets.Scripts.Attack {
             Destroy(gameObject);
          }
 
-        public void OnCollisionEnter2D(Collision2D collision) {
+        public void OnTriggerEnter2D(Collider2D collision) {
             Debug.Log("Collide with " + collision.gameObject + ", Tag = " + collision.gameObject.tag);
             if (isAttacking) {
                 if (collision.gameObject.tag == "Enemy") {

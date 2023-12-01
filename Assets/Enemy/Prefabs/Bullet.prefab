@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 50
+  TimeToDestroy: 0
+  hasHit: 0
   attackTimeByFrame: 120
   hitEffect: {fileID: 5044690138862907110, guid: 55026943125d5224fb32d343eba2561f, type: 3}
   speed: 20

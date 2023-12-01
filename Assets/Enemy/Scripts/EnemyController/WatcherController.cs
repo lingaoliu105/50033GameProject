@@ -13,7 +13,7 @@ namespace Enemy
         public float attackRange = 6f; //attack range is a circle with this radius
         public override void StartPatrol()
         {
-            moveDestination = new Vector2((Random.value - 0.5f) * horizontalMoveRange,
+            moveDestination = body.position + new Vector2((Random.value - 0.5f) * horizontalMoveRange,
                 (Random.value - 0.5f) * verticalMoveRange);
             AdjustOrientation();
             isMoving = true;

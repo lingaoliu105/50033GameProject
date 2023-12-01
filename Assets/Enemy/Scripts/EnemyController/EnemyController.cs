@@ -25,7 +25,7 @@ namespace Enemy {
         protected float hp;
         public float maxHP = 100;
         public float dieWaitTime = 0.8f;
-        public float detectRange = 8f;
+        public Vector2 detectRange = new Vector2(4f,2.5f);
         public int SoulAmount = 100;
 
         protected SpriteRenderer sprite;
@@ -88,11 +88,12 @@ namespace Enemy {
             DetectPlayer();
         }
 
-        protected void DetectPlayer()
+        protected virtual void DetectPlayer()
         {
-            if ((GetPlayerPosition() - transform.position).magnitude < detectRange)
+            var diff = (GetPlayerPosition() - transform.position);
+            if (Mathf.Abs(diff.x) < detectRange.x/2 && Mathf.Abs(diff.y) < detectRange.y/2)
             {
-                targetPlayer = GetPlayer();
+                targetPlayer = player;
             }
             else
             {
@@ -100,26 +101,29 @@ namespace Enemy {
             }
         }
 
-        public GameObject GetPlayer()
-        {
-            return GameObject.FindGameObjectWithTag("Player");
-        }
-
         public Vector3 GetPlayerPosition()
         {
+            if (player)
+            {
+                return player.transform.position;
+            }
             return GameObject.FindGameObjectWithTag("Player").transform.position;
         }
 
-        public void TakeDamage(int damage) {
+        public override void TakeDamage(int damage) {
             hp -= damage;
             healthBar.value = hp;
             if (hp <= 0) {
                 PlayDeadAnimation();
-                GetPlayer().GetComponent<PlayerController>().GainSoul(SoulAmount);
+                if (!player)
+                {
+                    player = GameObject.FindGameObjectWithTag("Player");
+                }
+                player.GetComponent<PlayerController>().GainSoul(SoulAmount);
                 StartCoroutine(WaitAndDestroy());
             } else
             {
-                HitFlash();
+                HitFlash();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
             }
         }
 

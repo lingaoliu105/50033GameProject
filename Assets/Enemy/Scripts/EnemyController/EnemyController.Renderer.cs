@@ -26,5 +26,10 @@ namespace Enemy {
         {
             animator.SetTrigger("hit");
         }
+
+        public void PassAway()
+        {
+            Destroy(gameObject);
+        }
     }
 }
