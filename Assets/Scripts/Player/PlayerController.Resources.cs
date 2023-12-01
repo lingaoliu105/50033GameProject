@@ -49,6 +49,7 @@ namespace Game
         public int DamageToTake = 0;
         public string DamageTag = "";
 
+        public bool DebugInvinsible = true;
         
 
         public void LockStamina() {
@@ -67,6 +68,10 @@ namespace Game
             }
         }
         public void TakeDamage(int amount) {
+            if (DebugInvinsible) {
+                Debug.Log("Damage:  "+amount);
+                return;
+            }
             if (invinsibleOnHitTimer <= 0) {
                 DamageToTake = amount;
                 DamageTag = "";
@@ -80,6 +85,10 @@ namespace Game
             }
         }
         public void TakeDamage(int amount, string tag) {
+            if (DebugInvinsible) {
+                Debug.Log("Damage:  " + amount);
+                return;
+            }
             if (invinsibleOnHitTimer <= 0) {
                 DamageToTake = amount;
                 DamageTag = tag;
@@ -130,7 +139,11 @@ namespace Game
         }
         private int CalcHPValue(int value) {
             int result = 0;
-
+            if (value <= 27 && value >= 0) result = (int)(value * 36.3f + 42);
+            if (value <= 44 && value >= 28) result = (int)((value -27 )* 15.3f + 1020);
+            if (value <= 72 && value >= 45) result = (int)((value - 44 ) * 2.5f + 1280);
+            if (value <= 98 && value >= 73) result = (int)((value - 72 ) * 1.85f + 1350);
+            if (value >= 99) result = 1400;
             return result;
         }
         public int NextLevelExp(int currentLevel) {
@@ -147,6 +160,8 @@ namespace Game
         public void GainSoul(int amount) { 
             Soul += amount;
         }
+
+        
 
         private void LoadPlayerInfo() {
             PlayerInfo = LoadFromFile();

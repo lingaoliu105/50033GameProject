@@ -70,7 +70,7 @@ namespace Assets.Scripts.Attack {
             Destroy(gameObject);
          }
 
-        public void OnCollisionEnter2D(Collision2D collision) {
+        public void OnTriggerEnter2D(Collider2D collision) {
             Debug.Log("Collide with " + collision.gameObject + ", Tag = " + collision.gameObject.tag);
             if (isAttacking) {
                 if (collision.gameObject.tag == "Enemy") {

@@ -122,7 +122,7 @@ public abstract class StateController : MonoBehaviour {
     }
     
     /********************************/
-
+    public abstract void TakeDamage(int damage);
 
 
 
