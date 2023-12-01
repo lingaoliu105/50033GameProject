@@ -45,5 +45,24 @@ namespace Enemy
                 TakeDamage(9999999);
             }
         }
+        
+        public virtual void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("PlayerProjectile"))
+            {
+                BasicPlayerProjectile attack = other.gameObject.GetComponent<BasicPlayerProjectile>();
+                if (attack && !attack.hasHit)
+                {
+                    attack.hasHit = true;
+                    PlayHitSound();
+                    TakeDamage(attack.attackDamage);
+                }
+            }
+
+            if (other.gameObject.CompareTag("Void"))
+            {
+                TakeDamage(9999999);
+            }
+        }
     }
 }
