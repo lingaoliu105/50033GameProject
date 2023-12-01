@@ -56,6 +56,7 @@ namespace Assets.Scripts.Attack {
         public virtual void  CollideWithEnemy(GameObject enemy) {
             attackCount++;
             // TODO: 伤害计算
+
             if (attackCount >= destroyAfterAttack && destroyAfterAttack > 0) {
                 Destroy(gameObject);
             }
