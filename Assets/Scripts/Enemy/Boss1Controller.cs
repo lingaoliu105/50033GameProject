@@ -73,7 +73,7 @@ namespace Assets.Scripts.Enemy {
             float random = UnityEngine.Random.Range(0f, 1f);
             NextExCountdown -= 1;
             NextSpecialAttackCountdown -= 1;
-            if NextSpecialAttack
+            // if NextSpecialAttack
         }
 
         public void Jump(Facings facing = Facings.Left) { 
