@@ -25,15 +25,6 @@ public class LiftGate : AbstractInteractiveObject
 
     }
 
-    protected override void Update()
-    {
-        base.Update();
-        if (flag)
-        {
-            Interact();
-        }
-    }
-
     protected IEnumerator LiftUp()
     {
         while (gate.transform.localPosition.y < liftHeight)

@@ -24,6 +24,8 @@ namespace Assets.Scripts.Attack {
         public float speed = 15f;
         [Header("子弹方向")]
         public Vector2 direction;
+
+        public bool hasHit = false;
         public float DeltaTime { get; set; }
         private new Collider2D collider;
 

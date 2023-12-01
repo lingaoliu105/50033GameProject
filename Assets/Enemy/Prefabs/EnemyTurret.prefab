@@ -270,18 +270,21 @@ MonoBehaviour:
   deltaTime: 0
   attackTemplates:
   - {fileID: 3883574252096972240, guid: 74bda27821e16fc4ab814e3093f336f4, type: 3}
-  attackTime: 0.4
+  attackTime: 0.42
   patrolRangeL: 0
   patrolRangeR: 0
   patrolSpeed: 0
   scoutSpeed: 0
+  groundBoxSize: {x: 0.3, y: 0.1}
+  groundCheckOffset: 0
   maxHP: 100
   dieWaitTime: 0.8
-  detectRange: 8
+  detectRange: {x: 4, y: 2.5}
   SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
+  bulletOffset: 0.27
 --- !u!82 &735817575841438032
 AudioSource:
   m_ObjectHideFlags: 0

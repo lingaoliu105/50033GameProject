@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 44389f39da4f49d4cb10f5df5202ef92, type: 3}
   m_Color: {r: 0.9528302, g: 0.38352907, b: 0.38352907, a: 0.7764706}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.51, y: 1.44}
@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 11
+  TimeToDestroy: 0
+  hasHit: 0
   attackTimeByFrame: 120
   hitEffect: {fileID: 5044690138862907110, guid: 55026943125d5224fb32d343eba2561f, type: 3}
   speed: 4
@@ -164,8 +166,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.36274928, y: 0.007885006}
-  m_Size: {x: 0.6805046, y: 0.4464078}
+  m_Offset: {x: 0.16005962, y: -0.008448181}
+  m_Size: {x: 0.62329763, y: 0.33060792}
   m_Direction: 1
 --- !u!82 &2395634098791293279
 AudioSource:
@@ -179,7 +181,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5755879bbad6614449e768f4c9e42e93, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0

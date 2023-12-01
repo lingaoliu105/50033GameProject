@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -33,16 +34,19 @@ public abstract class AbstractInteractiveObject : MonoBehaviour,IInteractive
 
     }
 
-    // Update is called once per frame
-    protected virtual void Update()
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (player)
+        if (other.gameObject.CompareTag("Player"))
         {
-            var position = player.transform.position;
-            if ((position - transform.position).magnitude <= interactDistance)
-            {
-                ShowInteractionMessage();
-            }
+            ShowInteractionMessage();
+        }
+    }
+
+    protected void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            HideInteractionMessage();
         }
     }
 
@@ -52,6 +56,11 @@ public abstract class AbstractInteractiveObject : MonoBehaviour,IInteractive
     {
         text.text = interactMessage;
         messageCanvas.enabled = true;
+    }
+    
+    protected virtual void HideInteractionMessage()
+    {
+        messageCanvas.enabled = false;
     }
     
 }
