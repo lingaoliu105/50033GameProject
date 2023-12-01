@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Train.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Train.prefab.meta" afterDir="false" />
+    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="misc">
+      <change afterPath="$PROJECT_DIR$/Assets/UIPrefabs/InteractiveMessage.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UIPrefabs/InteractiveMessage.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Train.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Train.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +172,7 @@
       <workItem from="1701320680012" duration="8302000" />
       <workItem from="1701346241124" duration="15586000" />
       <workItem from="1701435601896" duration="37000" />
+      <workItem from="1701435959598" duration="1934000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -386,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701434052471</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="misc">
+      <option name="closed" value="true" />
+      <created>1701436296664</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1701436296664</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +437,8 @@
     <MESSAGE value="city map rough implementation" />
     <MESSAGE value="city map complete" />
     <MESSAGE value="boss scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="boss scene" />
+    <MESSAGE value="misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

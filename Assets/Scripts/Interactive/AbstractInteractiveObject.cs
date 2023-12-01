@@ -18,8 +18,10 @@ public abstract class AbstractInteractiveObject : MonoBehaviour,IInteractive
 
     protected GameObject player;
 
-    public float interactDistance;
 
+    protected bool active;
+
+    public Rect detectRange;
     public string interactMessage;
     // Start is called before the first frame update
     protected virtual void Start()
@@ -34,11 +36,43 @@ public abstract class AbstractInteractiveObject : MonoBehaviour,IInteractive
 
     }
 
+    protected virtual void Update()
+    {
+        if (!player)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            
+        }
+    
+        DetectPlayer();
+        if (active && Input.GetKeyDown("f"))
+        {
+            Interact();
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(detectRange.position,detectRange.size);
+    }
+
+    protected virtual void DetectPlayer()
+    {
+        if (detectRange.Contains(player.transform.position))
+        {
+            Activate();
+        }
+        else
+        {
+            Deactivate();
+        }
+    }
+
     protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            ShowInteractionMessage();
+            Activate();
         }
     }
 
@@ -46,20 +80,22 @@ public abstract class AbstractInteractiveObject : MonoBehaviour,IInteractive
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            HideInteractionMessage();
+            Deactivate();
         }
     }
 
     public abstract void Interact();
 
-    protected virtual void ShowInteractionMessage()
+    protected virtual void Activate()
     {
+        active = true;
         text.text = interactMessage;
         messageCanvas.enabled = true;
     }
     
-    protected virtual void HideInteractionMessage()
+    protected virtual void Deactivate()
     {
+        active = false;
         messageCanvas.enabled = false;
     }
     
