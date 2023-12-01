@@ -16,3 +16,9 @@ MonoBehaviour:
   CameraStartPos: {x: 0, y: 0}
   CameraLocked: 0
   CameraSize: 0
+  CameraLayers:
+  - hasTop: 0
+    LayerTop: 0
+    LayerBottom: 0
+    FixedAreaTop: 0
+    FixedY: 0

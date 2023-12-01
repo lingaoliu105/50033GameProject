@@ -15,4 +15,20 @@ MonoBehaviour:
   PlayerPosition: {x: -1.15, y: 7.24}
   CameraStartPos: {x: -1.15, y: 7.24}
   CameraLocked: 0
-  CameraSize: 9
+  CameraSize: 7
+  CameraLayers:
+  - hasTop: 0
+    LayerTop: 0
+    LayerBottom: -20
+    FixedAreaTop: -14
+    FixedY: -16
+  - hasTop: 0
+    LayerTop: 1000
+    LayerBottom: 6
+    FixedAreaTop: 14
+    FixedY: 11
+  - hasTop: 1
+    LayerTop: 1000
+    LayerBottom: 21
+    FixedAreaTop: 1000
+    FixedY: 25

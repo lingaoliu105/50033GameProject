@@ -77,7 +77,7 @@ public class GameManager : Singleton<GameManager> {
         SceneCamera.IsLocked = CurrentLevelInfo.CameraLocked;
         SceneCamera.LockedCameraPos = CurrentLevelInfo.CameraStartPos;
         SceneCamera.SetCameraSize(CurrentLevelInfo.CameraSize);
-
+        SceneCamera.CameraLayers = CurrentLevelInfo.CameraLayers;
         // EnemyManager.GenerateBoss1(new Vector3(10f,-1f,0));
         Debug.Log("SetData");
         yield return new WaitForSecondsRealtime(0.03f);
