@@ -67,24 +67,9 @@ namespace Game
                 staminaRecoverConuntdown -= deltatime;
             }
         }
-        public void TakeDamage(int amount) {
-            if (DebugInvinsible) {
-                Debug.Log("Damage:  "+amount);
-                return;
-            }
-            if (invinsibleOnHitTimer <= 0) {
-                DamageToTake = amount;
-                DamageTag = "";
-                UpdateEquipsOnHurt();
-                HP -= DamageToTake;
-                if (HP <= 0) {
-                    HP = 0;
-                    Die();
-                }
-                invinsibleOnHitTimer = Constants.InvinsibleOnHitTime;
-            }
-        }
-        public void TakeDamage(int amount, string tag) {
+
+        public void TakeDamage(int amount, string tag = "") {
+            if (amount <= 0) return;
             if (DebugInvinsible) {
                 Debug.Log("Damage:  " + amount);
                 return;
@@ -93,6 +78,7 @@ namespace Game
                 DamageToTake = amount;
                 DamageTag = tag;
                 UpdateEquipsOnHurt();
+                if (DamageToTake <= 0) return;
                 HP -= DamageToTake;
                 if (HP <= 0) {
                     HP = 0;

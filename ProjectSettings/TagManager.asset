@@ -13,6 +13,7 @@ TagManager:
   - Trap
   - Void
   - Object
+  - Ladder
   layers:
   - Default
   - TransparentFX
