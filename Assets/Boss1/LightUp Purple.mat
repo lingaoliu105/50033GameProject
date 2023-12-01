@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightUp Red
+  m_Name: LightUp Purple
   m_Shader: {fileID: -6465566751694194690, guid: 56d7e50f339bb6243919f60b2ad3cb2b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -67,5 +67,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Color: {r: 2.418848, g: 0.13612565, b: 0.09424084, a: 0}
+    - _Color: {r: 1.2181702, g: 0.062745124, b: 1.4980391, a: 0}
   m_BuildTextureStacks: []
