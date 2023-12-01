@@ -4,124 +4,237 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Levels/City.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Levels/City.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/Palette.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/Banner.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/Banner.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-big-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-big-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-coke-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-coke-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-neon-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-neon-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-scroll-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-scroll-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-side-4.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-side-4.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-sushi-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner-sushi-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner1.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner1.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_coke.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_coke.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_green.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_green.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_neon.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_neon.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_scroll.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_scroll.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_sushi.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/banner_sushi.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor-face-1.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor-face-1.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/monitor.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/Materials/hotel-sign.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/Materials/hotel-sign.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 1.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 1.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 2.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 2.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 3.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 4.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 4.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 5.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 5.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 6.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 6.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 7.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner 7.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Prefabs/Banner.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/~UnityDirMonSyncFile~3ef400766d10f5e4984883ad1db3874b~" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/~UnityDirMonSyncFile~72a49987d9a96a449b7080288cc2bbe6~" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/~UnityDirMonSyncFile~accb8ca23dbb4714dabf08c4f53e985d~" afterDir="false" />
+    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="city map complete">
+      <change afterPath="$PROJECT_DIR$/Assets/Levels/CityBoss.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Levels/CityBoss.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/highway-14475.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/highway-14475.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Boss2.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Boss2.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Train.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Train.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/ScrollBackground.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/ScrollBackground.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/TrainShake.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/TrainShake.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_000.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_001.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_002.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_003.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_004.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_005.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_006.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_007.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_008.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_009.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_010.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_011.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_012.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_013.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_014.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_015.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_016.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_017.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_018.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_019.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_020.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_021.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_022.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_023.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_024.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_025.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_026.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_027.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_028.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_029.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Gifs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Gifs/Effect_Hyperspeed_1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Gifs/Effect_Hyperspeed_1.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Spritesheets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Spritesheets/Effect_Hyperspeed_1_517x515.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/30fps/Spritesheets/Effect_Hyperspeed_1_517x515.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_000.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_001.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_002.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_003.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_004.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_005.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_006.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_007.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_008.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_009.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_010.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_011.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_012.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_013.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_014.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_015.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_016.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_017.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_018.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_019.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_020.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_021.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_022.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_023.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_024.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_025.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_026.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_027.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_028.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_029.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_030.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_031.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_032.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_033.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_034.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_035.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_036.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_037.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_037.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_038.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_038.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_039.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_039.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_040.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_041.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_041.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_042.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_042.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_043.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_043.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_044.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_045.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_045.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_046.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_046.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_047.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_047.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_048.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_048.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_049.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_049.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_050.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_050.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_051.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_051.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_052.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_053.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_053.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_054.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_054.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_055.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_055.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_056.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_056.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_057.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_057.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_058.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_059.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Frames/Effect_Hyperspeed_1/Effect_Hyperspeed_1_059.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Gifs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Gifs/Effect_Hyperspeed_1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Gifs/Effect_Hyperspeed_1.gif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Spritesheets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Spritesheets/Effect_Hyperspeed_1_517x515.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/60fps/Spritesheets/Effect_Hyperspeed_1_517x515.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/Effect_Hyperspeed_1_000.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/Effect_Hyperspeed_1_000.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/speedline.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Animation/speedline.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/cyberpunk-street.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/cyberpunk-street.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers/back-buildings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers/back-buildings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers/far-buildings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers/far-buildings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers/foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Warped City Assets/PNG/layers/foreground.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Animation/Shieldman/ShieldmanAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Shieldman/ShieldmanAnim.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Animation/Soldier/SoldierAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Animation/Soldier/SoldierAnim.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyTurret.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyTurret.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyWatcher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Prefabs/EnemyWatcher.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Collider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Renderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Renderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Playerrefab/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Playerrefab/Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Attack/BasicPlayerProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Attack/BasicPlayerProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss1Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss1Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/antenna.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/antenna.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-arrow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-big/banner-big-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-coke/banner-coke-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-floor.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-floor.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-neon/banner-neon-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-open.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-open.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-scroll/banner-scroll-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-side/banner-side-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-small.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-small.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banner-sushi/banner-sushi-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banners.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/banners.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/control-box-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/hotel-sign.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/hotel-sign.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/props/monitorface/monitor-face-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/Skyline 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/Skyline 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/background/buildings-bg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/background/buildings-bg.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/background/near-buildings-bg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Warped City Assets/Artwork/ENVIRONMENT/background/near-buildings-bg.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,15 +256,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SoldierController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scripts/Enemy/Boss1Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scripts/Enemy/Boss1Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/IInteractive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/ScrollBackground.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/TrainShake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Tiles/Palette.prefab" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -237,10 +353,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7508">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4580">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7508" />
+      <option name="pid" value="4580" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -279,7 +395,7 @@
       <workItem from="1701012310515" duration="13990000" />
       <workItem from="1701239484699" duration="722000" />
       <workItem from="1701320680012" duration="8302000" />
-      <workItem from="1701346241124" duration="6998000" />
+      <workItem from="1701346241124" duration="14014000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -473,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701330358647</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="city map complete">
+      <option name="closed" value="true" />
+      <created>1701397021537</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1701397021537</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +642,8 @@
     <MESSAGE value="bat and slime" />
     <MESSAGE value="update sfx" />
     <MESSAGE value="city map rough implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="city map rough implementation" />
+    <MESSAGE value="city map complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="city map complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
