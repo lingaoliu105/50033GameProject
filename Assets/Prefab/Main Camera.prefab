@@ -154,8 +154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 8514294055651557571}
   IsLocked: 1
+  CameraLayers: []
   PlayerSpriteRenderer: {fileID: 718797631069592187, guid: 1dfc3d34d89b0004b8c1d785972abfcb, type: 3}
   LockedCameraPos: {x: 0, y: 5}
+  layer: 0
   ShakeStrength: 0.4
   ShakeCurve:
     serializedVersion: 2
