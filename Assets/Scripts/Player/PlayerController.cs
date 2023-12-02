@@ -383,7 +383,8 @@ namespace Game {
         private bool inSandevistan = false;
         public bool CanSandevistan {
             get {
-                return GameInput.Sandevistan.Pressed()&& !inSandevistan;
+                return false;
+                    //GameInput.Sandevistan.Pressed()&& !inSandevistan;
             }
         }
 
