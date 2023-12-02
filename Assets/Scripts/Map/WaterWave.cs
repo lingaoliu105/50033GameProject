@@ -13,6 +13,7 @@ public class WaterWave : MonoBehaviour
     public float currentAngle = 0;
     public float strength = 10;
     public float radDis = 180;
+    public float n = 1f;
     private void Start()
     {
         spriteShapeController = GetComponent<SpriteShapeController>();
@@ -25,6 +26,13 @@ public class WaterWave : MonoBehaviour
         }
         for (int i = 0; i < spline.GetPointCount(); i++)
         {
+            if (i >= 2 && i < spline.GetPointCount() - 2)
+            {
+                spline.SetTangentMode(i,ShapeTangentMode.Continuous);
+                spline.SetLeftTangent(i,new Vector3(-n,0,0));
+                spline.SetRightTangent(i,new Vector3(n,0,0));
+                
+            }
             splinePos.Add(spline.GetPosition(i));
 
         }

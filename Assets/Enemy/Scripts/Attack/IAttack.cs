@@ -7,21 +7,28 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Enemy {
-    internal interface IAttack {
-        IEnumerator WaitAndDestroy();
 
-        void OnCollisionEnter2D(Collision2D collision);
-    }
-
-    public abstract class EnemyAttack: MonoBehaviour, IAttack
+    public abstract class EnemyAttack: MonoBehaviour
     {
         public abstract IEnumerator WaitAndDestroy();
+        public AudioClip hitAudio;
 
         public int Damage; 
         public float TimeToDestroy;
-        public bool hasHit = false;
+        protected AudioSource attackAudio;
+
+        protected virtual void Start()
+        {
+            attackAudio = GetComponent<AudioSource>();
+        }
+
         public abstract void Hitting();
         public abstract void  OnCollisionEnter2D(Collision2D collision);
+
+        public virtual bool CheckActive()
+        {
+            return true;
+        }
     }
 
     interface IEffect
