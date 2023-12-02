@@ -86,6 +86,16 @@ public class GameManager : Singleton<GameManager> {
         Debug.Log("StartGame");
     }
 
+    public IEnumerator ChangeScene(LevelInfo levelInfo) { 
+        yield return StartCoroutine(LoadingScreenSlideClose(0.5f));
+        Destroy(PlayerControllerObject);
+        Destroy(SceneCameraObject);
+        Destroy(EnemyManagerObject);
+        Destroy(EffectManagerObject);
+        CurrentLevelInfo = levelInfo;
+        StartCoroutine(StartGame());
+    }
+
     public IEnumerator LoadingScreenSlideClose(float time) { 
         //Left half from 1600 to 310, right half from -1600 to -310
         LoadingScreenRighthalf.transform.localPosition = new Vector3(1600, 0, 0);

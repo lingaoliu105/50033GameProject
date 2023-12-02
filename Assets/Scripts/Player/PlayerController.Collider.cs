@@ -8,6 +8,7 @@ using UnityEngine;
 using Enemy;
 using Assets.Scripts.Map;
 using Assets.Scripts.Items;
+using Unity.Burst.CompilerServices;
 
 namespace Game {
     public partial class PlayerController {
@@ -21,12 +22,19 @@ namespace Game {
         private readonly Rect normalHurtbox = new Rect(0f, -0.15f, 0.8f, 0.9f);
         private readonly Rect duckHurtbox = new Rect(8f, 4f, 0.8f, 0.4f);
 
+        public bool isOnMovingPlatform = false;
+        public bool touchingMovingPlatform = false;
+
+        public MovingPlatformBasic lastFrameMovingPlatform = null;
+
+        public Vector2 MovingPlatformSpeed = Vector2.zero;
+
         private Rect collider;
 
         void CheckForSomeObject() {
             // 执行矩形区域检测
             Collider2D[] colliders = Physics2D.OverlapBoxAll(this.Position + collider.position, collider.size, 0);
-
+            touchingMovingPlatform = false;
             // 遍历检测到的碰撞器
             foreach (Collider2D collider in colliders) {
                 // 检查标签是否为 "EnemyProjectile"
@@ -48,6 +56,13 @@ namespace Game {
                     Debug.Log("Object");
                     collider.GetComponent<ItemObject>().PickedUP(this);
                 }
+                if (collider.CompareTag("MovingPlatform")) {
+                    MovingPlatformSpeed = collider.GetComponent<MovingPlatformBasic>().Speed;
+                    touchingMovingPlatform = true;
+                }
+            }
+            if (!touchingMovingPlatform) {
+                MovingPlatformSpeed = Vector2.zero;
             }
         }
 
@@ -59,8 +74,41 @@ namespace Game {
         private bool CheckGround(Vector2 offset) {
             Vector2 origion = this.Position + collider.position + offset;
             RaycastHit2D hit = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION, groundMask);
+            //Debug the hit draw and log
+            //Debug.DrawRay(origion, Vector2.down * DEVIATION, Color.red);
+            // Debug.DrawRay(origion + new Vector2(0f, -collider.size.y * 0.5f), Vector2.down * DEVIATION, Color.red);
+            //Debug.Log($"======CheckGround {hit.collider}, {hit.normal}");
             if (hit && hit.normal == Vector2.up) {
+                if (hit.collider.CompareTag("MovingPlatform")) {
+                    isOnMovingPlatform = true;
+                    MovingPlatformSpeed = hit.collider.GetComponent<MovingPlatformBasic>().Speed;
+                    lastFrameMovingPlatform = hit.collider.GetComponent<MovingPlatformBasic>();
+                    PlatformBoost = hit.collider.GetComponent<MovingPlatformBasic>().JumpBoost;
+                } else {
+                    isOnMovingPlatform = false;
+                    MovingPlatformSpeed = Vector2.zero;
+                }
                 return true;
+            } else {
+                if (lastFrameMovingPlatform != null) {
+                    float fix = 2 * Math.Abs(lastFrameMovingPlatform.Speed.y * Time.deltaTime);
+                    RaycastHit2D hitfix = Physics2D.BoxCast(origion, collider.size, 0, Vector2.down, DEVIATION + fix, groundMask);
+                    // Debug.DrawRay(origion + new Vector2(0f,-collider.size.y*0.5f), Vector2.down * DEVIATION, Color.red);
+                    // Debug.Log($"======CheckGround {hit.collider}, {hit.normal}");
+                    if (hitfix && hitfix.normal == Vector2.up) {
+                        if (hitfix.collider.CompareTag("MovingPlatform")) {
+                            isOnMovingPlatform = true;
+                            MovingPlatformSpeed = hitfix.collider.GetComponent<MovingPlatformBasic>().Speed;
+                            lastFrameMovingPlatform = hitfix.collider.GetComponent<MovingPlatformBasic>();
+                            PlatformBoost = hitfix.collider.GetComponent<MovingPlatformBasic>().JumpBoost;
+                        } else {
+                            isOnMovingPlatform = false;
+                            MovingPlatformSpeed = Vector2.zero;
+                            lastFrameMovingPlatform = null;
+                        }
+                        return true;
+                    }
+                }
             }
             return false;
         }

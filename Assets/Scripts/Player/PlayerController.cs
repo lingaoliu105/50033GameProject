@@ -22,6 +22,8 @@ namespace Game {
         public Vector2 Position;
         public Vector2 InitPos = new Vector2(1f, -1.5f);
         public Vector2 Speed;
+        public Vector2 PlatformBoost;
+        public Vector2 FinalSpeed;
         [SerializeField]
         private bool onGround;
         public bool OnGround { get => onGround;}
@@ -229,13 +231,6 @@ namespace Game {
             moveY = Math.Sign(JoystickValue.y);
             LastAim = GameInput.GetAimVector(Facing);
 
-            //Get ground
-            wasOnGround = onGround;
-            if (Speed.y <= 0) {
-                this.onGround = CheckGround();//碰撞检测地面
-            } else {
-                this.onGround = false;
-            }
 
             //Wall Slide
             if (this.WallSlideDir != 0) {
@@ -259,6 +254,23 @@ namespace Game {
 
             stateMachine.Update(deltaTime);
 
+
+            //Get ground
+            wasOnGround = onGround;
+
+            if (Speed.y <= 0) {
+                if (isOnMovingPlatform) {
+                     this.onGround = true;
+                }
+                this.onGround = CheckGround();//碰撞检测地面
+            } else {
+                this.onGround = false;
+            }
+            
+
+
+            
+
             //Wall Boost, 不消耗体力WallJump
             this.WallBoost?.Update(deltaTime);
 
@@ -266,8 +278,11 @@ namespace Game {
             JumpCheck.Update(deltaTime);
 
             CanJump = JumpCheck.AllowJump();
-            UpdateColliderX(Speed.x*deltaTime);
-            UpdateColliderY(Speed.y*deltaTime);
+
+            
+
+            UpdateColliderX(Speed.x*deltaTime + MovingPlatformSpeed.x*deltaTime);
+            UpdateColliderY(Speed.y*deltaTime + MovingPlatformSpeed.y * deltaTime);
 /*            if (lastTime != Time.fixedTime) {
                 debugPoints.Add(Speed);
                 debugTime.Add(Time.fixedTime);

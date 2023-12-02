@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bb0fec5e09abbc4448893b3c57ee518b
+guid: 7d3f5c2cc76df464e8280b1ed3ffdc94
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,22 +123,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: E
+      name: tileset2_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 16
+        x: 105
+        y: 64
+        width: 46
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 757da913d79571040bb71661264d468d
-      internalID: -1966505420
+      spriteID: d4e37d9263684224da5b1c799f415872
+      internalID: -212389857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset2_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c5f8568bc71834cbecfff818da9c26
+      internalID: 2045178891
       vertices: []
       indices: 
       edges: []
@@ -141,7 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      E: -1966505420
+      tileset2_0: -212389857
+      tileset2_1: 2045178891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

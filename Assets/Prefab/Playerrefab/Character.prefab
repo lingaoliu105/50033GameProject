@@ -1095,6 +1095,10 @@ MonoBehaviour:
   CurrentRangedWeapon: {fileID: 11400000, guid: 472fb3648ec8d5c4ead4f9c2e8e427e1, type: 2}
   CurrentMeleeWeapon: {fileID: 11400000, guid: 3cdc51e5d65ca0b4c950f912158a84fa, type: 2}
   buffs: []
+  isOnMovingPlatform: 0
+  touchingMovingPlatform: 0
+  lastFrameMovingPlatform: {fileID: 0}
+  MovingPlatformSpeed: {x: 0, y: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1102,6 +1106,8 @@ MonoBehaviour:
   Position: {x: 0, y: 0}
   InitPos: {x: 1, y: -2}
   Speed: {x: 0, y: 0}
+  PlatformBoost: {x: 0, y: 0}
+  FinalSpeed: {x: 0, y: 0}
   onGround: 0
   varJumpTimer: 0
   HopWaitX: 0
@@ -1185,7 +1191,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
