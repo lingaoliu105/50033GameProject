@@ -29,7 +29,7 @@ TagManager:
   - Background
   - Object
   - Interactive
-  - 
+  - TopEffects
   - 
   - 
   - 
@@ -68,4 +68,7 @@ TagManager:
     locked: 0
   - name: BuiltInUI
     uniqueID: 2594470093
+    locked: 0
+  - name: TopRenderingLayer
+    uniqueID: 11254601
     locked: 0

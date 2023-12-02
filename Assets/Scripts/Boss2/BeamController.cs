@@ -64,11 +64,11 @@ public class BeamController : MonoBehaviour {
         beamStart.GetComponent<SpriteRenderer>().enabled = true;
         beamEnd.GetComponent<SpriteRenderer>().enabled = true;
         beam.GetComponent<SpriteRenderer>().enabled = true;
-        while (timer < 0.5f) {
+        while (timer < 0.2f) {
             timer += Time.deltaTime;
-            beam.transform.localScale = new Vector3(beam.transform.localScale.x, timer * 2, 1);
-            beamStart.transform.localScale = new Vector3(beamStart.transform.localScale.x, timer * 2, 1);
-            beamEnd.transform.localScale = new Vector3(beamEnd.transform.localScale.x, timer * 2, 1);
+            beam.transform.localScale = new Vector3(beam.transform.localScale.x, timer * 5, 1);
+            beamStart.transform.localScale = new Vector3(beamStart.transform.localScale.x, timer * 5, 1);
+            beamEnd.transform.localScale = new Vector3(beamEnd.transform.localScale.x, timer * 5, 1);
             yield return null;
         }
         beamCollider.enabled = true;
@@ -86,11 +86,11 @@ public class BeamController : MonoBehaviour {
         LockLength = true;
         yield return null;
         beamCollider.enabled = false;
-        while (timer < 0.5f) {
+        while (timer < 0.2f) {
             timer += Time.deltaTime;
-            beam.transform.localScale = new Vector3(beam.transform.localScale.x, 1f - timer * 2, 1);
-            beamStart.transform.localScale = new Vector3(beamStart.transform.localScale.x, 1f - timer * 2, 1);
-            beamEnd.transform.localScale = new Vector3(beamEnd.transform.localScale.x, 1f - timer * 2, 1);
+            beam.transform.localScale = new Vector3(beam.transform.localScale.x, 1f - timer * 5, 1);
+            beamStart.transform.localScale = new Vector3(beamStart.transform.localScale.x, 1f - timer * 5, 1);
+            beamEnd.transform.localScale = new Vector3(beamEnd.transform.localScale.x, 1f - timer * 5, 1);
             yield return null;
         }
         beamStart.GetComponent<SpriteRenderer>().enabled = false;

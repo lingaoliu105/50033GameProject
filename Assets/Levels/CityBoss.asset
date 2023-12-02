@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: CityBoss
   m_EditorClassIdentifier: 
   PlayerPosition: {x: 40, y: 9}
-  CameraStartPos: {x: 18, y: 20}
-  CameraLocked: 0
-  CameraSize: 7
+  CameraStartPos: {x: 48, y: 9}
+  CameraLocked: 1
+  CameraSize: 9
+  CameraLayers:
+  - hasTop: 0
+    LayerTop: 0
+    LayerBottom: 0
+    FixedAreaTop: 0
+    FixedY: 0
