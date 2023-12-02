@@ -7,11 +7,7 @@ using UnityEngine;
 namespace Enemy {
     public class MeleeAttack : EnemyAttack, IEffect {
         
-        public AudioClip hitAudio;
-        private AudioSource attackAudio;
-        private void Start() {
-            attackAudio = GetComponent<AudioSource>();
-        }
+        public bool hasHit = false;
 
         public void SelfDestroy() {
             Destroy(gameObject);
@@ -30,10 +26,16 @@ namespace Enemy {
 
         public override void Hitting() {
             attackAudio.PlayOneShot(hitAudio);
+            hasHit = true;
         }
 
         public override void OnCollisionEnter2D(Collision2D collision) {
             return;
+        }
+
+        public override bool CheckActive()
+        {
+            return !hasHit;
         }
     }
 }

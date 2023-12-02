@@ -5,26 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Water.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/Trap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/Trap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/GasTrap.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/GasTrap.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Lift.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Lift.prefab.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Prefab/Poison.prefab" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Prefab/Poison.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Springs.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Springs.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite Shape Profile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite Shape Profile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WaterWave.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WaterWave.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/RotateBlade 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/RotateBlade 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/RotateBlade.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/RotateBlade.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/SingleSideDoor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/SingleSideDoor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/UndergroundDoor.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/UndergroundDoor.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/gas.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/gas.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/GasTrap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/GasTrap.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/RotateBlade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/RotateBlade.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/UndergroundDoor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Map/UndergroundDoor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/axe 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/axe 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/axe 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/axe 2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/knife 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/knife 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/knife 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/knife 2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/mace 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/mace 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/magic staff 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/magic staff 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/pickaxe 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/pickaxe 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/spear 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/spear 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Melee Weapons/sprites/sword 6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/underground/4 Animated objects/Acid1_0.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/underground/4 Animated objects/Acid1_0.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/underground/4 Animated objects/gas.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/underground/4 Animated objects/gas.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EffectManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EffectManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EnemyManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EnemyManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMapBackup.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMapBackup.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIPrefabs/ButtonText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIPrefabs/ButtonText.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIPrefabs/Tube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIPrefabs/Tube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/IAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/IAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Underground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Underground.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/WaterWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/WaterWave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.Collider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.Collider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/underground/3 Objects/Door2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/underground/3 Objects/Door2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/underground/4 Animated objects/Acid1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/underground/4 Animated objects/Acid1.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,49 +88,25 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c8cc7c3239f545aca16532f69b99099c3e000/ae/18426339/Graph.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Action/StartIdle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/MeleeAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Attack/Trap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Decision/AttackReachableDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/Decision/TargetExistDecision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/ShieldmanController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SoldierController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Prefab/EffectManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Prefab/EffectManager.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/IInteractive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/GasTrap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/RotateBlade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/ScrollBackground.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/TrainShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/UndergroundDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WaterWave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityLearn/Water2D-Unity/Assets/WaterShapeController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -169,10 +193,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="45568">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="45568" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -215,7 +239,8 @@
       <workItem from="1701435601896" duration="37000" />
       <workItem from="1701435959598" duration="2652000" />
       <workItem from="1701439930465" duration="3701000" />
-      <workItem from="1701495378258" duration="3761000" />
+      <workItem from="1701495378258" duration="4044000" />
+      <workItem from="1701499497401" duration="8195000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -441,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701438393776</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="water effect">
+      <option name="closed" value="true" />
+      <created>1701499386850</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1701499386850</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +508,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="enemy design basic" />
     <MESSAGE value="import enemy controller" />
     <MESSAGE value="enemy soldier basic moving" />
     <MESSAGE value="ememy soldier basic moving" />
@@ -500,7 +532,8 @@
     <MESSAGE value="boss scene" />
     <MESSAGE value="misc" />
     <MESSAGE value="interactive object receive input" />
-    <option name="LAST_COMMIT_MESSAGE" value="interactive object receive input" />
+    <MESSAGE value="water effect" />
+    <option name="LAST_COMMIT_MESSAGE" value="water effect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

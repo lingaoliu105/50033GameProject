@@ -33,12 +33,11 @@ namespace Game {
                 if (collider.CompareTag("EnemyProjectile")) {
                     // 处理敌方投射物的逻辑
                     var attackInstance = collider.GetComponent<EnemyAttack>();
-                    if (attackInstance && !attackInstance.hasHit) // prevent multiple hit caused
+                    if (attackInstance && !attackInstance.CheckActive()) // prevent multiple hit caused
                     {
                         int damage = collider.GetComponent<EnemyAttack>().Damage;
                         this.TakeDamage(damage);
                         collider.GetComponent<EnemyAttack>().Hitting();
-                        attackInstance.hasHit = true;
                     }
                 }
                 if (collider.CompareTag("Void")) { 
