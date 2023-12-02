@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Water.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Poison.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Poison.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Springs.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Springs.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite Shape Profile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite Shape Profile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WaterWave.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/WaterWave.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EffectManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EffectManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EnemyManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EnemyManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMapBackup.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMapBackup.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIPrefabs/ButtonText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIPrefabs/ButtonText.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UIPrefabs/Tube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIPrefabs/Tube.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +115,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\MyProjects\UnityGameProject\50033GameProject -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -144,7 +123,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.3.9f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity3D\2022.3.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\MyProjects\UnityGameProject\50033GameProject -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\MyProjects\UnityGameProject\50033GameProject" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -169,10 +148,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="45568">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="45568" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -508,53 +487,25 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs</url>
           <line>62</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="62" containingFunctionPresentation="Method 'Attack'">
-            <startOffsets>
-              <option value="2473" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2487" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="62" containingFunctionPresentation="Method 'Attack'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs</url>
           <line>70</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="70" containingFunctionPresentation="Method 'StartScout'">
-            <startOffsets>
-              <option value="2689" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2706" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="70" containingFunctionPresentation="Method 'StartScout'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs</url>
           <line>92</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="92" containingFunctionPresentation="Method 'AttackCanReach'">
-            <startOffsets>
-              <option value="3406" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3423" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\WatcherController.cs" initialLine="92" containingFunctionPresentation="Method 'AttackCanReach'" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.Renderer.cs</url>
           <line>26</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\EnemyController.Renderer.cs" initialLine="26" containingFunctionPresentation="Method 'HitFlash'">
-            <startOffsets>
-              <option value="597" />
-            </startOffsets>
-            <endOffsets>
-              <option value="624" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\EnemyController.Renderer.cs" initialLine="26" containingFunctionPresentation="Method 'HitFlash'" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
