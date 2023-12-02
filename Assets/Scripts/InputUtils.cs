@@ -64,7 +64,7 @@ namespace Game {
         public static VirtualButton AttackButton = new VirtualButton(KeyCode.J, 0.08f);
         public static VirtualButton ShootButton = new VirtualButton(KeyCode.C, 0.08f);
         public static VirtualButton HeavyAttackButton = new VirtualButton(KeyCode.K, 0.1f);
-        public static VirtualButton Sandevistan = new VirtualButton(KeyCode.T);
+        // public static VirtualButton Sandevistan = new VirtualButton(KeyCode.T);
         public static VirtualButton GrabButton = new VirtualButton(KeyCode.LeftShift);
         public static VirtualButton SwitchItem = new VirtualButton(KeyCode.X);
         public static VirtualButton ConsumeButton = new VirtualButton(KeyCode.R,0.08f);

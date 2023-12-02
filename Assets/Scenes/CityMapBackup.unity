@@ -14426,11 +14426,11 @@ Transform:
   m_GameObject: {fileID: 437744690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.1915894, y: -2.372322, z: -0.16783363}
+  m_LocalPosition: {x: -4.3, y: 16, z: -0.16783363}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1875445705}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &386643442
 PrefabInstance:
@@ -14775,11 +14775,11 @@ Transform:
   m_GameObject: {fileID: 486144578}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.623405, y: -2.372322, z: -0.16783363}
+  m_LocalPosition: {x: 19.9, y: 29.2, z: -0.16783363}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1875445705}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &486144580
 SpriteRenderer:
@@ -17618,11 +17618,11 @@ Transform:
   m_GameObject: {fileID: 1344733835}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.263405, y: -2.372322, z: -0.16783363}
+  m_LocalPosition: {x: 42.7, y: 26.3, z: -0.16783363}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1875445705}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1344733837
 SpriteRenderer:
@@ -18154,7 +18154,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 70, y: 7}
+  m_Size: {x: 50, y: 7.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18674,7 +18674,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 200, y: 13.0625}
+  m_Size: {x: 50, y: 13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24815,8 +24815,10 @@ SceneRoots:
   - {fileID: 587607716}
   - {fileID: 204012574}
   - {fileID: 1215842027}
-  - {fileID: 1875445705}
   - {fileID: 995946389}
   - {fileID: 823385976}
   - {fileID: 1765954205}
   - {fileID: 1725577766}
+  - {fileID: 437744692}
+  - {fileID: 486144579}
+  - {fileID: 1344733836}

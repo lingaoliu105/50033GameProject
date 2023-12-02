@@ -706,7 +706,7 @@ TextureImporter:
         width: 40
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -727,7 +727,7 @@ TextureImporter:
         width: 40
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -735,6 +735,48 @@ TextureImporter:
       bones: []
       spriteID: 8253c92e3e56f734596badcfb798eb89
       internalID: -1831177527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_Fire_Bullet_Pixel_16x16_01_30
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 55
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c64d4267e0ad94695994ecee9eb5bd
+      internalID: -1596976920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_Fire_Bullet_Pixel_16x16_01_31
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 54
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8b8545555297e4ea9706faba0158c1
+      internalID: 1206669439
       vertices: []
       indices: 
       edges: []
@@ -774,6 +816,8 @@ TextureImporter:
       All_Fire_Bullet_Pixel_16x16_01_28: 184653817
       All_Fire_Bullet_Pixel_16x16_01_29: -1831177527
       All_Fire_Bullet_Pixel_16x16_01_3: 1605510180
+      All_Fire_Bullet_Pixel_16x16_01_30: -1596976920
+      All_Fire_Bullet_Pixel_16x16_01_31: 1206669439
       All_Fire_Bullet_Pixel_16x16_01_4: -1643967740
       All_Fire_Bullet_Pixel_16x16_01_5: 1487004319
       All_Fire_Bullet_Pixel_16x16_01_6: 726446388
