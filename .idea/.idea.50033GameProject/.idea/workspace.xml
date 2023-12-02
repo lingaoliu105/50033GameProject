@@ -4,12 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="misc">
-      <change afterPath="$PROJECT_DIR$/Assets/UIPrefabs/InteractiveMessage.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UIPrefabs/InteractiveMessage.prefab.meta" afterDir="false" />
+    <list default="true" id="9eb573c1-f79b-46bd-a472-e8aaf42c83f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Material/Water.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Poison.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Poison.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Springs.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Springs.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprite Shape Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprite Shape Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/WaterWave.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/WaterWave.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.50033GameProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CityMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EffectManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EffectManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/EnemyManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/EnemyManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/GameManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMapBackup.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CityMapBackup.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIPrefabs/ButtonText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIPrefabs/ButtonText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UIPrefabs/Tube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UIPrefabs/Tube.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +46,34 @@
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/SoldierController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/TurretController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/WatcherController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scripts/Enemy/Boss1Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scripts/Enemy/Boss1Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Prefab/EffectManager.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Prefab/EffectManager.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scenes/CityMapBackup.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/MyProjects/UnityGameProject/50033GameProject/Assets/Scripts/Interactive/AbstractInteractiveObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/IInteractive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/Lift.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactive/LiftGate.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,6 +82,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/BackpackCloseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/IInteractiveButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WaterWave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UnityLearn/Water2D-Unity/Assets/WaterShapeController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -128,10 +169,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28448">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="45568">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="28448" />
+      <option name="pid" value="45568" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -172,7 +213,9 @@
       <workItem from="1701320680012" duration="8302000" />
       <workItem from="1701346241124" duration="15586000" />
       <workItem from="1701435601896" duration="37000" />
-      <workItem from="1701435959598" duration="1934000" />
+      <workItem from="1701435959598" duration="2652000" />
+      <workItem from="1701439930465" duration="3701000" />
+      <workItem from="1701495378258" duration="3761000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -390,7 +433,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701436296664</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="interactive object receive input">
+      <option name="closed" value="true" />
+      <created>1701438393776</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1701438393776</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +450,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -413,7 +475,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="enemy design basic" />
     <MESSAGE value="import enemy controller" />
     <MESSAGE value="enemy soldier basic moving" />
@@ -438,7 +499,8 @@
     <MESSAGE value="city map complete" />
     <MESSAGE value="boss scene" />
     <MESSAGE value="misc" />
-    <option name="LAST_COMMIT_MESSAGE" value="misc" />
+    <MESSAGE value="interactive object receive input" />
+    <option name="LAST_COMMIT_MESSAGE" value="interactive object receive input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,32 +556,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Enemy/Scripts/EnemyController/EnemyController.cs</url>
-          <line>107</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Enemy\Scripts\EnemyController\EnemyController.cs" initialLine="107" containingFunctionPresentation="Method 'GetPlayerPosition'">
-            <startOffsets>
-              <option value="3193" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3245" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.Collider.cs</url>
-          <line>34</line>
-          <properties documentPath="D:\MyProjects\UnityGameProject\50033GameProject\Assets\Scripts\Player\PlayerController.Collider.cs" initialLine="34" containingFunctionPresentation="Method 'CheckForSomeObject'">
-            <startOffsets>
-              <option value="1172" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1230" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
