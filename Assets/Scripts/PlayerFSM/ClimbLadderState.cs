@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Game {
     public class ClimbLadderState : BaseActionState {
-        public ClimbLadderState(PlayerController controller) : base(EActionState.Climb, controller) {
+        public ClimbLadderState(PlayerController controller) : base(EActionState.Ladder, controller) {
         }
 
         public override IEnumerator Coroutine() {
@@ -29,7 +29,7 @@ namespace Game {
 
             player.ClimbSnap();
 
-            player.PlayAnimation("Climb");
+            // player.PlayAnimation("Climb");
             player.SetBool("Climbing", true);
         }
 
@@ -53,14 +53,13 @@ namespace Game {
                 //Play(Sfxs.char_mad_grab_letgo);
                 return EActionState.Normal;
             }
-            if (!player.CollideCheck(player.Position, Vector2.right * (int)player.Facing)) {
+            if (!player.inLadderArea) {
                 if (player.Speed.y < 0) {
-                    ClimbHop();
+                    //
+                    //ClimbHop();
                 }
-                
                 return EActionState.Normal;
             }
-
             float target = 0;
             bool trySlip = false;
             if (player.ClimbNoMoveTimer <= 0) {
@@ -71,15 +70,7 @@ namespace Game {
                         player.Speed.y = Mathf.Min(player.Speed.y, 0);
                         target = 0;
                         trySlip = true;
-                    } else if (player.ClimbHopBlockedCheck() && player.SlipCheck(0.1f)) {
-                        Debug.Log("=====ClimbSlip_Type2");
-                        player.Speed.y = Mathf.Min(player.Speed.y, 0);
-                        target = 0;
-                        trySlip = true;
-                    } else if (player.SlipCheck()) {
-                        ClimbHop();
-                        return EActionState.Normal;
-                    }
+                    } 
                 } else if (player.MoveY == -1) {
                     target = Constants.ClimbDownSpeed;
                     if (player.OnGround) {
@@ -91,10 +82,10 @@ namespace Game {
                 } else {
                     trySlip = true;
                 }
+                
             } else {
                 trySlip = true;
             }
-
             if (trySlip && player.SlipCheck()) {
                 Debug.Log("=======ClimbSlip_Type4");
                 target = Constants.ClimbSlipSpeed;

@@ -95,6 +95,7 @@ namespace Game {
             this.stateMachine.AddState(new ClimbState(this));
             this.stateMachine.AddState(new AttackState(this));
             this.stateMachine.AddState(new ComboState(this));
+            this.stateMachine.AddState(new ClimbLadderState(this));
             this.Facing = Facings.Right;
             this.LastAim = Vector2.right;
             isAlive = true;
