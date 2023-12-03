@@ -13,7 +13,7 @@ using UnityEngine.UIElements;
 namespace Game {
     public class SceneCamera : MonoBehaviour, ICamera {
         [SerializeField]
-        private Camera mainCamera;
+        public Camera mainCamera;
         //[SerializeField]
         //private Camera postCamera;
 

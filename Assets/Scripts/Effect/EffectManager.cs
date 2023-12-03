@@ -11,12 +11,22 @@ using UnityEngine.Rendering.Universal;
 namespace Game {
     public class EffectManager: MonoBehaviour {
         public SceneCamera gameCamera;
+        
+        public GameObject Background;
+
+        public ParallaxController[] parallaxControllers;
+
         public Volume volume; // 引用包含Volume组件的游戏对象
         public GameObject AbsorbEffectPrefab;
         private float freezeTime;
 
         public void Update() {
             float deltaTime = Time.unscaledDeltaTime;
+            if (parallaxControllers.Length>0){
+                for(int i =0; i < parallaxControllers.Length; i++){
+                    parallaxControllers[i].CameraPosition = gameCamera.mainCamera.transform.position;
+                }
+            }
         }
         public void CameraShake(Vector2 dir) {
             this.gameCamera.Shake(dir, 0.2f);
@@ -71,6 +81,19 @@ namespace Game {
                 }
             }
         }
+
+        public void LoadParallax(){
+            parallaxControllers = new ParallaxController[Background.transform.childCount];
+            //Debug.Log(Background.transform.childCount);
+
+            for (int i =0; i<= Background.transform.childCount -1; i++) {
+                //Debug.Log(i);
+                parallaxControllers[i] = Background.transform.GetChild(i).GetComponent<ParallaxController>();
+                //Debug.Log("Loading "+transform.GetChild(i));
+            }
+        }
+
+
 
         private IEnumerator ChromaticAbberationOn(float duration) {
             float timer = 0f;
