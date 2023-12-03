@@ -38,6 +38,8 @@ public class GameManager : Singleton<GameManager> {
     public GameObject LoadingScreenRighthalf;
     public GameObject LoadingScreenLefthalf;
 
+    public GameObject CurrentBackgroundPrefab;
+
     public ItemDataObject ItemDataObject;
     public ItemFactory ItemFactory;
     
@@ -69,6 +71,7 @@ public class GameManager : Singleton<GameManager> {
         PlayerController.ItemFactory = ItemFactory;
         EnemyManager.EffectManager = EffectManager;
         EnemyManager.PlayerController = PlayerController;
+        EffectManager.Background = Instantiate(CurrentBackgroundPrefab);
         Debug.Log("SetComponents");
         yield return new WaitForSecondsRealtime(0.03f);
         //PlayerController.LoadDataFromFile = true;
@@ -77,6 +80,7 @@ public class GameManager : Singleton<GameManager> {
         SceneCamera.IsLocked = CurrentLevelInfo.CameraLocked;
         SceneCamera.LockedCameraPos = CurrentLevelInfo.CameraStartPos;
         SceneCamera.SetCameraSize(CurrentLevelInfo.CameraSize);
+        EffectManager.LoadParallax();
         SceneCamera.CameraLayers = CurrentLevelInfo.CameraLayers;
         // EnemyManager.GenerateBoss1(new Vector3(10f,-1f,0));
         Debug.Log("SetData");
