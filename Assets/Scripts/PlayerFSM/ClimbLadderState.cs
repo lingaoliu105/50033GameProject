@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Game {
-    public class ClimbState : BaseActionState {
-        public ClimbState(PlayerController controller) : base(EActionState.Climb, controller) {
+    public class ClimbLadderState : BaseActionState {
+        public ClimbLadderState(PlayerController controller) : base(EActionState.Climb, controller) {
         }
 
         public override IEnumerator Coroutine() {
@@ -27,9 +27,9 @@ namespace Game {
             player.WallBoost.ResetTime();
             player.ClimbNoMoveTimer = Constants.ClimbNoMoveTime;
 
-            //player.ClimbSnap();
+            player.ClimbSnap();
 
-            //player.PlayAnimation("Climb");
+            player.PlayAnimation("Climb");
             player.SetBool("Climbing", true);
         }
 
@@ -40,11 +40,7 @@ namespace Game {
         public override EActionState Update(float deltaTime) {
             player.ClimbNoMoveTimer -= deltaTime;
             if (GameInput.JumpButton.Pressed() && (!player.Ducking || player.CanUnDuck)) {
-                if (player.MoveX == -(int)player.Facing) {
-                    player.WallJump(-(int)player.Facing);
-                } else { 
-                    player.ClimbJump();
-                }
+                 player.ClimbJump();
                 return EActionState.Normal;
             }
             if (player.CanDash) {
@@ -124,12 +120,12 @@ namespace Game {
                 player.HopWaitX = (int)player.Facing;
                 player.HopWaitXSpeed = (int)player.Facing * Constants.ClimbHopX;
             }
-            //player.ClimbHopSolid = player.CollideClimbHop((int)player.Facing);
-            //if (player.ClimbHopSolid)
+            //ctx.ClimbHopSolid = ctx.CollideClimbHop((int)ctx.Facing);
+            //if (ctx.ClimbHopSolid)
             //{
             //    //climbHopSolidPosition = climbHopSolid.Position;
-            //    player.HopWaitX = (int)player.Facing;
-            //    player.HopWaitXSpeed = (int)player.Facing * Constants.ClimbHopX;
+            //    ctx.HopWaitX = (int)ctx.Facing;
+            //    ctx.HopWaitXSpeed = (int)ctx.Facing * Constants.ClimbHopX;
             //}
             else {
                 player.HopWaitX = 0;
