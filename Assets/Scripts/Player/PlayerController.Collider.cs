@@ -42,13 +42,13 @@ namespace Game {
             foreach (Collider2D collider in colliders) {
                 // 检查标签是否为 "EnemyProjectile"
                 if (collider.CompareTag("EnemyProjectile")) {
-                    // 处理敌方投射物的逻辑
-                    var attackInstance = collider.GetComponent<EnemyAttack>();
-                    if (attackInstance && !attackInstance.CheckActive()) // prevent multiple hit caused
-                    {
-                        int damage = collider.GetComponent<EnemyAttack>().Damage;
-                        this.TakeDamage(damage);
+                    int damage = 0;
+                    if (collider.gameObject.GetComponent<EnemyAttack>() != null) {
+                        damage = collider.gameObject.GetComponent<EnemyAttack>().Damage;
                         collider.GetComponent<EnemyAttack>().Hitting();
+                    } if (damage > 0) {
+                        Debug.Log($"======TakeDamage {damage} ====== {collider.gameObject}");
+                        this.TakeDamage(damage);
                     }
                 }
                 if (collider.CompareTag("Void")) { 

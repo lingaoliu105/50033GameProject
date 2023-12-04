@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a21a3756eecb347a68d47de2733d3c, type: 3}
   m_Name: CityBoss
   m_EditorClassIdentifier: 
-  PlayerPosition: {x: 40, y: 9}
+  PlayerPosition: {x: 50, y: 9}
   CameraStartPos: {x: 48, y: 9}
   CameraLocked: 1
   CameraSize: 9

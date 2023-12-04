@@ -58,6 +58,9 @@ namespace Assets.Scripts.Attack {
         public virtual void  CollideWithEnemy(GameObject enemy) {
             attackCount++;
             // TODO: 伤害计算
+            if (enemy.GetComponent<BodyPartController>() != null) { 
+                enemy.GetComponent<BodyPartController>().hit(attackDamage);
+            }
 
             if (attackCount >= destroyAfterAttack && destroyAfterAttack > 0) {
                 Destroy(gameObject);
@@ -72,7 +75,7 @@ namespace Assets.Scripts.Attack {
          }
 
         public void OnTriggerEnter2D(Collider2D collision) {
-            Debug.Log("Collide with " + collision.gameObject + ", Tag = " + collision.gameObject.tag);
+            //Debug.Log("Collide with " + collision.gameObject + ", Tag = " + collision.gameObject.tag);
             if (isAttacking) {
                 if (collision.gameObject.tag == "Enemy") {
                     CollideWithEnemy(collision.gameObject);

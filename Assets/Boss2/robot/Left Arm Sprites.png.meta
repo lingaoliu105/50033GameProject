@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -108,7 +121,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Left Arm Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 78
+        width: 27
+        height: 34
+      alignment: 9
+      pivot: {x: 0, y: 0.7352941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bdeea72a2755e4197df6236ad30743
+      internalID: 637495346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 79
+        width: 27
+        height: 33
+      alignment: 9
+      pivot: {x: -0, y: 0.72727275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b4983a8cb18f548857b55b0327c70c
+      internalID: -464441798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 78
+        width: 28
+        height: 34
+      alignment: 9
+      pivot: {x: 0, y: 0.7352941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7015625b3434f2546ac4f447b386619d
+      internalID: 629288381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 80
+        width: 22
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0.74285716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ff4769ad556c7418586f09bb4c115e
+      internalID: -351529937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 83
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: -0, y: 0.6896552}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d83558e396b1343bd0a0d99782afac
+      internalID: -1866574279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 84
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: -0, y: 0.67857146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3312975842f629c4aa8c8e4550b5384c
+      internalID: -673021924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 80
+        width: 26
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0.7096774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af18083f5f660444c8d78d49a120174c
+      internalID: 2113062193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 82
+        width: 28
+        height: 30
+      alignment: 9
+      pivot: {x: -0, y: 0.6774193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a5c3c51de6b2c4b98e38a0f82171e1
+      internalID: 471037506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 82
+        width: 27
+        height: 30
+      alignment: 9
+      pivot: {x: 0, y: 0.7096774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2eddb01be98777449dabbd073ec312f
+      internalID: 88104516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 82
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: -0, y: 0.7096774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f7e24b2d1cde9469b6c6e83d9c06cf
+      internalID: 1516965243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +342,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Left Arm Sprites_0: 637495346
+      Left Arm Sprites_1: -464441798
+      Left Arm Sprites_2: 629288381
+      Left Arm Sprites_3: -351529937
+      Left Arm Sprites_4: -1866574279
+      Left Arm Sprites_5: -673021924
+      Left Arm Sprites_6: 2113062193
+      Left Arm Sprites_7: 471037506
+      Left Arm Sprites_8: 88104516
+      Left Arm Sprites_9: 1516965243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

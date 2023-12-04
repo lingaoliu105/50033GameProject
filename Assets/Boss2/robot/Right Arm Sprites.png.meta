@@ -131,7 +131,7 @@ TextureImporter:
         width: 24
         height: 35
       alignment: 9
-      pivot: {x: 1, y: 0.72}
+      pivot: {x: 1, y: 0.71428573}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 23
         height: 35
       alignment: 9
-      pivot: {x: 1, y: 0.72}
+      pivot: {x: 1, y: 0.71428573}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 24
         height: 35
       alignment: 9
-      pivot: {x: 1, y: 0.72}
+      pivot: {x: 1, y: 0.71428573}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 26
         height: 35
       alignment: 9
-      pivot: {x: 1, y: 0.72}
+      pivot: {x: 1, y: 0.71428573}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 23
         height: 35
       alignment: 9
-      pivot: {x: 1, y: 0.72}
+      pivot: {x: 1, y: 0.71428573}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 21
         height: 36
       alignment: 9
-      pivot: {x: 0.9, y: 0.72}
+      pivot: {x: 0.9047619, y: 0.7222222}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
         width: 27
         height: 31
       alignment: 9
-      pivot: {x: 0.74, y: 0.71}
+      pivot: {x: 0.7407408, y: 0.7096774}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
         width: 26
         height: 31
       alignment: 9
-      pivot: {x: 0.77, y: 0.71}
+      pivot: {x: 0.7692308, y: 0.7096774}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,7 +299,7 @@ TextureImporter:
         width: 28
         height: 31
       alignment: 9
-      pivot: {x: 0.71, y: 0.7}
+      pivot: {x: 0.71428573, y: 0.7096774}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +320,7 @@ TextureImporter:
         width: 26
         height: 31
       alignment: 9
-      pivot: {x: 0.77, y: 0.71}
+      pivot: {x: 0.7692308, y: 0.7096774}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,6 +328,90 @@ TextureImporter:
       bones: []
       spriteID: 41f7e24b2d1cde9469b6c6e83d9c06cf
       internalID: 1516965243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Arm Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 13
+        width: 26
+        height: 35
+      alignment: 9
+      pivot: {x: 1, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2613e16e75fe7524f84dc9b7cd548321
+      internalID: -635108398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Arm Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 13
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 1, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9879919ee7e6346976398ef18f1b44
+      internalID: -70358575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Arm Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 13
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 1, y: 0.7241379}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a54f4672b3cdf4f8a2c8f6277c8296
+      internalID: -1521370163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right Arm Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 26
+        width: 26
+        height: 16
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eecbff048d8e9b46a67783ab207416f
+      internalID: 1046838433
       vertices: []
       indices: 
       edges: []
@@ -345,6 +429,10 @@ TextureImporter:
     nameFileIdTable:
       Right Arm Sprites_0: 637495346
       Right Arm Sprites_1: -464441798
+      Right Arm Sprites_10: -635108398
+      Right Arm Sprites_11: -70358575
+      Right Arm Sprites_12: -1521370163
+      Right Arm Sprites_13: 1046838433
       Right Arm Sprites_2: 629288381
       Right Arm Sprites_3: -351529937
       Right Arm Sprites_4: -1866574279

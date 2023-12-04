@@ -63,6 +63,7 @@ namespace Game {
             frame++;
             state = EActionState.Attack;
             player.Speed.x = maxSpeed * dir.x;
+            player.Speed.y = maxSpeed * dir.y;
             if (comboFlag) { 
                 Debug.Log("Combo " + frame);
                 return EActionState.Combo;

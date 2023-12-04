@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1891620477581436221}
   - component: {fileID: 8905140016138701965}
   - component: {fileID: 5827386788568858371}
-  - component: {fileID: -6014389718079360797}
   - component: {fileID: 8658383484492863068}
   m_Layer: 8
   m_Name: MachineGun
@@ -4880,21 +4879,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &-6014389718079360797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8252286900575796982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31a344a343ed1a418e89b1d20a9a879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 0
-  TimeToDestroy: 0
-  hasHit: 0
 --- !u!114 &8658383484492863068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4907,6 +4891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31a344a343ed1a418e89b1d20a9a879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitAudio: {fileID: 0}
   Damage: 8
   TimeToDestroy: 0
-  hasHit: 0

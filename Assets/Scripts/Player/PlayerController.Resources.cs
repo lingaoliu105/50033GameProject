@@ -70,11 +70,12 @@ namespace Game
 
         public void TakeDamage(int amount, string tag = "") {
             if (amount <= 0) return;
+            
             if (DebugInvinsible) {
-                Debug.Log("Damage:  " + amount);
+                Debug.Log($"==={tag} Damage: {amount}===invincible: {invinsibleTimer >= 0}");
                 return;
             }
-            if (invinsibleOnHitTimer <= 0) {
+            if (invinsibleTimer <= 0) {
                 DamageToTake = amount;
                 DamageTag = tag;
                 UpdateEquipsOnHurt();
@@ -84,7 +85,7 @@ namespace Game
                     HP = 0;
                     Die();
                 }
-                invinsibleOnHitTimer = Constants.InvinsibleOnHitTime;
+                invinsibleTimer = Constants.InvinsibleOnHitTime;
                 Flash();
             }
         }

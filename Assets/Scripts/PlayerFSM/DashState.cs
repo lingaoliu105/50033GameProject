@@ -72,6 +72,7 @@ namespace Game {
 
         public override EActionState Update(float deltaTime) {
             state = EActionState.Dash;
+            player.invinsibleTimer = 0.5f;
             #region 尾迹
             #endregion
             #region super

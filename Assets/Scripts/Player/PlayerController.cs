@@ -12,7 +12,7 @@ namespace Game {
 
         public LayerMask groundMask;
 
-        private float invinsibleOnHitTimer = 0f;
+        public float invinsibleTimer = 0f;
 
         private int frameRate = 60;
         private float deltaTime;
@@ -170,8 +170,8 @@ namespace Game {
                 return;
             }
             if (!CanMove) {
-                if (invinsibleOnHitTimer <= Constants.InvinsibleOnHitTime) {
-                    invinsibleOnHitTimer = Constants.InvinsibleOnHitTime;
+                if (invinsibleTimer <= Constants.InvinsibleOnHitTime) {
+                    invinsibleTimer = Constants.InvinsibleOnHitTime;
                 }
                 if (ForceMoveXTimer > 0) {
                     ForceMoveXTimer -= deltaTime;
@@ -201,11 +201,8 @@ namespace Game {
             if (varJumpTimer > 0) {
                 varJumpTimer -= deltaTime;
             }
-            if (invinsibleOnHitTimer > 0) {
-                invinsibleOnHitTimer -= deltaTime;
-            }
-            if (DebugInvinsible) {
-                invinsibleOnHitTimer = 99;
+            if (invinsibleTimer > 0) {
+                invinsibleTimer -= deltaTime;
             }
             // switch tube 
             if (GameInput.SwitchItem.Pressed()) {
