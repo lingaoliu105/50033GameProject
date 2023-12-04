@@ -126,12 +126,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 8e9bc7893f23e4870b5e22aac02c9c96
-    internalID: 0
+    internalID: -1304045809
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 7b1d40521a5cf2640a75a7ecdaf1c15d, type: 3}
+      name: _Emission
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
