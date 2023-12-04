@@ -32,6 +32,9 @@ namespace Game {
             if (GameInput.GrabButton.Checked() && !player.Ducking) {
                 //Climbing
                 if (player.Speed.y <= 0 && Math.Sign(player.Speed.x) != -(int)player.Facing) {
+                    if (player.inLadderArea) {
+                        return EActionState.Ladder;
+                    }
                     if (player.ClimbCheck((int)player.Facing)) {
                         player.Ducking = false;
                         return EActionState.Climb;

@@ -15,8 +15,9 @@ namespace Game {
         Attack,
         Combo,
         Hold,
+        
+        Ladder,
         Size,
-        Ladder
     }
 
     public abstract class BaseActionState {

@@ -31,9 +31,12 @@ namespace Game {
 
         private Rect collider;
 
+        public bool inLadderArea = false;
+
         void CheckForSomeObject() {
             // 执行矩形区域检测
             Collider2D[] colliders = Physics2D.OverlapBoxAll(this.Position + collider.position, collider.size, 0);
+            inLadderArea = false;
             touchingMovingPlatform = false;
             // 遍历检测到的碰撞器
             foreach (Collider2D collider in colliders) {
@@ -59,6 +62,10 @@ namespace Game {
                     MovingPlatformSpeed = collider.GetComponent<MovingPlatformBasic>().Speed;
                     touchingMovingPlatform = true;
                 }
+                if (collider.CompareTag("Ladder")) {
+                    inLadderArea = true;
+                }
+
             }
             if (!touchingMovingPlatform) {
                 MovingPlatformSpeed = Vector2.zero;
