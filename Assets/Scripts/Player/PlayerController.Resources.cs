@@ -137,7 +137,7 @@ namespace Game
             if (value >= 99) result = 1f;
             return result;
         }
-        private int CalcHPValue(int value) {
+        public int CalcHPValue(int value) {
             int result = 0;
             if (value <= 27 && value >= 0) result = (int)(value * 36.3f + 42);
             if (value <= 44 && value >= 28) result = (int)((value -27 )* 15.3f + 1020);

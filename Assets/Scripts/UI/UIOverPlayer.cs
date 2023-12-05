@@ -33,6 +33,9 @@ namespace Assets.Scripts.UI {
         public Transform VaccTubePanel;
         private GameObject[] VaccTubes;
 
+        public Canvas PauseMenu;
+        public bool isPaused = false;
+
         public Canvas DiePanel;
         private void Start() {
             Player = this.transform.parent.GetComponent<PlayerController>();
@@ -167,6 +170,16 @@ namespace Assets.Scripts.UI {
             UpdateBarValues();
             UpdateBuff();
             UpdateTubes();
+            //if pressed esc
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                if (isPaused) {
+                    PauseMenu.gameObject.SetActive(false);
+                    isPaused = false;
+                } else {
+                    PauseMenu.gameObject.SetActive(true);
+                    isPaused = true;
+                }
+            }
         }
 
         public void Respawn() { 

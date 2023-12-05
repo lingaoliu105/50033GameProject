@@ -45,6 +45,17 @@ namespace Assets.Scripts.UI {
         public TextMeshProUGUI LevelText;
         public string LevelString;
         public int LevelValue;
+        public TextMeshProUGUI HPText;
+        public string HPString;
+        public int HPValue;
+        public TextMeshProUGUI MPText;
+        public string MPString;
+        public int MPValue;
+        public TextMeshProUGUI STMText;
+        public string STMString;
+        public int STMValue;
+
+        public GameObject ConfirmButton;
 
         public Color HigherValueColor = Color.green;
         public Color NormalColor = Color.black;
@@ -111,20 +122,49 @@ namespace Assets.Scripts.UI {
             if (DeltaSoul == 0) {
                 SoulText.color = NormalColor;
                 SoulText.text = Player.Soul.ToString();
+             
             }
             if (DeltaLevel > 0) {
                 LevelText.color = HigherValueColor;
                 LevelText.text = Player.Level.ToString()+" -> " + (Player.Level + DeltaLevel).ToString();
+                ConfirmButton.SetActive(true);
             }
             if (DeltaLevel == 0) {
                 LevelText.color = NormalColor;
                 LevelText.text = Player.Level.ToString();
+                ConfirmButton.SetActive(false);
+            }
+            
+            HPValue = Player.HPVOrigin + ValueBlocks[(int)ValueBlockType.HPV].DeltaValueInt;
+            if (ValueBlocks[(int)ValueBlockType.HPV].DeltaValueInt > 0) {
+                HPText.color = HigherValueColor;
+                HPText.text = Player.CalcHPValue(Player.HPVOrigin).ToString()+" -> " + Player.CalcHPValue(HPValue).ToString();
+            } else {
+                  HPText.color = NormalColor;
+                HPText.text = Player.CalcHPValue(HPValue).ToString();
+            }
+            MPValue = Player.MPVOrigin + ValueBlocks[(int)ValueBlockType.MPV].DeltaValueInt;
+            if (ValueBlocks[(int)ValueBlockType.MPV].DeltaValueInt > 0) {
+                MPText.color = HigherValueColor;
+                MPText.text = (Player.CalcHPValue(Player.MPVOrigin)/4).ToString()+" -> " + (Player.CalcHPValue(MPValue)/4).ToString();
+            } else {
+                  MPText.color = NormalColor;
+                MPText.text = (Player.CalcHPValue(MPValue)/4).ToString();
+            }
+            STMValue = Player.STMOrigin + ValueBlocks[(int)ValueBlockType.STM].DeltaValueInt;
+            if (ValueBlocks[(int)ValueBlockType.STM].DeltaValueInt > 0) {
+                STMText.color = HigherValueColor;
+                STMText.text = (Player.CalcHPValue(Player.STMOrigin)/3).ToString()+" -> " + (Player.CalcHPValue(STMValue)/3).ToString();
+            } else {
+                  STMText.color = NormalColor;
+                STMText.text = (Player.CalcHPValue(STMValue)/3).ToString();
             }
         }
 
         private void Start() {
             //Player = this.transform.parent.GetComponent<PlayerController>();
             IsBonfire = true;
+            Rewind();
             NextLevelSoul = Player.NextLevelExp(Player.Level + DeltaLevel);
             //Close();
         }
@@ -136,7 +176,7 @@ namespace Assets.Scripts.UI {
             return result;
         }
 
-        public void Close() { 
+        public void Rewind() { 
             //Clear all delta
             DeltaLevel = 0;
             DeltaSoul = 0;
@@ -175,7 +215,7 @@ namespace Assets.Scripts.UI {
                 Player.TECOrigin += ValueBlocks[(int)ValueBlockType.TEC].DeltaValueInt;
                 Player.LUCOrigin += ValueBlocks[(int)ValueBlockType.LUC].DeltaValueInt;
                 Player.RestoreAllToMax();
-                Close();
+                Rewind();
             }
         }
        
