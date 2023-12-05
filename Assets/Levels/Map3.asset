@@ -10,20 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15a21a3756eecb347a68d47de2733d3c, type: 3}
-  m_Name: Underground
+  m_Name: Map3
   m_EditorClassIdentifier: 
-  PlayerPosition: {x: -6, y: 7}
-  CameraStartPos: {x: 0, y: 0}
+  PlayerPosition: {x: -1.15, y: 7.24}
+  CameraStartPos: {x: -1.15, y: 7.24}
   CameraLocked: 0
   CameraSize: 7
   CameraLayers:
   - hasTop: 0
     LayerTop: 0
     LayerBottom: -20
-    FixedAreaTop: 6
-    FixedY: 6
+    FixedAreaTop: -14
+    FixedY: -16
   - hasTop: 0
-    LayerTop: 1500
-    LayerBottom: 9
-    FixedAreaTop: 17.5
-    FixedY: 10
+    LayerTop: 1000
+    LayerBottom: 6
+    FixedAreaTop: 14
+    FixedY: 11
+  - hasTop: 1
+    LayerTop: 1000
+    LayerBottom: 21
+    FixedAreaTop: 1000
+    FixedY: 25

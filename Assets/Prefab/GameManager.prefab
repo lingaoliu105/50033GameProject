@@ -129,6 +129,8 @@ MonoBehaviour:
   EnemyManager: {fileID: 0}
   EffectManagerObject: {fileID: 5510613733838494038, guid: ec34feca861af124aa9507f3d93d1434, type: 3}
   EffectManager: {fileID: 0}
+  CurrentLevel: -1
+  ScenesData: {fileID: 11400000, guid: 333d7fdaf39838e49bed4dc29adefeaf, type: 2}
   CurrentLevelInfo: {fileID: 11400000, guid: ae15b73f5a5d7294a99089055f9269a4, type: 2}
   PlayerPrefab: {fileID: 3779697531838084338, guid: 1dfc3d34d89b0004b8c1d785972abfcb, type: 3}
   SceneCameraPrefab: {fileID: 6089389181790695794, guid: c157b6d22167d3940888717ced1cce46, type: 3}
@@ -136,6 +138,7 @@ MonoBehaviour:
   EffectManagerPrefab: {fileID: 5510613733838494038, guid: ec34feca861af124aa9507f3d93d1434, type: 3}
   LoadingScreenRighthalf: {fileID: 1850564595023057878}
   LoadingScreenLefthalf: {fileID: 7400495102595623177}
+  CurrentBackgroundPrefab: {fileID: 0}
   ItemDataObject: {fileID: 11400000, guid: 7985d3b11bff79a4cb667d5648be95af, type: 2}
 --- !u!1 &7400495102595623177
 GameObject:
@@ -230,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8329215865607856005
 RectTransform:
   m_ObjectHideFlags: 0

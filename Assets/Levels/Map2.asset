@@ -10,15 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15a21a3756eecb347a68d47de2733d3c, type: 3}
-  m_Name: LevelInfo
+  m_Name: Map2
   m_EditorClassIdentifier: 
-  PlayerPosition: {x: 0, y: 0}
+  PlayerPosition: {x: -6, y: 7}
   CameraStartPos: {x: 0, y: 0}
   CameraLocked: 0
-  CameraSize: 0
+  CameraSize: 7
   CameraLayers:
   - hasTop: 0
     LayerTop: 0
-    LayerBottom: 0
-    FixedAreaTop: 0
-    FixedY: 0
+    LayerBottom: -20
+    FixedAreaTop: 6
+    FixedY: 6
+  - hasTop: 0
+    LayerTop: 1500
+    LayerBottom: 9
+    FixedAreaTop: 17.5
+    FixedY: 10

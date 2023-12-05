@@ -9,12 +9,14 @@ public class DronesCircle : MonoBehaviour
     public WaitForSeconds wait5 = new WaitForSeconds(0.5f);
     public WaitForSeconds wait10 = new WaitForSeconds(1f);
     private bool launched = false;
+    int cycle = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Generate();
+        cycle = 0;
         drones = new BeamController[transform.childCount];
 
         for (int i = 0; i <= transform.childCount - 1; i++) {
@@ -52,6 +54,10 @@ public class DronesCircle : MonoBehaviour
             yield return wait10;
             yield return wait10;
             yield return wait10;
+            cycle++;
+            if (cycle >= 10) {
+                Destroy(gameObject);
+            }
         }
 
     }

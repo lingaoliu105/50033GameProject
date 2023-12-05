@@ -5,7 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Enemy/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Map1.unity
+    guid: 4a1ba760e7046b24ea691d58be16aa41
+  - enabled: 1
+    path: Assets/Scenes/Boss1.unity
+    guid: acbbeb27e42ccdb4586bc0df5e0614e9
+  - enabled: 1
+    path: Assets/Scenes/Map2.unity
+    guid: 1fe2a043bb7d1ef4e8363847f09db365
+  - enabled: 1
+    path: Assets/Scenes/Map3.unity
+    guid: 91de45260631f544e876aace1cc33e68
+  - enabled: 1
+    path: Assets/Scenes/Boss2.unity
+    guid: fb45ac7ff72e9324399d23386ccd1248
   m_configObjects: {}

@@ -29,6 +29,9 @@ public class GameManager : Singleton<GameManager> {
     [HideInInspector]
     public EffectManager EffectManager;
 
+    public int CurrentLevel = -1;
+    public ScenesData ScenesData;
+
     public LevelInfo CurrentLevelInfo;
     public GameObject PlayerPrefab;
     public GameObject SceneCameraPrefab;
@@ -89,14 +92,22 @@ public class GameManager : Singleton<GameManager> {
         
         Debug.Log("StartGame");
     }
+    [ContextMenu("TestSceneChange")]
+    public void TestSceneChange() {
+        StartCoroutine(ChangeScene(1));
+    }
 
-    public IEnumerator ChangeScene(LevelInfo levelInfo) { 
+    public IEnumerator ChangeScene(int sceneID = 1) { 
         yield return StartCoroutine(LoadingScreenSlideClose(0.5f));
         Destroy(PlayerControllerObject);
         Destroy(SceneCameraObject);
         Destroy(EnemyManagerObject);
         Destroy(EffectManagerObject);
-        CurrentLevelInfo = levelInfo;
+        CurrentLevelInfo = ScenesData.Levels[sceneID];
+        CurrentLevel = sceneID;
+        CurrentBackgroundPrefab = ScenesData.Backgrounds[sceneID];
+        UnityEngine.SceneManagement.SceneManager.LoadScene(ScenesData.ScenesName[sceneID]);
+        yield return new WaitForSecondsRealtime(0.03f);
         StartCoroutine(StartGame());
     }
 

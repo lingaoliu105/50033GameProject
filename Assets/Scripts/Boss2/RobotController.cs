@@ -100,6 +100,11 @@ public class RobotController: MonoBehaviour {
     }
     public IEnumerator WaitAndLaunch() {
         yield return SkillCD;
+        Vector2 target = Vector2.zero;
+        if (GameObject.FindWithTag("Player")!= null) {
+            target = GameObject.FindWithTag("Player").transform.position;
+        }
+        facing = target.x > transform.position.x ? Facings.Right : Facings.Left;
         if (AtkCount < 2) {
             AtkCount++;
             StartCoroutine(CommonAttack());
