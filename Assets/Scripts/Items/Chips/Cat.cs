@@ -13,7 +13,7 @@ namespace Assets.Scripts.Items {
             }
             if (player.DamageTag == "Fallen") {
                 Debug.Log("Cat: ");
-                player.DamageToTake = 1;
+                player.DamageToTake = player.DamageToTake/2;
             }
         }
     }

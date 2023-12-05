@@ -53,6 +53,8 @@ namespace Assets.Scripts.Items {
         public virtual void OnHurt() {  }
         public virtual void OnDeath() { }
         public virtual void Update() { }
+        public virtual void OnEquip() { }
+        public virtual void OnUnequip() { }
     }
     [Serializable]
     public struct ItemInfo {
