@@ -42,7 +42,8 @@ namespace Assets.Scripts.Map {
         Disappear();
     }
         public void Disappear(){
-            chest.SetActive(false);
+            GameObject currentGameObject = gameObject;
+            currentGameObject.SetActive(false);
         }
         
     }

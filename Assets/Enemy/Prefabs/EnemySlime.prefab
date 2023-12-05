@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5617750666312511072}
   - component: {fileID: 5962707283039827506}
   - component: {fileID: 2478874056169016573}
-  - component: {fileID: 7062718969494125267}
+  - component: {fileID: 2884974041185942167}
   m_Layer: 9
   m_Name: EnemySlime
   m_TagString: Enemy
@@ -259,22 +259,22 @@ MonoBehaviour:
   - {fileID: 6742887311361911918, guid: 84c3c3d9a5b6e3040a6130f90fa73134, type: 3}
   attackTime: 0.2
   patrolRangeL: 0
-  patrolRangeR: 0
-  patrolSpeed: 3
+  patrolRangeR: 2
+  patrolSpeed: 1
   scoutSpeed: 3.5
   groundBoxSize: {x: 0.7, y: 0.2}
   groundCheckOffset: 0.4
   maxHP: 100
   dieWaitTime: 0.8
-  detectRange: 8
+  detectRange: {x: 4, y: 2.5}
   SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
   attackRange: 5
   jumpHeight: 3
---- !u!61 &7062718969494125267
-BoxCollider2D:
+--- !u!70 &2884974041185942167
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -305,19 +305,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.36}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.8, y: 0.8}
-    newSize: {x: 0.8, y: 1.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.68, y: 0.72}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0.4}
+  m_Size: {x: 0.8, y: 0.8}
+  m_Direction: 0
 --- !u!1 &1065565375435061592
 GameObject:
   m_ObjectHideFlags: 0

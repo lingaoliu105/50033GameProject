@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 8786251024742157009}
   - component: {fileID: 2834263275128940012}
   - component: {fileID: 48024468377522498}
-  - component: {fileID: -2725010650092202951}
+  - component: {fileID: 1174141506908443816}
   m_Layer: 9
   m_Name: EnemyBat
   m_TagString: Enemy
@@ -198,7 +198,7 @@ MonoBehaviour:
   groundCheckOffset: 0
   maxHP: 100
   dieWaitTime: 0.8
-  detectRange: 8
+  detectRange: {x: 4, y: 2.5}
   SoulAmount: 100
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
@@ -304,8 +304,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!61 &-2725010650092202951
-BoxCollider2D:
+--- !u!70 &1174141506908443816
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -336,19 +336,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0025604516, y: 0.01536271}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.73883414, y: 0.641537}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1 &711019398530038361
 GameObject:
   m_ObjectHideFlags: 0
