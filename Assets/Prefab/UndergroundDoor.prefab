@@ -87,7 +87,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,13 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a853099a693f561418ce37c1e1fcafdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectRange:
-    serializedVersion: 2
-    x: 0
-    y: 1
-    width: 2
-    height: 2
-  interactMessage: 
+  door: {fileID: 0}
 --- !u!1001 &8032879045251109300
 PrefabInstance:
   m_ObjectHideFlags: 0

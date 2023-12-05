@@ -204,6 +204,12 @@ namespace Game {
             //}
         }
 
+        //climb ladder modification
+        public void ClimbLadderSnap(){
+            this.Position += Vector2.right*(float)((Math.Floor(this.Position.x)+Math.Ceiling(this.Position.x))/2-this.Position.x);
+        }
+        //modification ends
+
         public void PlayDuck(bool enable) {
             if (enable) {
                 //SpriteControl.Scale(new Vector2(1.4f, .6f));

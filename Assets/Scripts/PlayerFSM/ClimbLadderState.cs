@@ -27,7 +27,8 @@ namespace Game {
             player.WallBoost.ResetTime();
             player.ClimbNoMoveTimer = Constants.ClimbNoMoveTime;
 
-            player.ClimbSnap();
+            //player.ClimbSnap();
+            player.ClimbLadderSnap();
 
             // player.PlayAnimation("Climb");
             player.SetBool("Climbing", true);
