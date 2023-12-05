@@ -828,6 +828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3129561756285657509}
   - component: {fileID: 9192486040618655931}
+  - component: {fileID: 6413680874484350773}
   m_Layer: 5
   m_Name: EquipmentTag
   m_TagString: Untagged
@@ -870,6 +871,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!114 &6413680874484350773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593818635445969865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df317d7136c228d4ebc70d1ad2938ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  equipableItems: []
 --- !u!1 &9146672563988516382
 GameObject:
   m_ObjectHideFlags: 0

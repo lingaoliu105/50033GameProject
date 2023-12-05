@@ -10,9 +10,12 @@ using UnityEngine;
 public class Inventory:MonoBehaviour {
      public PlayerController player;
     public EquipableItem[] equipableItems;
+    public int CurrentItemIndex = 0;
+    public EquipableItem CurrentItem;
 
     public void Update() {
-        EquipableItem[] items = player.Equipments;
+        equipableItems = player.Equipments;
+        
     }
 
 }
