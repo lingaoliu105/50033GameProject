@@ -12,6 +12,8 @@ namespace Game {
         public Vector2 cameraPos;
         public PlayerSpriteRenderer SpriteRenderer;
         public EffectManager EffectManager;
+        public AudioSource playerAudioSource;
+        public AudioClip[] playerAudioClips;
 
         public void Flash() {
             SpriteRenderer.Flash();
@@ -27,6 +29,13 @@ namespace Game {
 
         public void PlayAnimation(String trigger) {
             SpriteRenderer.SetTrigger(trigger);
+            if (trigger=="Jump"&&this.onGround==true){
+                playerAudioSource.PlayOneShot(playerAudioClips[0]);
+            }else if(trigger=="Attack"){
+                playerAudioSource.PlayOneShot(playerAudioClips[1]);
+            }else if(trigger=="Shoot"){
+                playerAudioSource.PlayOneShot(playerAudioClips[2]);
+            }
         }
 
         public void SetFloat(String name, float value) {
@@ -51,5 +60,6 @@ namespace Game {
             SpriteRenderer.Land = OnGround;
             SpriteRenderer.Ducking = Ducking;
         }
+        
     }
 }
