@@ -280,7 +280,7 @@ MonoBehaviour:
   maxHP: 100
   dieWaitTime: 0.8
   detectRange: {x: 4, y: 2.5}
-  SoulAmount: 100
+  SoulAmount: 130
   targetPlayer: {fileID: 0}
   playerPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
