@@ -9,7 +9,8 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 public static class RobotControllerParams { 
-    static public int[] RocketNumber = new int[4] {12, 3, 6, 9};
+    static public int MaxHP = 5000;
+    static public int[] RocketNumber = new int[4] {3, 3, 6, 9};
     static public float[] RocketFlyingTime = new float[4] { 2f, 2f, 1f, 1f};
     static public float[] RocketInterval = new float[4] { 0.5f, 0.2f, 0.2f, 0.2f};
     static public int[] MissileNumber = new int[4] { 2, 4, 6, 6};
@@ -32,6 +33,7 @@ public enum Boss1ExAttack {
 }
 public class RobotController: MonoBehaviour {
     public int[] bodyPartDamage;
+    public int HP;
 
     public RobotArm LArm;
     public RobotArm RArm;
@@ -59,9 +61,13 @@ public class RobotController: MonoBehaviour {
     public Facings facing = Facings.Right;
     public float Velocity = 0f;
 
+    public GameObject DeadRobot;
+
     public void Start() {
         bodyPartDamage = new int[(int)BodyPartType.Size];
+        HP = RobotControllerParams.MaxHP;
         SetHeat(0);
+        StartCoroutine(WaitAndLaunch());
     }
     public void Update() {
         int tmpDamage = 0;
@@ -74,6 +80,11 @@ public class RobotController: MonoBehaviour {
         }
         if (tmpDamage > 0) {
             Debug.Log($"===hit {this.gameObject} ===Damage {tmpDamage}");
+            HP -= tmpDamage;
+            if (HP <= 0) {
+                Instantiate(DeadRobot, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
         }
         LArm.facing = facing;
         RArm.facing = facing;
@@ -89,8 +100,24 @@ public class RobotController: MonoBehaviour {
     }
     public IEnumerator WaitAndLaunch() {
         yield return SkillCD;
+        if (AtkCount < 2) {
+            AtkCount++;
+            StartCoroutine(CommonAttack());
+        } else if (SpcCount < 2) {
+            AtkCount = 0;
+            SpcCount++;
+            StartCoroutine(SpecialAttack());
+        } else {
+            AtkCount = 0;
+            SpcCount = 0;
+            StartCoroutine(ExAttack());
+        }
     }
-    
+    public void OnDestory() {
+        StopAllCoroutines();
+        
+    }
+
     public void hit(int Damage, BodyPartType bodyPartType) {
         //Debug.Log($"===hit {this.gameObject}===Damage {Damage}");
         if (Damage > 0) {
@@ -128,6 +155,7 @@ public class RobotController: MonoBehaviour {
                 yield return LeftArmShoot();
             }
         }
+        StartCoroutine(WaitAndLaunch());
     }
     float specialAttackRate = 0.5f;
     [ContextMenu("Attack1")]
@@ -147,6 +175,7 @@ public class RobotController: MonoBehaviour {
             specialAttackRate -= 0.1f;
             yield return LargeMissile();
         }
+        StartCoroutine(WaitAndLaunch());
     }
     public IEnumerator ExAttack() {
         facing = NetPos.x > transform.position.x ? Facings.Right : Facings.Left;
@@ -201,6 +230,7 @@ public class RobotController: MonoBehaviour {
         } 
         SetHeat((int)HeatRate);
         yield return new WaitForSeconds(2f);
+        StartCoroutine(WaitAndLaunch());
     }
 
     public void SetHeat(int h) {
@@ -236,6 +266,7 @@ public class RobotController: MonoBehaviour {
         }
         Velocity = 0f;
         RArm.StartFire();
+        yield return new WaitForSeconds(2f);
     }
     public IEnumerator LeftArmShoot() {
         Vector2 target = GameObject.FindWithTag("Player").transform.position;
@@ -247,6 +278,7 @@ public class RobotController: MonoBehaviour {
         }
         Velocity = 0f;
         LArm.StartFire();
+        yield return new WaitForSeconds(2f);
     }
     public IEnumerator Missiles() {
         Body.LaunchMissile();

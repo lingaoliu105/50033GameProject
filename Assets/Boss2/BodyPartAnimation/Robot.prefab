@@ -265,19 +265,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyPartDamage: 
+  HP: 0
   LArm: {fileID: 9016432453273634175}
   RArm: {fileID: 7864823960235689387}
   Body: {fileID: 8954939722913857932}
   LAnimaror: {fileID: 1924445886438224805}
   RAnimaror: {fileID: 4981316056987443733}
   Heat: 0
+  HeatRate: 0
   LaserNetA1Prefab: {fileID: 8131123999966012845, guid: 3bfbbdf04a78fd64b8d7195db1ba9139, type: 3}
   LaserNetA2Prefab: {fileID: 7773295043912767063, guid: e41c310ed34370c4e9240ba36e3c47bb, type: 3}
   LaserNetB1Prefab: {fileID: 7773295043912767063, guid: e675c8c08d433df4ca27d3485cf2d750, type: 3}
   LaserNetB2Prefab: {fileID: 2385014933662516937, guid: 1707432bcfd3aae4190fadfd3f72cc72, type: 3}
   LaserCirclePrefab: {fileID: 6092853580146300638, guid: 20ce0b673bf3ec949b916051261c067c, type: 3}
+  AtkCount: 0
+  SpcCount: 0
   facing: 1
   Velocity: 0
+  DeadRobot: {fileID: 7182807509703694456, guid: 3cc327f4b4e94db4dbd53a33cd821f1e, type: 3}
 --- !u!1 &4576238311822361810
 GameObject:
   m_ObjectHideFlags: 0
