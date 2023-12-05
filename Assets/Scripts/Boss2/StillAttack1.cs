@@ -13,7 +13,7 @@ namespace Assets.Scripts.Enemy {
             StartCoroutine(WaitAndDestroy());
         }
         public override void Hitting() {
-            this.GetComponent<Collider2D>().enabled = false;
+            //this.GetComponent<Collider2D>().enabled = false;
             return;
         }
 

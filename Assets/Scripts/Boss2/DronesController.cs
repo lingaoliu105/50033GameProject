@@ -11,6 +11,7 @@ public class DronesController : MonoBehaviour
         drones = new BeamController[transform.childCount];
         for (int i = 0; i <= transform.childCount - 1; i++) {
             drones[i] = transform.GetChild(i).GetComponent<BeamController>();
+
         }
         
     }

@@ -1,4 +1,4 @@
-using Enemy;
+using Game;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +14,7 @@ public class RobotArm : MonoBehaviour
     private GameObject firing;
     public Facings facing = Facings.Right;
     private WaitForSeconds BeforeFiringInterval =  new WaitForSeconds(0.5f);
+    private WaitForSeconds FiringTime =  new WaitForSeconds(2f);
     public WaitForSeconds RocketInterval = new WaitForSeconds(0.3f);
     public float RocketFlyingTime = 1f;
     public int RocketCount = 3;
@@ -55,7 +56,7 @@ public class RobotArm : MonoBehaviour
     public IEnumerator RocketCoroutine() {
         yield return BeforeFiringInterval;
         for (int i = 0; i < RocketCount; i++) {
-            GameObject rocket = Instantiate(rocketPrefab, transform.position + firingOffset * (int)facing, Quaternion.identity);
+            GameObject rocket = Instantiate(rocketPrefab, transform.position + new Vector3(firingOffset.x * (int)facing, firingOffset.y, 0), Quaternion.identity);
             rocket.GetComponent<ABRocket>().target = GameObject.FindWithTag("Player").transform.position;
             rocket.GetComponent<ABRocket>().t = RocketFlyingTime;
             yield return RocketInterval;
@@ -66,9 +67,11 @@ public class RobotArm : MonoBehaviour
 
     public IEnumerator FireCoroutine() {
         yield return BeforeFiringInterval;
-        firing = Instantiate(firingPrefab, transform.position + firingOffset * (int)facing, Quaternion.identity);
-        firing.transform.parent = transform;
+        firing = Instantiate(firingPrefab, transform.position + new Vector3(firingOffset.x*(int)facing, firingOffset.y,0), Quaternion.identity);
         firing.transform.localScale = new Vector3((int)facing, 1, 1);
+        firing.transform.parent = transform;
+        yield return FiringTime;
+        StopFire();
     }
 
     [ContextMenu("Stop")]

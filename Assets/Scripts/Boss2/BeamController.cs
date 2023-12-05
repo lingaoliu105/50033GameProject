@@ -9,8 +9,8 @@ public class BeamController : MonoBehaviour {
     public Transform beamEnd;
     public Transform beamStart;
     public BoxCollider2D beamCollider;
+    public SpriteRenderer WarningArea;
     public int length;
-    public bool AlwaysDisplay;
     private bool LockLength;
     // size 1,1,1
     // pos 1.8, 0.8, 0
@@ -33,22 +33,29 @@ public class BeamController : MonoBehaviour {
     
     void Start() {
         OnValidate();
-        if (AlwaysDisplay) {
-            beamStart.GetComponent<SpriteRenderer>().enabled = true;
-            beamEnd.GetComponent<SpriteRenderer>().enabled = true;
-            beam.GetComponent<SpriteRenderer>().enabled = true;
-            beamCollider.enabled = true;
-        } else {
-            beamStart.GetComponent<SpriteRenderer>().enabled = false;
-            beamEnd.GetComponent<SpriteRenderer>().enabled = false;
-            beam.GetComponent<SpriteRenderer>().enabled = false;
-            beamCollider.enabled = false;
-        }
+        WarningArea.color = new Color(1, 0, 0, 0);
+        beamStart.GetComponent<SpriteRenderer>().enabled = false;
+        beamEnd.GetComponent<SpriteRenderer>().enabled = false;
+        beam.GetComponent<SpriteRenderer>().enabled = false;
+        beamCollider.enabled = false;
         LockLength = false;
     }
-    [ContextMenu("Launch")]
-    public void Launch() { 
+    public IEnumerator ShowWarningAreaCoroutine() {
+        float timer = 0;
+        while (timer < 0.2f) {
+            timer += Time.deltaTime;
+            WarningArea.color = new Color(1, 0, 0, timer * 2.5f);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.2f);
+        WarningArea.color = new Color(1, 0, 0, 0);
+        yield return new WaitForSeconds(0.2f);
         StartCoroutine(LaunchBeam());
+    }
+
+    [ContextMenu("Launch")]
+    public void Launch() {
+        StartCoroutine(ShowWarningAreaCoroutine());
     }
 
     public IEnumerator LaunchBeam() {
@@ -73,6 +80,8 @@ public class BeamController : MonoBehaviour {
         }
         beamCollider.enabled = true;
         LockLength = false;
+        yield return new WaitForSeconds(0.3f);
+        StartCoroutine(StopBeam());
     }
     [ContextMenu("Stop")]
     public void Stop() {
@@ -105,6 +114,13 @@ public class BeamController : MonoBehaviour {
         if (LockLength) {
             return;
         }
+        WarningArea.color = new Color(1, 0, 0, 0);
+        beamStart.GetComponent<SpriteRenderer>().enabled = false;
+        beamEnd.GetComponent<SpriteRenderer>().enabled = false;
+        beam.GetComponent<SpriteRenderer>().enabled = false;
+        beamCollider.enabled = false;
+        WarningArea.transform.localScale = new Vector3(length+2, 1, 1);
+        WarningArea.transform.localPosition = new Vector3(2f + length / 2f, 0.8f, 0);
         beam.transform.localScale = new Vector3(length, 1, 1);
         beam.transform.localPosition = new Vector3(1.3f + length / 2f, 0.8f, 0);
         beamEnd.transform.localPosition = new Vector3(1.8f + length, 0.8f, 0);

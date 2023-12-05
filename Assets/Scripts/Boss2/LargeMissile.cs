@@ -18,6 +18,7 @@ public class LargeMissile : MonoBehaviour
     private Vector2 movingDirection;
     private Vector2 targetingDirection;
     private Vector2 position;
+    private float startingGoingUpTime = 0.5f;
 
     public GameObject explosionOnWay;
     public GameObject explosionOnHit;
@@ -34,8 +35,13 @@ public class LargeMissile : MonoBehaviour
         } else {
             target = targetPlayer.position;
         }
+
         
         targetingDirection = (target - position).normalized;
+        if (startingGoingUpTime >= 0) { 
+            startingGoingUpTime -= Time.deltaTime;
+            targetingDirection = (4f * startingGoingUpTime * Vector2.up + targetingDirection).normalized;
+        }
         // correct moving direction to target but limit the angular velocity
         if (Vector2.Dot(movingDirection, targetingDirection) < 0.99f) {
             movingDirection = Vector2.Lerp(movingDirection, targetingDirection, MaxAngularVelocity).normalized;
@@ -54,7 +60,7 @@ public class LargeMissile : MonoBehaviour
         }
     }
     public void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Ground") {
             Explode();
         }
     }

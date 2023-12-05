@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6615802407623828519}
   m_Layer: 9
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firingOffset: {x: 0.4, y: -1, z: 0}
   facing: 1
-  RocketFlyingTime: 1
   MissileCount: 3
+  MissileSpeed: 5
   missilePrefab: {fileID: 7816687569294089636, guid: 248b8301e1d01d14b99b37db5104113a, type: 3}
   missileLargePrefab: {fileID: 412035140741783965, guid: 558ef5c73db46e243a5a49e07c7f20ad, type: 3}
   isFiring: 0
@@ -213,6 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9278d3620d6ce43b56664e0e40531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotController: {fileID: 0}
+  bodyPartType: 0
 --- !u!1 &2207849217312419118
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2334780808296751741}
+  - component: {fileID: 4904878339856089439}
   m_Layer: 9
   m_Name: Robot
   m_TagString: Enemy
@@ -249,6 +252,32 @@ Transform:
   - {fileID: 535726699353363404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4904878339856089439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207849217312419118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2132ef1fb8f2f9f40a26733dcec30de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyPartDamage: 
+  LArm: {fileID: 9016432453273634175}
+  RArm: {fileID: 7864823960235689387}
+  Body: {fileID: 8954939722913857932}
+  LAnimaror: {fileID: 1924445886438224805}
+  RAnimaror: {fileID: 4981316056987443733}
+  Heat: 0
+  LaserNetA1Prefab: {fileID: 8131123999966012845, guid: 3bfbbdf04a78fd64b8d7195db1ba9139, type: 3}
+  LaserNetA2Prefab: {fileID: 7773295043912767063, guid: e41c310ed34370c4e9240ba36e3c47bb, type: 3}
+  LaserNetB1Prefab: {fileID: 7773295043912767063, guid: e675c8c08d433df4ca27d3485cf2d750, type: 3}
+  LaserNetB2Prefab: {fileID: 2385014933662516937, guid: 1707432bcfd3aae4190fadfd3f72cc72, type: 3}
+  LaserCirclePrefab: {fileID: 6092853580146300638, guid: 20ce0b673bf3ec949b916051261c067c, type: 3}
+  facing: 1
+  Velocity: 0
 --- !u!1 &4576238311822361810
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +331,7 @@ GameObject:
   - component: {fileID: 6308395856753267873}
   m_Layer: 9
   m_Name: 'Right Leg '
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,6 +508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9278d3620d6ce43b56664e0e40531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotController: {fileID: 0}
+  bodyPartType: 4
 --- !u!1 &8710806385065405638
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +526,7 @@ GameObject:
   - component: {fileID: 612667862257241462}
   m_Layer: 9
   m_Name: Left Leg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,6 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9278d3620d6ce43b56664e0e40531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotController: {fileID: 0}
+  bodyPartType: 3
 --- !u!1001 &2141044822352825509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -757,11 +790,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9278d3620d6ce43b56664e0e40531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotController: {fileID: 0}
+  bodyPartType: 2
 --- !u!4 &6521110819045529495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5172708876976249650, guid: 4621206ccf3cd944d9d10162800280ab, type: 3}
   m_PrefabInstance: {fileID: 2141044822352825509}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7864823960235689387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8112094900059883790, guid: 4621206ccf3cd944d9d10162800280ab, type: 3}
+  m_PrefabInstance: {fileID: 2141044822352825509}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350926769555539640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d2ef69d24f2d145b740d36680c7d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8969416101509717928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1013,3 +1059,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9278d3620d6ce43b56664e0e40531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotController: {fileID: 0}
+  bodyPartType: 1
