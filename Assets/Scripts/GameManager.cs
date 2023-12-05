@@ -38,10 +38,15 @@ public class GameManager : Singleton<GameManager> {
     public GameObject EnemyManagerPrefab;
     public GameObject EffectManagerPrefab;
 
+    public Vector2 LastDeathPosition;
+    public int LastDeathLostSoul;
+
     public GameObject LoadingScreenRighthalf;
     public GameObject LoadingScreenLefthalf;
 
     public GameObject CurrentBackgroundPrefab;
+
+    public GameObject DeadSoulItemPrefab;
 
     public ItemDataObject ItemDataObject;
     public ItemFactory ItemFactory;
@@ -55,6 +60,8 @@ public class GameManager : Singleton<GameManager> {
         StartCoroutine(StartGame());
     }
     public IEnumerator StartGame() {
+        CurrentLevelInfo = ScenesData.Levels[CurrentLevel];
+        CurrentBackgroundPrefab = ScenesData.Backgrounds[CurrentLevel];
         PlayerControllerObject = Instantiate(PlayerPrefab, CurrentLevelInfo.PlayerPosition, Quaternion.identity);
         SceneCameraObject = Instantiate(SceneCameraPrefab, CurrentLevelInfo.CameraStartPos, Quaternion.identity);
         EnemyManagerObject = Instantiate(EnemyManagerPrefab);
@@ -77,7 +84,6 @@ public class GameManager : Singleton<GameManager> {
         EffectManager.Background = Instantiate(CurrentBackgroundPrefab);
         Debug.Log("SetComponents");
         yield return new WaitForSecondsRealtime(0.03f);
-        //PlayerController.LoadDataFromFile = true;
         PlayerController.Position = CurrentLevelInfo.PlayerPosition;
         PlayerController.Initialize();
         SceneCamera.IsLocked = CurrentLevelInfo.CameraLocked;
@@ -85,7 +91,7 @@ public class GameManager : Singleton<GameManager> {
         SceneCamera.SetCameraSize(CurrentLevelInfo.CameraSize);
         EffectManager.LoadParallax();
         SceneCamera.CameraLayers = CurrentLevelInfo.CameraLayers;
-        // EnemyManager.GenerateBoss1(new Vector3(10f,-1f,0));
+        if (CurrentLevel == 1) EnemyManager.GenerateBoss1(new Vector3(10f, -1f, 0));
         Debug.Log("SetData");
         yield return new WaitForSecondsRealtime(0.03f);
         StartCoroutine(LoadingScreenSlideOpen(0.5f));
@@ -103,10 +109,32 @@ public class GameManager : Singleton<GameManager> {
         Destroy(SceneCameraObject);
         Destroy(EnemyManagerObject);
         Destroy(EffectManagerObject);
-        CurrentLevelInfo = ScenesData.Levels[sceneID];
+
         CurrentLevel = sceneID;
-        CurrentBackgroundPrefab = ScenesData.Backgrounds[sceneID];
-        UnityEngine.SceneManagement.SceneManager.LoadScene(ScenesData.ScenesName[sceneID]);
+        CurrentLevelInfo = ScenesData.Levels[CurrentLevel];
+        CurrentBackgroundPrefab = ScenesData.Backgrounds[CurrentLevel];
+        UnityEngine.SceneManagement.SceneManager.LoadScene(ScenesData.ScenesName[CurrentLevel]);
+        yield return new WaitForSecondsRealtime(0.03f);
+        StartCoroutine(StartGame());
+    }
+
+    public void Respawn() {
+         StartCoroutine(RespawnCoroutine());
+    }
+
+    public IEnumerator RespawnCoroutine() {
+        yield return StartCoroutine(LoadingScreenSlideClose(0.5f));
+        Destroy(PlayerControllerObject);
+        Destroy(SceneCameraObject);
+        Destroy(EnemyManagerObject);
+        Destroy(EffectManagerObject);
+
+        CurrentLevelInfo = ScenesData.Levels[CurrentLevel];
+        CurrentBackgroundPrefab = ScenesData.Backgrounds[CurrentLevel];
+        UnityEngine.SceneManagement.SceneManager.LoadScene(ScenesData.ScenesName[CurrentLevel]);
+        yield return new WaitForSecondsRealtime(0.03f);
+        if (LastDeathLostSoul>=0) Instantiate(DeadSoulItemPrefab, LastDeathPosition, Quaternion.identity).GetComponent<RestoringItemObject>().Soul = LastDeathLostSoul;
+        LastDeathLostSoul = -1;
         yield return new WaitForSecondsRealtime(0.03f);
         StartCoroutine(StartGame());
     }
@@ -145,6 +173,11 @@ public class GameManager : Singleton<GameManager> {
         LoadingScreenRighthalf.GetComponent<Image>().enabled = false;
         LoadingScreenLefthalf.GetComponent<Image>().enabled = false;
         Time.timeScale = 1f;
+    }
+
+    public void RecordDeath(Vector2 position, int lostSoul) {
+        LastDeathPosition = position;
+        LastDeathLostSoul = lostSoul;
     }
 
 }

@@ -136,9 +136,12 @@ MonoBehaviour:
   SceneCameraPrefab: {fileID: 6089389181790695794, guid: c157b6d22167d3940888717ced1cce46, type: 3}
   EnemyManagerPrefab: {fileID: 8189330626271908184, guid: 7cbfee51a3034fb4ea2ed20715ca1086, type: 3}
   EffectManagerPrefab: {fileID: 5510613733838494038, guid: ec34feca861af124aa9507f3d93d1434, type: 3}
+  LastDeathPosition: {x: 0, y: 0}
+  LastDeathLostSoul: 0
   LoadingScreenRighthalf: {fileID: 1850564595023057878}
   LoadingScreenLefthalf: {fileID: 7400495102595623177}
   CurrentBackgroundPrefab: {fileID: 0}
+  DeadSoulItemPrefab: {fileID: 4084929260553701429, guid: 2437145c6d4f6ad44bbfc110f6b0e621, type: 3}
   ItemDataObject: {fileID: 11400000, guid: 7985d3b11bff79a4cb667d5648be95af, type: 2}
 --- !u!1 &7400495102595623177
 GameObject:

@@ -20,18 +20,19 @@ public class PlayerInfo: ScriptableObject {
     public int TECOrigin = 10;
     public int LUCOrigin = 10;
     public int Level = 0;
+    public int Soul = 1000;
     [Header("属性的实时数值")]
-    public int MaxHP = 300;
-    public int MaxElec = 40;
-    public int MaxStamina = 80;
-    public int HP = 300;
-    public int Elec = 40;
-    public int Stamina = 80;
-    public int Soul = 10000;
-    public int STR = 10;
-    public int DEX = 10;
-    public int TEC = 10;
-    public int LUC = 10;
+    //public int MaxHP = 300;
+    //public int MaxElec = 40;
+    //public int MaxStamina = 80;
+    //public int HP = 300;
+    //public int Elec = 40;
+    //public int Stamina = 80;
+    
+    //public int STR = 10;
+    //public int DEX = 10;
+    //public int TEC = 10;
+    //public int LUC = 10;
     [Header("场景信息")]
     public Vector2 position;
 
@@ -48,7 +49,7 @@ public class PlayerInfo: ScriptableObject {
             // 使用序列化器将对象数据写入文件
             serializer.Serialize(writer, this);
         }
-        Debug.Log("Save to" + SavePath);
+        Debug.Log("Save to " + SavePath);
     }
     public void OnValidate() {
     }

@@ -110,7 +110,7 @@ namespace Game {
             this.WallBoost = new WallBoost(this);
             spriteRenderer = GetComponent<SpriteRenderer>();
             
-            this.LoadPlayerInfo();
+            
         }
         #region Debug
         [SerializeField]
@@ -149,13 +149,15 @@ namespace Game {
 
         void Start() {
             this.stateMachine.State = (int)EActionState.Normal;
+            RestoreAllToMax();
         }
 
         public void Initialize() {
+            this.LoadPlayerInfo();
             this.SetUpWeapons(TestRangedWeapon, TestMeleeWeapon);
+            RestoreAllToMax();
             this.InitInventory();
             CanMove = true;
-
         }
 
 
@@ -293,6 +295,8 @@ namespace Game {
 
         public void Die() {
             isAlive = false;
+            GameManager.Instance.RecordDeath(Position, Soul);
+            Soul = 0;
             PlayAnimation("Die");
         }
 

@@ -137,6 +137,13 @@ namespace Assets.Scripts.UI {
         }
 
         public void Close() { 
+            //Clear all delta
+            DeltaLevel = 0;
+            DeltaSoul = 0;
+            NextLevelSoul = Player.NextLevelExp(Player.Level + DeltaLevel);
+            for (int i = 0; i < (int)ValueBlockType.Size; i++) {
+                ValueBlocks[i].Reset();
+            }
             //this.gameObject.SetActive(false);
         }
         public void Open(bool isBonfire = false) {
@@ -157,8 +164,19 @@ namespace Assets.Scripts.UI {
         }
         
         public void Confirm() {
-
-            //Close();
+            if (IsBonfire) {
+                Player.Level += DeltaLevel;
+                Player.Soul -= DeltaSoul;
+                Player.HPVOrigin += ValueBlocks[(int)ValueBlockType.HPV].DeltaValueInt;
+                Player.MPVOrigin += ValueBlocks[(int)ValueBlockType.MPV].DeltaValueInt;
+                Player.STMOrigin += ValueBlocks[(int)ValueBlockType.STM].DeltaValueInt;
+                Player.STROrigin += ValueBlocks[(int)ValueBlockType.STR].DeltaValueInt;
+                Player.DEXOrigin += ValueBlocks[(int)ValueBlockType.DEX].DeltaValueInt;
+                Player.TECOrigin += ValueBlocks[(int)ValueBlockType.TEC].DeltaValueInt;
+                Player.LUCOrigin += ValueBlocks[(int)ValueBlockType.LUC].DeltaValueInt;
+                Player.RestoreAllToMax();
+                Close();
+            }
         }
        
     }

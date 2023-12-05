@@ -168,5 +168,10 @@ namespace Assets.Scripts.UI {
             UpdateBuff();
             UpdateTubes();
         }
+
+        public void Respawn() { 
+            
+            GameManager.Instance.Respawn();
+        }
     }
 }

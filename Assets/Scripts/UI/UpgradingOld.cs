@@ -125,10 +125,10 @@ namespace Assets.Scripts.UI {
             tempLUC--;
         }
         public void Confirm() {
-            Player.STR += tempSTR;
-            Player.DEX += tempDEX;
-            Player.TEC += tempTEC;
-            Player.LUC += tempLUC;
+            Player.STROrigin += tempSTR;
+            Player.DEXOrigin += tempDEX;
+            Player.TECOrigin += tempTEC;
+            Player.LUCOrigin += tempLUC;
             Player.Level += tempLV;
             Player.Soul -= tempSoul;
             tempSTR = 0;

@@ -1103,6 +1103,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  invinsibleTimer: 0
   isAlive: 1
   Position: {x: 0, y: 0}
   InitPos: {x: 1, y: -2}
@@ -1148,21 +1149,21 @@ MonoBehaviour:
   TECOrigin: 0
   LUCOrigin: 0
   HP: 0
-  MaxHP: 0
+  MaxHPMod: 0
   Elec: 0
-  MaxElec: 0
-  MaxStamina: 0
+  MaxElecMod: 0
+  MaxStaminaMod: 0
   Stamina: 0
   Soul: 0
-  STR: 22
-  DEX: 0
-  TEC: 0
-  LUC: 0
+  STRMod: 0
+  DEXMod: 0
+  TECMod: 0
+  LUCMod: 0
   Level: 0
-  LoadDataFromFile: 0
+  LoadDataFromFile: 1
   DamageToTake: 0
   DamageTag: 
-  DebugInvinsible: 1
+  DebugInvinsible: 0
 --- !u!61 &7335868575748012475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2545,9 +2546,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2726744032335924127}
     m_Modifications:
+    - target: {fileID: 3094039367833197696, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292380227278992572, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292380227278992572, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8357847838997898806}
+    - target: {fileID: 3292380227278992572, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292380227278992572, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Assets.Scripts.UI.UIOverPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6929540043835084640, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
       propertyPath: m_Name
       value: DeadUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929540043835084640, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8269724955525887442, guid: 946ae4ab355e1214b9993d70524ded74, type: 3}
       propertyPath: m_Pivot.x

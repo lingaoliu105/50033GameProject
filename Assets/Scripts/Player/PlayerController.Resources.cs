@@ -20,23 +20,29 @@ namespace Game
         public int LUCOrigin;
         [Header("属性的实时数值")]
 		public int HP;
-        
-        public int MaxHP;
+        public int MaxHPMod;
+        public int MaxHP { get { return MaxHPMod + MaxHPCalculated; } }
         public int Elec;
-        public int MaxElec;
-        public int MaxStamina;
+        public int MaxElecMod;
+        public int MaxElec { get { return MaxElecMod + MaxElecCalculated; } }
+        public int MaxStaminaMod;
+        public int MaxStamina { get { return MaxStaminaMod + MaxStaminaCalculated; } }
         public int Stamina;
         public int Soul;
-        public int STR;
-        public int DEX;
-        public int TEC;
-        public int LUC;
+        public int STRMod;
+        public int STR { get { return STRMod + STROrigin; } }
+        public int DEXMod;
+        public int DEX { get { return DEXMod + DEXOrigin; } }
+        public int TECMod;
+        public int TEC { get { return TECMod + TECOrigin; } }
+        public int LUCMod;
+        public int LUC{ get { return LUCMod + LUCOrigin; } }
         public int Level;
         public int MaxHPCalculated { get { return CalcHPValue(HPVOrigin); } }
         
         
-        public int MaxElecCalculated { get { return CalcHPValue(MPVOrigin); } }
-        public int MaxStaminaCalculated { get { return CalcHPValue(STMOrigin); } }
+        public int MaxElecCalculated { get { return (int)(CalcHPValue(MPVOrigin)/4); } }
+        public int MaxStaminaCalculated { get { return (int)(CalcHPValue(STMOrigin)/3); } }
 
         public float STRFix { get { return CalcFixValue(STR); } }
         public float DEXFix { get { return CalcFixValue(DEX); } }
@@ -44,12 +50,18 @@ namespace Game
         public float LUCFix { get { return CalcFixValue(LUC); } }
 
         private float staminaRecoverConuntdown = 0f;
-        public bool LoadDataFromFile = false;
+        public bool LoadDataFromFile = true;
 
         public int DamageToTake = 0;
         public string DamageTag = "";
 
         public bool DebugInvinsible = true;
+
+        public void RestoreAllToMax() {
+            HP = MaxHP;
+            Elec = MaxElec;
+            Stamina = MaxStamina;
+        }
         
 
         public void LockStamina() {
@@ -110,6 +122,7 @@ namespace Game
                     // 使用序列化器将对象数据读取出来
                     info = serializer.Deserialize(reader) as PlayerInfo;
                 }
+                Debug.Log("Load from " + path);
             }
             // 删除原文件
             System.IO.File.Delete(path);
@@ -152,14 +165,10 @@ namespace Game
 
         private void LoadPlayerInfo() {
             PlayerInfo = LoadFromFile();
-            if (PlayerInfo == null || !LoadDataFromFile) {
+            if (PlayerInfo == null) {
                 PlayerInfo = ScriptableObject.CreateInstance<PlayerInfo>();
-                PlayerInfo.SaveData();
             }
             {
-                MaxHP = PlayerInfo.MaxHP;
-                MaxElec = PlayerInfo.MaxElec;
-                MaxStamina = PlayerInfo.MaxStamina;
                 STROrigin = PlayerInfo.STROrigin;
                 DEXOrigin = PlayerInfo.DEXOrigin;
                 TECOrigin = PlayerInfo.TECOrigin;
@@ -167,22 +176,13 @@ namespace Game
                 HPVOrigin = PlayerInfo.HPVOrigin;
                 MPVOrigin = PlayerInfo.MPVOrigin;
                 STMOrigin = PlayerInfo.STMOrigin;
-                HP = PlayerInfo.HP;
-                Elec = PlayerInfo.Elec;
-                Stamina = PlayerInfo.Stamina;
                 Soul = PlayerInfo.Soul;
-                STR = PlayerInfo.STR;
-                DEX = PlayerInfo.DEX;
-                TEC = PlayerInfo.TEC;
-                LUC = PlayerInfo.LUC;
                 Level = PlayerInfo.Level;
+                PlayerInfo.SaveData();
             }
             
         }
         private void SavePlayerInfo() { 
-            PlayerInfo.MaxHP = MaxHP;
-            PlayerInfo.MaxElec = MaxElec;
-            PlayerInfo.MaxStamina = MaxStamina;
             PlayerInfo.STROrigin = STROrigin;
             PlayerInfo.DEXOrigin = DEXOrigin;
             PlayerInfo.TECOrigin = TECOrigin;
@@ -190,15 +190,9 @@ namespace Game
             PlayerInfo.HPVOrigin = HPVOrigin;
             PlayerInfo.MPVOrigin = MPVOrigin;
             PlayerInfo.STMOrigin = STMOrigin;
-            PlayerInfo.HP = HP;
-            PlayerInfo.Elec = Elec;
-            PlayerInfo.Stamina = Stamina;
             PlayerInfo.Soul = Soul;
-            PlayerInfo.STR = STR;
-            PlayerInfo.DEX = DEX;
-            PlayerInfo.TEC = TEC;
-            PlayerInfo.LUC = LUC;
             PlayerInfo.Level = Level;
+            PlayerInfo.position = Position;
             PlayerInfo.SaveData();
         }
 	}

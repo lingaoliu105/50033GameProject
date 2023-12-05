@@ -11,11 +11,13 @@ namespace Assets.Scripts.Items {
     public class RestoringItemObject: ItemObject {
         public int HP;
         public int MP;
+        public int Soul;
 
         public override void PickedUP(PlayerController player) {
             base.PickedUP(player);
             player.RestoreHP(HP);
             player.RestoreElec(MP);
+            player.GainSoul(Soul);
         }
 
     }
