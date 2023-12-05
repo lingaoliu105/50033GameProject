@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[ExecuteAlways]
 public class DronesCircle : MonoBehaviour
 {
     public BeamController[] drones;
@@ -11,9 +10,11 @@ public class DronesCircle : MonoBehaviour
     public WaitForSeconds wait10 = new WaitForSeconds(1f);
     private bool launched = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        Generate();
         drones = new BeamController[transform.childCount];
 
         for (int i = 0; i <= transform.childCount - 1; i++) {
@@ -41,9 +42,12 @@ public class DronesCircle : MonoBehaviour
 
     public IEnumerator LaunchCoroutine() {
         while (launched) {
-            StartCoroutine(LaunchOneByOneCoroutine());
-            yield return wait5;
-            StartCoroutine(StopOneByOneCoroutine());
+            int rd = Random.Range(0, 2);
+            if (rd == 0) {
+                StartCoroutine(LaunchOneByOneCoroutine(true));
+            } else {
+                StartCoroutine(LaunchOneByOneCoroutine(false));
+            }
             yield return wait10;
             yield return wait10;
             yield return wait10;
@@ -52,9 +56,13 @@ public class DronesCircle : MonoBehaviour
 
     }
 
-    public IEnumerator LaunchOneByOneCoroutine() {
+    public IEnumerator LaunchOneByOneCoroutine(bool Clockwise) {
         for (int i = 0; i <= transform.childCount - 1; i++) {
-            drones[i].Launch();
+            if (Clockwise) {
+                drones[i].Launch();
+            } else {
+                drones[transform.childCount - 1 - i].Launch();
+            }
             yield return wait2;
         }
     }

@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 1640292060454272837}
   m_Layer: 6
   m_Name: v-truck (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5540,7 +5540,7 @@ GameObject:
   - component: {fileID: 3589580435375530773}
   m_Layer: 6
   m_Name: v-truck (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6122,7 +6122,7 @@ GameObject:
   - component: {fileID: 9172853041458797945}
   m_Layer: 6
   m_Name: v-truck (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6492,7 +6492,7 @@ GameObject:
   - component: {fileID: 7795963728297441135}
   m_Layer: 6
   m_Name: v-truck
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6651,7 +6651,7 @@ GameObject:
   - component: {fileID: 7541227076624506665}
   m_Layer: 6
   m_Name: v-truck (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7021,7 +7021,7 @@ GameObject:
   - component: {fileID: 197067600213536987}
   m_Layer: 6
   m_Name: v-truck (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

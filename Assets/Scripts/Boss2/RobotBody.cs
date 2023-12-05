@@ -1,4 +1,4 @@
-using Enemy;
+using Game;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +14,9 @@ public class RobotBody : MonoBehaviour
     private GameObject firing;
     public Facings facing = Facings.Right;
     private WaitForSeconds BeforeFiringInterval =  new WaitForSeconds(0.5f);
-    public WaitForSeconds RocketInterval = new WaitForSeconds(0.3f);
-    public float RocketFlyingTime = 1f;
+    public WaitForSeconds MissileInterval = new WaitForSeconds(0.3f);
     public int MissileCount = 3;
+    public float MissileSpeed = 5f;
 
     //public GameObject firingPrefab;
     public GameObject missilePrefab;
@@ -62,12 +62,12 @@ public class RobotBody : MonoBehaviour
     public IEnumerator MissileCoroutine() {
         yield return BeforeFiringInterval;
         for (int i = 0; i < MissileCount; i++) {
-            GameObject rocket = Instantiate(missilePrefab, transform.position + firingOffset * (int)facing, Quaternion.identity);
+            GameObject rocket = Instantiate(missilePrefab, transform.position, Quaternion.identity);
             rocket.GetComponent<Missile>().targetPlayer = GameObject.FindWithTag("Player").transform;
             if (facing == Facings.Left) {
                 rocket.GetComponent<Missile>().BeforeLaunchingSpeed = -rocket.GetComponent<Missile>().BeforeLaunchingSpeed;
             }
-            yield return RocketInterval;
+            yield return MissileInterval;
         }
         animator.SetTrigger("Stop");
         isFiring = false;
@@ -75,7 +75,7 @@ public class RobotBody : MonoBehaviour
 
     public IEnumerator LargeMissileCoroutine() {
         yield return BeforeFiringInterval;
-        GameObject rocket = Instantiate(missileLargePrefab, transform.position + firingOffset * (int)facing, Quaternion.identity);
+        GameObject rocket = Instantiate(missileLargePrefab, transform.position, Quaternion.identity);
         rocket.GetComponent<LargeMissile>().targetPlayer = GameObject.FindWithTag("Player").transform;
         animator.SetTrigger("Stop");
         isFiring = false;
