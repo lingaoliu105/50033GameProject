@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Enemy;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,6 +61,9 @@ namespace Assets.Scripts.Attack {
             // TODO: 伤害计算
             if (enemy.GetComponent<BodyPartController>() != null) { 
                 enemy.GetComponent<BodyPartController>().hit(attackDamage);
+            }
+            if (enemy.GetComponent<Boss1Controller>() != null) {
+                enemy.GetComponent<Boss1Controller>().TakeDamage(attackDamage);
             }
 
             if (attackCount >= destroyAfterAttack && destroyAfterAttack > 0) {
