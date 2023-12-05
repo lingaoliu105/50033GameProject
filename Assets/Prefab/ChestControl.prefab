@@ -317,6 +317,9 @@ MonoBehaviour:
   chestAnimator: {fileID: 4946877079075302491}
   chestAudioSource: {fileID: 3806559700295336916}
   chestOpen: {fileID: 8300000, guid: f96202793de6ea243a5cef418e4acda9, type: 3}
+  id: 0
+  FirstTimeItem: {fileID: 4084929260553701429, guid: 4dfd7d1537474194d8a4460f3d0e4e44, type: 3}
+  RepeatItem: {fileID: 4084929260553701429, guid: ab7ce609ff791ca449e95aa65e5053ec, type: 3}
 --- !u!1 &1767611848789826365
 GameObject:
   m_ObjectHideFlags: 0

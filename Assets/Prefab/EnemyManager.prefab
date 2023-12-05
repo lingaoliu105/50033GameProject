@@ -47,3 +47,6 @@ MonoBehaviour:
   EffectManager: {fileID: 0}
   PlayerController: {fileID: 0}
   Boss1Prefab: {fileID: 2477587251318614049, guid: cf4e60b382ce5574a8700eb8e77cd5fb, type: 3}
+  Boss2Prefab: {fileID: 2207849217312419118, guid: 46160788c967db44aa4510dc924b61b2, type: 3}
+  Boss1DPrefab: {fileID: 4839775405615622778, guid: d93001b38c59f0848a28c04bd31789b8, type: 3}
+  Boss2DPrefab: {fileID: 7182807509703694456, guid: 3cc327f4b4e94db4dbd53a33cd821f1e, type: 3}

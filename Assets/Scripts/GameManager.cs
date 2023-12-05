@@ -31,6 +31,7 @@ public class GameManager : Singleton<GameManager> {
 
     public int CurrentLevel = -1;
     public ScenesData ScenesData;
+    public SaveData SaveData;
 
     public LevelInfo CurrentLevelInfo;
     public GameObject PlayerPrefab;
@@ -55,11 +56,16 @@ public class GameManager : Singleton<GameManager> {
         Application.targetFrameRate = 60;
         ItemDataObject.Initialize();
         ItemFactory = new ItemFactory(ItemDataObject);
+        SaveData = LoadFromFile();
+        if (SaveData == null) {
+            SaveData = new SaveData();
+        }
         GameInput.Init();
         Time.timeScale = 0f;
-        StartCoroutine(StartGame());
+        StartCoroutine(ChangeScene(SaveData.currentMap));
     }
     public IEnumerator StartGame() {
+        yield return new WaitForSecondsRealtime(0.03f);
         CurrentLevelInfo = ScenesData.Levels[CurrentLevel];
         CurrentBackgroundPrefab = ScenesData.Backgrounds[CurrentLevel];
         PlayerControllerObject = Instantiate(PlayerPrefab, CurrentLevelInfo.PlayerPosition, Quaternion.identity);
@@ -91,7 +97,10 @@ public class GameManager : Singleton<GameManager> {
         SceneCamera.SetCameraSize(CurrentLevelInfo.CameraSize);
         EffectManager.LoadParallax();
         SceneCamera.CameraLayers = CurrentLevelInfo.CameraLayers;
-        if (CurrentLevel == 1) EnemyManager.GenerateBoss1(new Vector3(10f, -1f, 0));
+        if (CurrentLevel == 1 && !SaveData.isBoss1Beaten) EnemyManager.GenerateBoss1(new Vector3(10f, -1f, 0));
+        if (CurrentLevel == 1 && SaveData.isBoss1Beaten) EnemyManager.GenerateDeadBoss1(new Vector3(10f, -1f, 0));
+        if (CurrentLevel == 4 && !SaveData.isBoss2Beaten) EnemyManager.GenerateBoss2(new Vector3(48f, 5.25f, 0));
+        if (CurrentLevel == 4 && SaveData.isBoss2Beaten) EnemyManager.GenerateDeadBoss2(new Vector3(48f, 5.25f, 0));
         Debug.Log("SetData");
         yield return new WaitForSecondsRealtime(0.03f);
         StartCoroutine(LoadingScreenSlideOpen(0.5f));
@@ -111,6 +120,15 @@ public class GameManager : Singleton<GameManager> {
         Destroy(EffectManagerObject);
 
         CurrentLevel = sceneID;
+        if (sceneID == 2) {
+            SaveData.isMap2Reached = true;
+        }
+        if (sceneID == 3) {
+            SaveData.isMap3Reached = true;
+        }
+        SaveData.isMapAchieved[sceneID] = true;
+        SaveData.currentMap = sceneID;
+        SaveData.SaveToFiles();
         CurrentLevelInfo = ScenesData.Levels[CurrentLevel];
         CurrentBackgroundPrefab = ScenesData.Backgrounds[CurrentLevel];
         UnityEngine.SceneManagement.SceneManager.LoadScene(ScenesData.ScenesName[CurrentLevel]);
@@ -156,7 +174,7 @@ public class GameManager : Singleton<GameManager> {
             yield return new WaitForSecondsRealtime(0.03f);
         }
         //Debug
-        StartCoroutine(StartGame());
+        //StartCoroutine(StartGame());
     }
     public IEnumerator LoadingScreenSlideOpen(float time) {
         //Left half from 310 to 1600, right half from -310 to -1600
@@ -178,6 +196,37 @@ public class GameManager : Singleton<GameManager> {
     public void RecordDeath(Vector2 position, int lostSoul) {
         LastDeathPosition = position;
         LastDeathLostSoul = lostSoul;
+    }
+
+    public SaveData LoadFromFile() {
+        SaveData info = null;
+        string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        path = path + "\\SaveInfo.xml";
+        if (System.IO.File.Exists(path)) {
+            // 创建 XML 序列化器
+            System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(SaveData));
+            // 创建文件流，用于读取 XML 数据
+            using (System.IO.TextReader reader = new System.IO.StreamReader(path)) {
+                // 使用序列化器将对象数据读取出来
+                info = serializer.Deserialize(reader) as SaveData;
+            }
+            Debug.Log("Load from " + path);
+        }
+        // 删除原文件
+        System.IO.File.Delete(path);
+        return info;
+    }
+
+    public void OnDestroy() {
+        SaveData.SaveToFiles();
+    }
+    [ContextMenu("ResetSaveData")]
+    public void ResetSaveData() {
+        SaveData = new SaveData();
+        SaveData.SaveToFiles();
+        PlayerController.ResetPlayerInfo();
+        StartCoroutine(ChangeScene(SaveData.currentMap));
+
     }
 
 }

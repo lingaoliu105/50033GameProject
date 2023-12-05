@@ -11,9 +11,7 @@ namespace Assets.Scripts.Items {
     public class ItemObject: MonoBehaviour {
         public ItemBase Item;
         public PlayerController player;
-        public void Start() {
-            
-        }
+
         public virtual void PickedUP(PlayerController player) { 
             GetComponent<Collider2D>().enabled = false;
             this.player = player;

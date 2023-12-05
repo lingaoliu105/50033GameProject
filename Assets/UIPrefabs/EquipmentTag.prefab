@@ -700,7 +700,7 @@ RectTransform:
   m_Father: {fileID: 5568685660052259490}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -835,7 +835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3129561756285657509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -885,6 +885,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   equipableItems: []
+  CurrentItemIndex: 0
+  CurrentItem:
+    Name: 
+    ID: 0
+    Description: 
+    Price: 0
+    SellPrice: 0
+    Rarity: 0
+    IsUpgradable: 0
+    IsStackable: 0
+    Level: 0
+    MaxStack: -1
+    CurrentStack: -1
+    Icon: {fileID: 0}
+    player: {fileID: 0}
+    UpdateTime: 0
 --- !u!1 &9146672563988516382
 GameObject:
   m_ObjectHideFlags: 0

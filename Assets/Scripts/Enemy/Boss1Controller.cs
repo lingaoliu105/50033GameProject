@@ -74,8 +74,8 @@ namespace Assets.Scripts.Enemy {
         public AudioSource SFX;
 
         public int ATP = 0;
-        private int HPMAX = 10000;
-        public int HP = 10000;
+        private int HPMAX = 3000;
+        public int HP = 3000;
 
         public Image HPBar;
 
@@ -87,6 +87,7 @@ namespace Assets.Scripts.Enemy {
         public float SpecialAtkRate = 0.5f;
         public float AttackRate = 0.5f;
         public string CurrentState;
+        public GameObject Dead;
 
         public IEnumerator WaitAndDecide(float time) { 
             CurrentState = "WaitAndDecide";
@@ -148,6 +149,9 @@ namespace Assets.Scripts.Enemy {
             HP -= damage;
             HPBar.rectTransform.sizeDelta = new Vector2(1000f*((float)HP/(float)HPMAX), 80);
             if (HP <= 0) {
+                GameManager.Instance.SaveData.isBoss1Beaten = true;
+                Instantiate(Dead, transform.position, Quaternion.identity);
+                PlayerController.GainSoul(20000);
                 Destroy(gameObject);
             }
             else {
@@ -213,6 +217,7 @@ namespace Assets.Scripts.Enemy {
         public override void Start() {
             base.Start();
             panel.OnValidate();
+            HP = HPMAX;
             //NextExCountdown = 20 + (int)UnityEngine.Random.Range(-3,4);
             LastEx = UnityEngine.Random.Range(0, 2) == 0 ? Boss1ExAttack.JumpAndThrowMany : Boss1ExAttack.MeleeAttackLongRange;
             //NextSpecialAttackCountdown = 5 + (int)UnityEngine.Random.Range(-1, 2);

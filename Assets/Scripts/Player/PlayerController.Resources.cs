@@ -40,7 +40,7 @@ namespace Game
         public int Level;
         public int MaxHPCalculated { get { return CalcHPValue(HPVOrigin); } }
         
-        
+        public bool ResetFlag = false;
         public int MaxElecCalculated { get { return (int)(CalcHPValue(MPVOrigin)/4); } }
         public int MaxStaminaCalculated { get { return (int)(CalcHPValue(STMOrigin)/3); } }
 
@@ -162,8 +162,13 @@ namespace Game
         }
 
         
-
+        public void ResetPlayerInfo() {
+            PlayerInfo = ScriptableObject.CreateInstance<PlayerInfo>();
+            ResetFlag = true;
+            PlayerInfo.SaveData();
+        }
         private void LoadPlayerInfo() {
+            ResetFlag = false;
             PlayerInfo = LoadFromFile();
             if (PlayerInfo == null) {
                 PlayerInfo = ScriptableObject.CreateInstance<PlayerInfo>();
@@ -176,24 +181,30 @@ namespace Game
                 HPVOrigin = PlayerInfo.HPVOrigin;
                 MPVOrigin = PlayerInfo.MPVOrigin;
                 STMOrigin = PlayerInfo.STMOrigin;
+                MaxBlueTubes = PlayerInfo.MaxBlueTubes;
+                MaxRedTubes = PlayerInfo.MaxRedTubes;
                 Soul = PlayerInfo.Soul;
                 Level = PlayerInfo.Level;
                 PlayerInfo.SaveData();
             }
             
         }
-        private void SavePlayerInfo() { 
-            PlayerInfo.STROrigin = STROrigin;
-            PlayerInfo.DEXOrigin = DEXOrigin;
-            PlayerInfo.TECOrigin = TECOrigin;
-            PlayerInfo.LUCOrigin = LUCOrigin;
-            PlayerInfo.HPVOrigin = HPVOrigin;
-            PlayerInfo.MPVOrigin = MPVOrigin;
-            PlayerInfo.STMOrigin = STMOrigin;
-            PlayerInfo.Soul = Soul;
-            PlayerInfo.Level = Level;
-            PlayerInfo.position = Position;
-            PlayerInfo.SaveData();
+        private void SavePlayerInfo() {
+            if (!ResetFlag) {
+                PlayerInfo.STROrigin = STROrigin;
+                PlayerInfo.DEXOrigin = DEXOrigin;
+                PlayerInfo.TECOrigin = TECOrigin;
+                PlayerInfo.LUCOrigin = LUCOrigin;
+                PlayerInfo.HPVOrigin = HPVOrigin;
+                PlayerInfo.MPVOrigin = MPVOrigin;
+                PlayerInfo.STMOrigin = STMOrigin;
+                PlayerInfo.Soul = Soul;
+                PlayerInfo.Level = Level;
+                PlayerInfo.position = Position;
+                PlayerInfo.MaxBlueTubes = MaxBlueTubes;
+                PlayerInfo.MaxRedTubes = MaxRedTubes;
+                PlayerInfo.SaveData();
+            }
         }
 	}
 }

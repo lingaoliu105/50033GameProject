@@ -60,10 +60,6 @@ namespace Assets.Scripts.Attack {
         public virtual void  CollideWithEnemy(GameObject enemy) {
             attackCount++;
             // TODO: 伤害计算
-            PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
-            if (player != null) {
-                player.UpdateEquipsOnAttackHit();
-            }
             if (enemy.GetComponent<BodyPartController>() != null) { 
                 enemy.GetComponent<BodyPartController>().hit(attackDamage);
             }

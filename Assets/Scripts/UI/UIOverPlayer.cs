@@ -32,6 +32,7 @@ namespace Assets.Scripts.UI {
         public GameObject VaccTubePrefab;
         public Transform VaccTubePanel;
         private GameObject[] VaccTubes;
+        public GameObject[] MapButton;
 
         public Canvas PauseMenu;
         public bool isPaused = false;
@@ -180,11 +181,23 @@ namespace Assets.Scripts.UI {
                     isPaused = true;
                 }
             }
+            for(int i =0;i<5;i++) {
+                if (GameManager.Instance.SaveData.isMapAchieved[i]) {
+                    MapButton[i].SetActive(true);
+                } else {
+                    MapButton[i].SetActive(false);
+                }
+            }
         }
-
+        public void Reset() {
+            GameManager.Instance.ResetSaveData();
+        }
         public void Respawn() { 
             
             GameManager.Instance.Respawn();
+        }
+        public void ChangeScene(int sceneID) {
+            GameManager.Instance.TriggerSceneChange(sceneID);
         }
     }
 }

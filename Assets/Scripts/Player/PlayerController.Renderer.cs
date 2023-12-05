@@ -29,12 +29,14 @@ namespace Game {
 
         public void PlayAnimation(String trigger) {
             SpriteRenderer.SetTrigger(trigger);
-            if (trigger=="Jump"&&this.onGround==true){
+            if (trigger == "Jump" && this.onGround == true) {
                 playerAudioSource.PlayOneShot(playerAudioClips[0]);
-            }else if(trigger=="Attack"){
+            } else if (trigger == "Attack") {
                 playerAudioSource.PlayOneShot(playerAudioClips[1]);
-            }else if(trigger=="Shoot"){
+            } else if (trigger == "Shoot") {
                 playerAudioSource.PlayOneShot(playerAudioClips[2]);
+            } else if (trigger == "Dash"||trigger == "Roll") {
+                playerAudioSource.PlayOneShot(playerAudioClips[3]);
             }
         }
 

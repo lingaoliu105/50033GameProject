@@ -20345,6 +20345,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
+      propertyPath: id
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
+      propertyPath: FirstTimeItem
+      value: 
+      objectReference: {fileID: 4084929260553701429, guid: fd2ded2fb32cf23488d3ddcfe094d956, type: 3}
     - target: {fileID: 6143949162522943737, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
       propertyPath: m_Name
       value: ChestControl2 (1)
@@ -22757,6 +22765,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
+      propertyPath: id
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
+      propertyPath: FirstTimeItem
+      value: 
+      objectReference: {fileID: 4084929260553701429, guid: e0b33b3ad45407e4bb7c1e956c44fc95, type: 3}
     - target: {fileID: 6143949162522943737, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
       propertyPath: m_Name
       value: ChestControl2 (3)
@@ -23653,6 +23669,10 @@ PrefabInstance:
     - target: {fileID: 392893337899946104, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
+      propertyPath: id
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6143949162522943737, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
       propertyPath: m_Name
@@ -32030,6 +32050,10 @@ PrefabInstance:
     - target: {fileID: 392893337899946104, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
+      propertyPath: id
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 623189221097848910, guid: 5529a9fe59a69c542b4ca53f9ff864af, type: 3}
       propertyPath: chestAnimator

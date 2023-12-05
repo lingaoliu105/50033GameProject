@@ -14,6 +14,9 @@ namespace Assets.Scripts.Map {
         public Animator chestAnimator;
         public AudioSource chestAudioSource;
         public AudioClip chestOpen;
+        public int id;
+        public GameObject FirstTimeItem;
+        public GameObject RepeatItem;
 
         public void Start() {
             isOpened = false;
@@ -27,6 +30,12 @@ namespace Assets.Scripts.Map {
                 chestAnimator.SetTrigger("isOpened");
                 chestAudioSource.PlayOneShot(chestOpen);
                 //add item
+                if (GameManager.Instance.SaveData.isChestOpened[id]) {
+                    Instantiate(RepeatItem, transform.position, Quaternion.identity);
+                } else {
+                    Instantiate(FirstTimeItem, transform.position, Quaternion.identity);
+                    GameManager.Instance.SaveData.isChestOpened[id] = true;
+                }
                 StartCoroutine(ExecuteAfterDelay());
             } 
             else if (triggerId == 1) {

@@ -21,6 +21,8 @@ public class PlayerInfo: ScriptableObject {
     public int LUCOrigin = 10;
     public int Level = 0;
     public int Soul = 1000;
+    public int MaxRedTubes = 3;
+    public int MaxBlueTubes = 1;
     [Header("属性的实时数值")]
     //public int MaxHP = 300;
     //public int MaxElec = 40;

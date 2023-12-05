@@ -11,7 +11,7 @@ using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public static class RobotControllerParams { 
-    static public int MaxHP = 25000;
+    static public int MaxHP = 8000;
     static public int[] RocketNumber = new int[4] {3, 3, 6, 9};
     static public float[] RocketFlyingTime = new float[4] { 2f, 2f, 1f, 1f};
     static public float[] RocketInterval = new float[4] { 0.5f, 0.2f, 0.2f, 0.2f};
@@ -45,6 +45,9 @@ public class RobotController: MonoBehaviour {
 
     public int Heat = 0;
     public float HeatRate = 0f;
+
+    public AudioSource SFX;
+    public AudioClip hitSound;
 
     public GameObject LaserNetA1Prefab;
     public GameObject LaserNetA2Prefab;
@@ -82,11 +85,15 @@ public class RobotController: MonoBehaviour {
             bodyPartDamage[i] = 0;
         }
         if (tmpDamage > 0) {
-            Debug.Log($"===hit {this.gameObject} ===Damage {tmpDamage}");
+            //Debug.Log($"===hit {this.gameObject} ===Damage {tmpDamage}");
             HP -= tmpDamage;
+            SFX.PlayOneShot(hitSound);
             HPBar.rectTransform.sizeDelta = new Vector2(1000f * ((float)HP / (float)RobotControllerParams.MaxHP), 80);
             if (HP <= 0) {
+                GameManager.Instance.SaveData.isBoss2Beaten = true;
                 Instantiate(DeadRobot, transform.position, Quaternion.identity);
+                PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+                player.GainSoul(50000);
                 Destroy(this.gameObject);
             }
         }
