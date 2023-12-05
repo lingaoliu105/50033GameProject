@@ -25,5 +25,5 @@ MonoBehaviour:
   - hasTop: 0
     LayerTop: 1500
     LayerBottom: 9
-    FixedAreaTop: 18
+    FixedAreaTop: 17.5
     FixedY: 10
