@@ -21,7 +21,7 @@ namespace Assets.Scripts.Map {
             if (playerInTrigger) {
                 tipButton.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E)) {
-                    //Debug.Log("Player pressed E");
+                    Debug.Log("Player pressed E");
                     mapObject.Interact(triggerId);
                 }
             } else {

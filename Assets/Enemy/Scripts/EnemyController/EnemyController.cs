@@ -107,7 +107,11 @@ namespace Enemy {
             {
                 player = GameObject.FindGameObjectWithTag("Player");
             }
-            return player.transform.position;
+            if (player!=null){
+                return player.transform.position;
+            } else {
+                return new Vector3(0,0,0);
+            }
         }
 
         public override void TakeDamage(int damage) {

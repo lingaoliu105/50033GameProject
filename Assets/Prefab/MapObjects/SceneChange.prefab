@@ -180,7 +180,7 @@ MonoBehaviour:
   tipButton: {fileID: 2499202586849566843}
   tipText: 
   playerInTrigger: 0
-  triggerId: 0
+  triggerId: 1
 --- !u!114 &2677002418180875741
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -99,8 +99,8 @@ public class GameManager : Singleton<GameManager> {
         Debug.Log("StartGame");
     }
     [ContextMenu("TestSceneChange")]
-    public void TestSceneChange() {
-        StartCoroutine(ChangeScene(1));
+    public void TriggerSceneChange(int SceneID) {
+        StartCoroutine(ChangeScene(SceneID));
     }
 
     public IEnumerator ChangeScene(int sceneID = 1) { 

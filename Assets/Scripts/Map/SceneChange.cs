@@ -11,7 +11,7 @@ namespace Assets.Scripts.Map {
     public class SceneChange:MapObjectController {
         public int sceneId;
         public override void Interact(int triggerId) {
-            GameManager.Instance.ChangeScene(sceneId);
+            GameManager.Instance.TriggerSceneChange(sceneId);
         }
     }
 }
