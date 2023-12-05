@@ -1049,6 +1049,7 @@ GameObject:
   - component: {fileID: 6545057199268044756}
   - component: {fileID: 7335868575748012475}
   - component: {fileID: 1557751132615944362}
+  - component: {fileID: -5451816431609983314}
   m_Layer: 10
   m_Name: Character
   m_TagString: Player
@@ -1142,6 +1143,11 @@ MonoBehaviour:
   cameraPos: {x: 1, y: -1}
   SpriteRenderer: {fileID: 718797631069592187}
   EffectManager: {fileID: 0}
+  playerAudioSource: {fileID: -5451816431609983314}
+  playerAudioClips:
+  - {fileID: 8300000, guid: f2f5c67441681f84e948d634c6e7aea5, type: 3}
+  - {fileID: 8300000, guid: 369286711e0455e419f3e16991379d3b, type: 3}
+  - {fileID: 8300000, guid: 5755879bbad6614449e768f4c9e42e93, type: 3}
   PlayerInfo: {fileID: 0}
   HPVOrigin: 0
   MPVOrigin: 0

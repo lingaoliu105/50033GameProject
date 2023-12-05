@@ -25,8 +25,9 @@ namespace Enemy {
         }
 
         public override void Hitting() {
+            if (!attackAudio.isPlaying){
             attackAudio.PlayOneShot(hitAudio);
-            hasHit = true;
+            hasHit = true;}
         }
 
         public override void OnCollisionEnter2D(Collision2D collision) {

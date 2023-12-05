@@ -133,7 +133,9 @@ namespace Enemy {
 
         private void PlayHitSound()
         {
+            if (!hitAudio.isPlaying){
             hitAudio.PlayOneShot(hitAudio.clip);
+            }
         }
 
         // this should be added to the GameRestart EventListener as callback
