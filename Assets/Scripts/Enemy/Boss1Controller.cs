@@ -74,8 +74,8 @@ namespace Assets.Scripts.Enemy {
         public AudioSource SFX;
 
         public int ATP = 0;
-        public int HPMAX = 5000;
-        public int HP = 5000;
+        private int HPMAX = 10000;
+        public int HP = 10000;
 
         public Image HPBar;
 
@@ -146,7 +146,7 @@ namespace Assets.Scripts.Enemy {
 
         public override void TakeDamage(int damage) {
             HP -= damage;
-            HPBar.rectTransform.sizeDelta = new Vector2(1000f*(HP/HPMAX), 80);
+            HPBar.rectTransform.sizeDelta = new Vector2(1000f*((float)HP/(float)HPMAX), 80);
             if (HP <= 0) {
                 Destroy(gameObject);
             }

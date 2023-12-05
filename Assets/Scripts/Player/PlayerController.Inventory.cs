@@ -51,6 +51,17 @@ namespace Game{
                 if (Equipments[i] == null) {
                     Equipments[i] = item;
                     item.player = this;
+                    Equipments[i].OnEquip();
+                    return;
+                }
+            }
+        }
+
+        public void UnequipItem(int id) {
+            for (int i = 0; i < 4; i++) {
+                if (Equipments[i] != null && Equipments[i].ID == id) {
+                    Equipments[i].OnUnequip();
+                    Equipments[i] = null;
                     return;
                 }
             }
@@ -65,6 +76,7 @@ namespace Game{
                 if (Equipments[i] == null) {
                     Equipments[i] = item;
                     item.player = this;
+                    Equipments[i].OnEquip();
                     return;
                 }
             }

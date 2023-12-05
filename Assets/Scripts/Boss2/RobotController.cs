@@ -3,13 +3,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 public static class RobotControllerParams { 
-    static public int MaxHP = 5000;
+    static public int MaxHP = 25000;
     static public int[] RocketNumber = new int[4] {3, 3, 6, 9};
     static public float[] RocketFlyingTime = new float[4] { 2f, 2f, 1f, 1f};
     static public float[] RocketInterval = new float[4] { 0.5f, 0.2f, 0.2f, 0.2f};
@@ -52,6 +54,7 @@ public class RobotController: MonoBehaviour {
     private WaitForSeconds NetInterval = new WaitForSeconds(0.5f);
 
     public GameObject LaserCirclePrefab;
+    public Image HPBar;
 
     private WaitForSeconds SkillCD = new WaitForSeconds(1f);
 
@@ -81,6 +84,7 @@ public class RobotController: MonoBehaviour {
         if (tmpDamage > 0) {
             Debug.Log($"===hit {this.gameObject} ===Damage {tmpDamage}");
             HP -= tmpDamage;
+            HPBar.rectTransform.sizeDelta = new Vector2(1000f * ((float)HP / (float)RobotControllerParams.MaxHP), 80);
             if (HP <= 0) {
                 Instantiate(DeadRobot, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
@@ -197,7 +201,7 @@ public class RobotController: MonoBehaviour {
             } else {
                 yield return LaserNetB();
             }
-            HeatRate += 0.5f;
+            HeatRate += 1f;
         } else if (Heat == 1) {
             if (r < 0.3) {
                 yield return LaserNetA();
