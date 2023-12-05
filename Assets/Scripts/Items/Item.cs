@@ -46,9 +46,8 @@ namespace Assets.Scripts.Items {
     [Serializable]
     public class EquipableItem: ItemBase{
         public int UpdateTime;
-        public virtual void OnMeleeAttackHit() {  }
         public virtual void OnMeleeAttack() { }
-        public virtual void OnRangedAttackHit() {  }
+        public virtual void OnAttackHit() {  }
         public virtual void OnRangedAttack() {  }
         public virtual void OnHurt() {  }
         public virtual void OnDeath() { }

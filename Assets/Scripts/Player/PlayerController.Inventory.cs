@@ -90,10 +90,10 @@ namespace Game{
                 }
             }
         }
-        public void UpdateEquipsOnMeleeAttackHit() {
+        public void UpdateEquipsOnAttackHit() {
             for (int i = 0; i < 4; i++) {
                 if (Equipments[i] != null) {
-                    Equipments[i].OnMeleeAttackHit();
+                    Equipments[i].OnAttackHit();
                 }
             }
         }
@@ -101,13 +101,6 @@ namespace Game{
             for (int i = 0; i < 4; i++) {
                 if (Equipments[i] != null) {
                     Equipments[i].OnMeleeAttack();
-                }
-            }
-        }
-        public void UpdateEquipsOnRangedAttackHit() {
-            for (int i = 0; i < 4; i++) {
-                if (Equipments[i] != null) {
-                    Equipments[i].OnRangedAttackHit();
                 }
             }
         }
