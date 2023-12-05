@@ -54,6 +54,9 @@ namespace Game {
                 if (collider.CompareTag("Void")) { 
                     collider.GetComponent<VoidArea>().GetOut(this);
                 }
+                if (collider.CompareTag("Trap")) { 
+                    collider.GetComponent<VoidTrap>().GetOut(this);
+                }
                 if (collider.CompareTag("Object")) {
                     Debug.Log("Object");
                     collider.GetComponent<ItemObject>().PickedUP(this);

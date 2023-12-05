@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gasTemplate: {fileID: 8119394173493925657, guid: 600f6ca40a60585438e370256f4aa0ec, type: 3}
-  trapNum: 5
+  trapNum: 6
   space: 2
-  timeInterval: 1
+  timeInterval: 3
+  startTime: 1.5
